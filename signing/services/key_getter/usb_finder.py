@@ -7,7 +7,7 @@ import subprocess
 from glob import glob
 
 
-def _get_usb_devices() -> list[str]:
+def _get_usb_devices_linux() -> list[str]:
     """
     Source: https://stackoverflow.com/a/64000192
 
@@ -21,14 +21,14 @@ def _get_usb_devices() -> list[str]:
                            'usb' in dev.split('/')[6]]))
     return [os.path.basename(dev) for dev in usb_devices]
 
-def get_usb_mount_paths() -> list[str]:
+def get_usb_mount_paths_linux() -> list[str]:
     """
     Source: https://stackoverflow.com/a/64000192
 
     This function returns the list of usb mount paths connected to the system.
     """
 
-    devices = _get_usb_devices()
+    devices = _get_usb_devices_linux()
     devices_mounting_points = []
     for dev in devices:
         # This command returns all locations where the device is mounted

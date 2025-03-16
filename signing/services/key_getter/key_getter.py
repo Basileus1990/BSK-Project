@@ -3,7 +3,7 @@ The package responsible for getting the key from the USB drive
 """
 import os
 import platform
-from signing.services.key_getter.usb_finder import get_usb_mount_paths
+from signing.services.key_getter.usb_finder import get_usb_mount_paths_linux
 
 WINDOWS_PLATFORM_NAME = "Windows"
 LINUX_PLATFORM_NAME = "Linux"
@@ -51,7 +51,7 @@ def _get_key_windows() -> str:
 
 
 def _get_key_linux() -> str:
-    usb_paths = get_usb_mount_paths()
+    usb_paths = get_usb_mount_paths_linux()
     if len(usb_paths) == 0:
         raise NoUSBDrivesFoundException()
 
@@ -70,5 +70,3 @@ def _get_key_linux() -> str:
         raise NoKeyFoundException()
 
     return key
-
-
