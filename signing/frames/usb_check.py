@@ -1,5 +1,5 @@
 """
-This frame is the view for checking for pendrice and reading the key
+This frame is the view for checking for usb drive and reading the key from it
 """
 
 import tkinter as tk
@@ -7,7 +7,7 @@ from signing.services.key_getter import key_getter
 from typing import Callable
 
 
-class GetKeyFromPendriveFrame(tk.Frame):
+class GetKeyFromUSBFrame(tk.Frame):
     def __init__(self, parent: tk.Tk, return_result: Callable[[str], None]):
         tk.Frame.__init__(self, parent)
 
@@ -15,7 +15,7 @@ class GetKeyFromPendriveFrame(tk.Frame):
 
         self.label = tk.Label(
             self,
-            text="To sign the pdf file first the key has to be read from the pendrive",
+            text="To sign the pdf file first the key has to be read from the USB drive",
             font=("TkDefaultFont", 16),
             wraplength=750,
         )
