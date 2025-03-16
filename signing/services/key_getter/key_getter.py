@@ -1,0 +1,73 @@
+"""
+The package responsible for getting the key from the pendrive
+"""
+import os
+import platform
+from signing.services.key_getter.usb_finder import get_usb_mount_paths
+
+WINDOWS_PLATFORM_NAME = "Windows"
+LINUX_PLATFORM_NAME = "Linux"
+KEY_FILE_NAME = "PDF-KEY.key"
+
+class UnsupportedPlatformException(Exception):
+    pass
+
+class NoUSBDrivesFoundException(Exception):
+    pass
+
+class NoKeyFoundException(Exception):
+    pass
+
+class MultipleKeysFoundException(Exception):
+    pass
+
+
+def get_key() -> str:
+    """
+    Returns the key from the pendrive.
+
+    Possible exceptions:
+
+    - **NoUSBDrivesFoundException**
+    - **NoKeyFoundException** -> When no key was found on any found devices.
+    - **UnsupportedPlatformException**
+    - **MultipleKeysFoundException** -> When the key file was found in multiple devices,
+      so it is impossible to determine which is the correct one.
+    """
+
+    if platform.system() == WINDOWS_PLATFORM_NAME:
+        return _get_key_windows()
+    elif platform.system() == LINUX_PLATFORM_NAME:
+        return _get_key_linux()
+    else:
+        raise UnsupportedPlatformException()
+
+
+def _get_key_windows() -> str:
+    # TODO: WIESIU
+    # Może być przydatne: https://abdus.dev/posts/python-monitor-usb/
+    raise Exception("Windows not supported yet")
+
+
+def _get_key_linux() -> str:
+    usb_paths = get_usb_mount_paths()
+    if len(usb_paths) == 0:
+        raise NoUSBDrivesFoundException()
+
+    key = None
+    for usb_path in usb_paths:
+        if not os.path.exists(f"{usb_path}/{KEY_FILE_NAME}"):
+            continue
+
+        with open(f"{usb_path}/{KEY_FILE_NAME}", "r") as key_file:
+            tmp_key = key_file.read()
+            if key is not None:
+                raise MultipleKeysFoundException()
+            key = tmp_key
+
+    if key is None:
+        raise NoKeyFoundException()
+
+    return key
+
+
