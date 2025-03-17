@@ -3,7 +3,7 @@ This frame is the view for checking for usb drive and reading the key from it
 """
 
 import tkinter as tk
-from signing.services.key_getter import key_getter
+from services.key_getter import key_getter
 from typing import Callable
 
 

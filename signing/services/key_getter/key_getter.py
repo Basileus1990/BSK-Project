@@ -3,7 +3,7 @@ The package responsible for getting the key from the USB drive
 """
 import os
 import platform
-from signing.services.key_getter.usb_finder import get_usb_mount_paths_linux
+from .usb_finder import get_usb_mount_paths_linux, get_usb_mount_paths_windows
 
 WINDOWS_PLATFORM_NAME = "Windows"
 LINUX_PLATFORM_NAME = "Linux"
@@ -47,8 +47,25 @@ def get_key() -> str:
 def _get_key_windows() -> str:
     # TODO: WIESIU
     # Może być przydatne: https://abdus.dev/posts/python-monitor-usb/
-    raise Exception("Windows not supported yet")
+    usb_paths = get_usb_mount_paths_windows()
+    if len(usb_paths) == 0:
+        raise NoUSBDrivesFoundException()
 
+    key = None
+    for usb_path in usb_paths:
+        if not os.path.exists(f"{usb_path}/{KEY_FILE_NAME}"):
+            continue
+
+        with open(f"{usb_path}/{KEY_FILE_NAME}", "r") as key_file:
+            tmp_key = key_file.read()
+            if key is not None:
+                raise MultipleKeysFoundException()
+            key = tmp_key
+
+    if key is None:
+        raise NoKeyFoundException()
+
+    return key
 
 def _get_key_linux() -> str:
     usb_paths = get_usb_mount_paths_linux()
