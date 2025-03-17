@@ -48,9 +48,11 @@ def _get_key_windows() -> str:
     usb_paths = get_usb_mount_paths_windows()
     return get_key_paths(usb_paths)
 
+
 def _get_key_linux() -> str:
     usb_paths = get_usb_mount_paths_linux()
     return get_key_paths(usb_paths)
+
 
 def get_key_paths(usb_paths):
     if len(usb_paths) == 0:
