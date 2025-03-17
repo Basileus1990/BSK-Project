@@ -45,30 +45,14 @@ def get_key() -> str:
 
 
 def _get_key_windows() -> str:
-    # TODO: WIESIU
-    # Może być przydatne: https://abdus.dev/posts/python-monitor-usb/
     usb_paths = get_usb_mount_paths_windows()
-    if len(usb_paths) == 0:
-        raise NoUSBDrivesFoundException()
-
-    key = None
-    for usb_path in usb_paths:
-        if not os.path.exists(f"{usb_path}/{KEY_FILE_NAME}"):
-            continue
-
-        with open(f"{usb_path}/{KEY_FILE_NAME}", "r") as key_file:
-            tmp_key = key_file.read()
-            if key is not None:
-                raise MultipleKeysFoundException()
-            key = tmp_key
-
-    if key is None:
-        raise NoKeyFoundException()
-
-    return key
+    return get_key_paths(usb_paths)
 
 def _get_key_linux() -> str:
     usb_paths = get_usb_mount_paths_linux()
+    return get_key_paths(usb_paths)
+
+def get_key_paths(usb_paths):
     if len(usb_paths) == 0:
         raise NoUSBDrivesFoundException()
 
