@@ -1,5 +1,4 @@
 import tkinter as tk
-from tkinter import ttk
 
 from frames.usb_check import GetKeyFromUSBFrame
 
