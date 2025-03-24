@@ -6,7 +6,7 @@ import tkinter as tk
 from tkinter import filedialog
 from typing import Callable
 from generating.key_generate.RSA_key_generator import generate_keys
-
+from generating.key_generate.AES_key_generator import aes_encrypt_file
 
 PRIVATE_KEY_NAME = "private_key.key"
 PUBLIC_KEY_NAME = "public_key.key"
@@ -70,6 +70,7 @@ class GenerateKeys(tk.Frame):
             private_location += ("/"+PRIVATE_KEY_NAME)
             if generate_keys(public_location, private_location):
                 self.result.configure(text="Done")
+                aes_encrypt_file(private_location,"1234")
             else:
                 self.result.configure(text="Failed")
         else:
