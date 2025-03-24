@@ -5,7 +5,12 @@
 import tkinter as tk
 from tkinter import filedialog
 from typing import Callable
-from generating.key_generate.key_RSA_generate import generate_keys
+from generating.key_generate.RSA_key_generator import generate_keys
+
+
+PRIVATE_KEY_NAME = "private_key.key"
+PUBLIC_KEY_NAME = "public_key.key"
+
 
 class GenerateKeys(tk.Frame):
     def __init__(self, parent: tk.Tk):
@@ -49,23 +54,25 @@ class GenerateKeys(tk.Frame):
         self.result.pack(padx=5,pady=10)
 
     # Open file dialog for choosing folder
-    def folder(self,entry):
+    def folder(self, entry):
         folder = filedialog.askdirectory(title="Select a public key")
 
         if folder:
-            entry.delete(0,tk.END)
-            entry.insert(0,folder)
+            entry.delete(0, tk.END)
+            entry.insert(0, folder)
 
     # generate a pair of keys in RSA
     def generate_keys(self,public_location: str,private_location: str):
         # check if uri's are empty
         if public_location and private_location:
-            if generate_keys(public_location,private_location):
+            # add keys name to uri
+            public_location += ("/"+PUBLIC_KEY_NAME)
+            private_location += ("/"+PRIVATE_KEY_NAME)
+            if generate_keys(public_location, private_location):
                 self.result.configure(text="Done")
             else:
                 self.result.configure(text="Failed")
         else:
             self.result.configure(text="Choose destinations")
-
 
 
