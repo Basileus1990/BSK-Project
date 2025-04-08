@@ -2,8 +2,8 @@ import tkinter as tk
 from key_generate.RSA_key_generator import generate_keys
 from frames.generate_window import GenerateKeys
 
-APP_WIDTH = 800
-APP_HEIGHT = 600
+APP_WIDTH = 400
+APP_HEIGHT = 400
 APP_TITLE = 'Generate keys'
 
 class App(tk.Tk):

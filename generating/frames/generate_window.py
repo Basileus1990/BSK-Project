@@ -25,8 +25,15 @@ class GenerateKeys(tk.Frame):
         self.label.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5)
 
         # text area for entry keys uri
+        self.label_public_key = tk.Label(self, text="Public Key localization:")
+        self.label_public_key.pack(anchor='center', padx=5)
         self.public_key_localization = tk.Entry(self, width=50)
+        self.public_key_localization.pack(padx=5, pady=(0, 10), anchor="center")
+
+        self.label_private_key = tk.Label(self, text="Private Key localization:")
+        self.label_private_key.pack(anchor='center', padx=5)
         self.private_key_localization = tk.Entry(self, width=50)
+        self.private_key_localization.pack(padx=5, pady=(0, 10),anchor="center")
 
         self.button_explore_public = tk.Button(
             self,
@@ -43,7 +50,10 @@ class GenerateKeys(tk.Frame):
             text="Generate keys",
             command=lambda: self.generate_keys(self.public_key_localization.get(), self.private_key_localization.get(),self.pin_entry.get()))
 
-        self.pin_entry = tk.Entry(self, width=50)
+        self.label_pin = tk.Label(self, text="PIN:")
+        self.label_pin.pack(anchor='center', padx=5)
+        self.pin_entry = tk.Entry(self, width=10)
+        self.pin_entry.pack(padx=5, pady=(0, 10), anchor="center")
 
         # self.button_decrypt = tk.Button(
         #     self,
@@ -55,9 +65,6 @@ class GenerateKeys(tk.Frame):
         self.pin_entry.pack(padx=5,pady=5)
         self.button_explore_public.pack(side=tk.TOP, padx=5, pady=5)
         self.button_explore_private.pack(side=tk.TOP, padx=5, pady=5)
-
-        self.public_key_localization.pack(padx=5,pady=10)
-        self.private_key_localization.pack(padx=5, pady=10)
 
         self.result = tk.Label(self,text=".")
         self.result.pack(padx=5,pady=10)
