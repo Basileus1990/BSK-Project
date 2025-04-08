@@ -7,9 +7,6 @@ def generate_keys(public_key_location: str, private_key_location: str) -> bool:
 
         private_key = key.exportKey()
 
-        private_key_location += "private_key.key"
-        public_key_location += "public_key.key"
-
         with (open(private_key_location, "wb")) as file:
             file.write(private_key)
 
