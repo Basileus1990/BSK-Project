@@ -3,11 +3,15 @@ The package responsible for getting the key from the USB drive
 """
 import os
 import platform
-from .usb_finder import get_usb_mount_paths_linux, get_usb_mount_paths_windows
 
 WINDOWS_PLATFORM_NAME = "Windows"
 LINUX_PLATFORM_NAME = "Linux"
 KEY_FILE_NAME = "PDF-KEY.key"
+
+if platform.system() == WINDOWS_PLATFORM_NAME:
+    from .usb_finder_windows import get_usb_mount_paths_windows
+elif platform.system() == LINUX_PLATFORM_NAME:
+    from .usb_finder_linux import get_usb_mount_paths_linux
 
 class UnsupportedPlatformException(Exception):
     pass
