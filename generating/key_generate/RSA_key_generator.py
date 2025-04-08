@@ -1,5 +1,6 @@
 from Crypto.PublicKey import RSA
 
+
 def generate_keys(public_key_location: str, private_key_location: str) -> bool:
     try:
         key = RSA.generate(4096)
