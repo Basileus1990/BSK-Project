@@ -85,10 +85,11 @@ class GenerateKeys(tk.Frame):
         else:
             self.result.configure(text="Choose destinations")
 
+    #@TODO do usuniecia bo tylko 2 aplikacji do podpisywania
     def decrypt_private_key(self, private_location: str):
         if private_location:
             private_location += ("/" + PRIVATE_KEY_NAME)
-            data = aes_decrypt_file(private_location, "1244")
+            data = aes_decrypt_file(private_location, "1234")
             if data[0]:
                 self.result.configure(text="Done")
             else:
