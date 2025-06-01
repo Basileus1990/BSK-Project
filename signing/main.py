@@ -1,7 +1,9 @@
 import tkinter as tk
 
+from cryptography.hazmat.primitives import serialization
+
 from frames.usb_check import GetKeyFromUSBFrame
-from services.pdf_signer import signer
+from services.pdf_signer import signer, verifier
 
 APP_WIDTH = 800
 APP_HEIGHT = 600
@@ -27,67 +29,83 @@ class App(tk.Tk):
 
 
 if __name__ == "__main__":
-    # App().mainloop()
-    priv_key = """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"""
-
-    public_key = """MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAvbFeA6XBmxeXJvHBITRX
-hEVdUtg5Mohm1ePkd34QmJ5ej/F6GAXeYf0LdyrEN93QTaWbdcg3eJZFaZX7lKTZ
-GQoNFjbXRxC5rtieb+oPud0gwahXuQ9/XLTC3dI+WgCMnxn4KR4PnlBeOmmoiedg
-UED/tE4p7DEuwu+HcCFgxCgy8OhO5Y2e81mGEhUvcUtMrtC5VQDFTNl/HxjE6m09
-wC62FSGN+WDxofzNvRKeNubmLkHS80c1jMY2PdY5mTPgF9VSrYSu0lh1vNophM9g
-DYgm6rVM8nXBOm8cUQSoay9/Ipsr/1mE2FTvhkTDesoJdwnQ2GptvbDRHk/+9K4r
-zObygMNNqS8ZvCfdgBaWZRYtokVXI8zax/Fo4DvABPNqnRh73xTZ4Lv/T2TGO26C
-/6UPjF154C6R3Gex4Wh9Yyc5PtRvj91hAT/RG9GLbSrIXPs+mkv8DftIYFhckCUw
-m/rCNNMehPtpHG7MXbXwoLSJtDfZll0uIdnIGFHmpRCx+PEgcESzSqH18kfwjtsb
-KPQ7bxOpDIBWBF5G7zBz7kugVSAu/94WjFMTnJ5eXIjG8mylOf5iof9VFPVXwhC3
-NAPXrmhCHYWaxkDV6OU59XnoBJXe3V0OkYlRH3EWkVrPJYPJE5gc14YIRVoEhCxA
-A1qiCWP4ZeALrHK+NF/aPuECAwEAAQ=="""
-    signer.sign(priv_key, "/home/pawel/Desktop/test.pdf")
+    App().mainloop()
+#     priv_key = """-----BEGIN RSA PRIVATE KEY-----
+# MIIJKAIBAAKCAgEAlCccxGWuhMwEfIBPfavOudY8M0UjIha2TkRimj8Sx3AA3ToS
+# QmNZew67npbL99lAVJKbYeQaGe//3RJJ87PE0+zQsmi/bPJhmFKbVai2C0SRQi8n
+# 10R7MgG4BKuzy8Rt5hkIFelj/66uFSRw1EIm5z1Tx3B3FYl5Tt6a/Tetefdo5trT
+# 0ED1yddph2m9Hy4/wCXjlPCWyIBckuAVNI5qCJC6ChkLpbD+90bFu7V6LAgjWcPh
+# Fzne1HNH9gZMsaa5j1L9j5ppQBVlS7UY1GE93WUbm8Zuva8IDXCZ15VzIsHRqzJj
+# kIDhjQrl9BrsjNfR4rj3kEzoyxpIYllM6jlAskpEkaiU21vW8/drjjbi1rWuTnbR
+# hTVtx4KTpyztQb6KMTzPVJ0nMesjBorAnQXpi85wrs9PNs3gyHxXcqoJhplqSQzu
+# 5UQX9baiCKeX6LYvTX2f1oTaN9rHuUKnYCrlJjdGyT1371ctg+Dbv1vhU/bRdDhA
+# 0cYTtoZxuFGM1GKXRkFyf6/QM6gQKGWkCCGtbtQ0nAea+rJwdiqsoXseqoLMJmod
+# hziGpqk9lF9Ups8bYAK1yrkZC9ALlCcTkgMNBxoRLriapgBGLqMMbPwWAL3INWQE
+# ZgJyfIe293YrdzS6+wG/+0Enht+ieCuI9DBpGd8hbTS/RaakUlfy7PQKl3sCAwEA
+# AQKCAgBIXJo2axvEjQmb7eflj+cW6cbZm+k/GyzMKaanhCsd8lzZsSV9+5yW+Gk3
+# WpwhYKGFLV5rf8gn5wtn5SjtuV5nzIFawsLM6c41YhOw0QiplEIGu5WQFUi+8gv5
+# bAwTeMvc2VkTqr1HAwDQHs5lPjJWO6QSA6KGiHERzrSQ/YLj0a4RI8zVKQVkIqzO
+# kRzof+Rva5IvCxv6roeIzZ5N30l3CYl0qSsBMOQ3zv+BYXBc1VS+4WetunxV9ECv
+# sAABvVdg474pR9gkjs69HaUVBrH60wmbGl64kycxuU/K9poX3ecU4TW0PN7tzubm
+# RchIOpmvTXzNpGMH4Lx+HPPuayxno+tT8vPMNJHPJdn91W26otMYvgwVF80Awhwv
+# 2eimtZXmrK3qaEh+7JtBQI0kbnAccR748Vg1cHxD5yjYnLMwzfpnXjLJlhGmV4D7
+# qKCmZ6psArtpAqRs6eTF+Nk56/qcyB0YuxuCExFieZZs2kUvakCcOhgfH6djL2eO
+# DKtMZJP7zcA+qCpPV4/nnvKk6hawMElcTC9lWMSjwBTWhP+CP51BHL0OAF4x0XfZ
+# thKCHlCs929YohAuExUsWQBFU8KIzNKQqyjTmGKZ9UCs0U2aMLTE+KYFT6xoeEK5
+# GJyed3WuGaoG8XwndBtOuoM9W4jWLc9YYQNeNM36QdIKFWPB4QKCAQEA/YwpsrM1
+# i+yuy7XScAtrfiFra860PqmFFUw2Ox7Q9iKDHcLMtevRaY5Sa1vyx29LQnxJxlku
+# rxkdfGBEbv5KP8C5oZnmmAvqFfmLbeo83YIEMaQG3+smBIoMmCQPareb1w3d7t2z
+# xsIv/31jRWFe4ZUhPS+LOpxJ+8y+MxkRvvJry8L+OPhvDouTVe0dx/oJpE9TBfgM
+# /6nIK91xwzdM9SN9Wb5OPEJ4vArlX1Wv5nLGaqXwWIryS0SqbgLTrKFAOk4uVoB5
+# gAfyn+Ek8VNClj8cS3wyzO6sIl09tmlEIaUCNk/FDMqeG1tTpLs/zY68OyunW9ty
+# sNUUePV5iT8ycwKCAQEAlZX4TBCFEUVEnRbfqHyI4h+IU4J+yFUW+b1XNTSQTp06
+# tnPyI/UuZqjsI4AzVy98BbKCwE10QcNtGpNC+tNWURhpK59nwJtTSr0Ij5XIUKH/
+# FjaL/Ci8Noygexw0mxjiiNWp1n585iw7JPC14NYXy+4rMg419bOCsDX1yFMGqr4j
+# blfuCPcncybj3KgGcp/IfgTSmVn6oxGxLC60KIY72+DcbIio5BzAD0EFjK+s/UUR
+# np4MTWL1xpYh/e9X46yJQB7lmAJqS8MN3jMWHy7XT+Y1H6yCToiIC4+eLdKNw/1H
+# coVmdyIev2ziW1A5kgE0NU94pwkZQcCZBzcQy+rc2QKCAQB9kJR181ppWWWXbQwy
+# gPVTGanhUhThk4Jc8clJrhE+VAkrC/XlgkvLQrh+gqLRMcTLwFGo8TG1dXKszeAW
+# N8j9maxU46rXUc8z4smyPXa3HFSHYPwmmIXTaaqjDfi0mQmMj0mBqjoGDNVIaghn
+# q7kZbolvi8Qf2papJNRs6dVoAxZvaroL7LzTLzxgKXW+O43a2Y38PsPxOVvwnVJh
+# o1lxbYn+j8ie/yxbs+m0NPNP5TduSY+lyeoEbJUatjuuGo18UouQOz/wr/7wPsfU
+# 2672SXrxxyhBZVHKEvMlCyy6nMVjsE2d8Bos4iWiRzlpy25cv1m6nAtIl73zyV3P
+# IoURAoIBAGOPDFJ8EETdaHxxc+zs7iIqQI7sZLurPn570aY81Ost5Jz48KmUDw0O
+# 0xQRyJn3pcEY/cNGCeGXU2+DoenVbTbOW3lIQELGXpp41FDUrR1VpLTBG0x6REK+
+# ODWYIT81Qdk29DIpv7FmsPq2Jyd89xuo6iEHqkxc7NehInPxJpfPsz9G0Mwwy5Xt
+# xWzgfGIgDM4rIYwlgha0uMoiT5BFP2Pp9mtaTaZ9qCq+6RWo+ycaqE58/M0o11IU
+# LI2ZllKXTEZcCg2xVdQU/47rS4b3oyCvpJ3vME9aucmQDgSLhgVy9vG27erOz84y
+# hzmlXJvbp0bwHOp3uNK1gGR39vrx14kCggEBAJSfTR0NiWMuhcpys+yE1Lgp1bAA
+# Kq6HtIp7zZubavtTCGYhzrvQ4yMaeJrrax5HIh9mPvBPoPxl45b64pDk2+TJbtOK
+# FqYkRikAqe9W+DSVL93WikmewPhejFoJxJSU1hU6B4JoSrwyCc3tuPEHDb29F2O4
+# lrN0zKV6o/SptuqcVRReVi4LOgyjOxsqpZ10oDhfK/i1zV2Ycr3qldeX7Zo4kmOv
+# 5q6vm8DzTqdKnA3R/yKVMYvYemd26Y9xs9nN1C6aWMMiLfHV9bwLY9qJtPpw6Xfx
+# ifVQOAodQ4jmVZujNnp5yNydJOcbstIZbsmHpOn/+3TrGcBacOed0fD89Lo=
+# -----END RSA PRIVATE KEY-----"""
+#
+#     public_key = """-----BEGIN PUBLIC KEY-----
+# MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAlCccxGWuhMwEfIBPfavO
+# udY8M0UjIha2TkRimj8Sx3AA3ToSQmNZew67npbL99lAVJKbYeQaGe//3RJJ87PE
+# 0+zQsmi/bPJhmFKbVai2C0SRQi8n10R7MgG4BKuzy8Rt5hkIFelj/66uFSRw1EIm
+# 5z1Tx3B3FYl5Tt6a/Tetefdo5trT0ED1yddph2m9Hy4/wCXjlPCWyIBckuAVNI5q
+# CJC6ChkLpbD+90bFu7V6LAgjWcPhFzne1HNH9gZMsaa5j1L9j5ppQBVlS7UY1GE9
+# 3WUbm8Zuva8IDXCZ15VzIsHRqzJjkIDhjQrl9BrsjNfR4rj3kEzoyxpIYllM6jlA
+# skpEkaiU21vW8/drjjbi1rWuTnbRhTVtx4KTpyztQb6KMTzPVJ0nMesjBorAnQXp
+# i85wrs9PNs3gyHxXcqoJhplqSQzu5UQX9baiCKeX6LYvTX2f1oTaN9rHuUKnYCrl
+# JjdGyT1371ctg+Dbv1vhU/bRdDhA0cYTtoZxuFGM1GKXRkFyf6/QM6gQKGWkCCGt
+# btQ0nAea+rJwdiqsoXseqoLMJmodhziGpqk9lF9Ups8bYAK1yrkZC9ALlCcTkgMN
+# BxoRLriapgBGLqMMbPwWAL3INWQEZgJyfIe293YrdzS6+wG/+0Enht+ieCuI9DBp
+# Gd8hbTS/RaakUlfy7PQKl3sCAwEAAQ==
+# -----END PUBLIC KEY-----"""
+#
+#     public_key_bytes = priv_key.encode('utf-8')
+#     private_key_obj = serialization.load_pem_private_key(
+#         public_key_bytes,
+#         password=None,  # Assuming unencrypted key as per function signature
+#     )
+#
+#     public_key_bytes = public_key.encode('utf-8')
+#     public_key_obj = serialization.load_pem_public_key(
+#         public_key_bytes,
+#     )
+#     signer.sign(private_key_obj, "/home/pawel/Desktop/test.pdf", "/home/pawel/Desktop/test-out.pdf")
+#     print(verifier.verify(public_key_obj, "/home/pawel/Desktop/test-out.pdf"))
