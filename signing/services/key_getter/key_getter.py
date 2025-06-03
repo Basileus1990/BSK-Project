@@ -9,7 +9,7 @@ LINUX_PLATFORM_NAME = "Linux"
 KEY_FILE_NAME = "PDF-KEY.key"
 
 if platform.system() == WINDOWS_PLATFORM_NAME:
-    from .usb_finder_windows import get_usb_mount_paths_windows
+    from .usb_finder_windows import _get_usb_mount_paths_windows
 elif platform.system() == LINUX_PLATFORM_NAME:
     from .usb_finder_linux import get_usb_mount_paths_linux
 
@@ -49,16 +49,16 @@ def get_key() -> str:
 
 
 def _get_key_windows() -> str:
-    usb_paths = get_usb_mount_paths_windows()
-    return get_key_paths(usb_paths)
+    usb_paths = _get_usb_mount_paths_windows()
+    return _get_key_paths(usb_paths)
 
 
 def _get_key_linux() -> str:
     usb_paths = get_usb_mount_paths_linux()
-    return get_key_paths(usb_paths)
+    return _get_key_paths(usb_paths)
 
 
-def get_key_paths(usb_paths):
+def _get_key_paths(usb_paths):
     if len(usb_paths) == 0:
         raise NoUSBDrivesFoundException()
 

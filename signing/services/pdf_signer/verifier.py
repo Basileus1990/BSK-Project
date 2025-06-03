@@ -9,6 +9,8 @@ from pyhanko_certvalidator import ValidationContext
 class NoSignatureFound(Exception):
     pass
 
+# TODO: More error handling
+
 
 def verify(public_key: rsa.RSAPublicKey, pdf_path: str) -> bool:
     """

@@ -3,7 +3,7 @@ import tkinter as tk
 from cryptography.hazmat.primitives import serialization
 
 from frames.usb_check import GetKeyFromUSBFrame
-from services.pdf_signer import signer, verifier
+from services.pdf_signer import sign, verify
 
 APP_WIDTH = 800
 APP_HEIGHT = 600
@@ -20,6 +20,7 @@ class App(tk.Tk):
 
         self.current_frame = GetKeyFromUSBFrame(self, self.get_key_from_usb_result)
         self.current_frame.pack(fill='both', expand=True)
+        
 
     def get_key_from_usb_result(self, key: str):
         # self.current_frame.destroy()
@@ -107,5 +108,5 @@ if __name__ == "__main__":
 #     public_key_obj = serialization.load_pem_public_key(
 #         public_key_bytes,
 #     )
-#     signer.sign(private_key_obj, "/home/pawel/Desktop/test.pdf", "/home/pawel/Desktop/test-out.pdf")
-#     print(verifier.verify(public_key_obj, "/home/pawel/Desktop/test-out.pdf"))
+#     sign(private_key_obj, "/home/pawel/Desktop/test.pdf", "/home/pawel/Desktop/test-out.pdf")
+#     print(verify(public_key_obj, "/home/pawel/Desktop/test-out.pdf"))

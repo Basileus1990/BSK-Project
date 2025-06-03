@@ -20,6 +20,7 @@ from pyhanko.sign.general import SigningError, UnacceptableSignerError
 from pyhanko.sign.timestamps import DummyTimeStamper
 from pyhanko_certvalidator.registry import SimpleCertificateStore
 
+# TODO: More error handling
 
 def sign(private_key: rsa.RSAPrivateKey, pdf_in_path: str, pdf_out_path: str):
     """
@@ -78,17 +79,17 @@ def sign(private_key: rsa.RSAPrivateKey, pdf_in_path: str, pdf_out_path: str):
         return True
     except FileNotFoundError:
         print(f"Error: Input PDF '{pdf_in_path}' not found.")
-        return False
+        raise Exception("TODO: Handle this error properly")
     except UnacceptableSignerError as e:
         print(f"Signer error: The key/cert might not meet requirements (e.g., key usage). Error: {e}")
         print("Ensure the self-signed certificate has Digital Signature key usage.")
-        return False
+        raise Exception("TODO: Handle this error properly")
     except SigningError as e:
         print(f"Error during PDF signing process: {e}")
-        return False
+        raise Exception("TODO: Handle this error properly")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
-        return False
+        raise Exception("TODO: Handle this error properly")
 
 
 def _generate_self_signed_cert(private_key: rsa.RSAPrivateKey) -> Tuple[asn1_x509.Certificate, asn1_keys.PrivateKeyInfo]:

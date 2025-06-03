@@ -4,7 +4,7 @@ This file contains functions needed for usb path locations through get_usb_mount
 
 import wmi
 
-def get_usb_mount_paths_windows() -> list[str]:
+def _get_usb_mount_paths_windows() -> list[str]:
     """
         Convert device ID to the path
     """
