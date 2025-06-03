@@ -20,7 +20,7 @@ def _get_usb_devices_linux() -> list[str]:
                            'usb' in dev.split('/')[6]]))
     return [os.path.basename(dev) for dev in usb_devices]
 
-def get_usb_mount_paths_linux() -> list[str]:
+def _get_usb_mount_paths_linux() -> list[str]:
     """
     Source: https://stackoverflow.com/a/64000192
 

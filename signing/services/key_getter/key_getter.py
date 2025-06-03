@@ -11,7 +11,7 @@ KEY_FILE_NAME = "PDF-KEY.key"
 if platform.system() == WINDOWS_PLATFORM_NAME:
     from .usb_finder_windows import _get_usb_mount_paths_windows
 elif platform.system() == LINUX_PLATFORM_NAME:
-    from .usb_finder_linux import get_usb_mount_paths_linux
+    from .usb_finder_linux import _get_usb_mount_paths_linux
 
 class UnsupportedPlatformException(Exception):
     pass
@@ -54,7 +54,7 @@ def _get_key_windows() -> str:
 
 
 def _get_key_linux() -> str:
-    usb_paths = get_usb_mount_paths_linux()
+    usb_paths = _get_usb_mount_paths_linux()
     return _get_key_paths(usb_paths)
 
 
