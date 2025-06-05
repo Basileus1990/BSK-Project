@@ -128,7 +128,7 @@ class GenerateKeys(tk.Frame):
     def show_pin(self):
         self.label_pin = tk.Label(self, text="PIN:", fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         self.label_pin.pack(anchor='center', padx=5)
-        self.pin_entry = tk.Entry(self, width=10)
+        self.pin_entry = tk.Entry(self, width=10,show='*',fg=FOREGROUND_COLOR, bg=BACKGROUND2_COLOR, insertbackground="white")
         self.pin_entry.pack(padx=5, pady=(0, 10), anchor="center")
         self.pin_entry.pack(padx=5, pady=5)
 

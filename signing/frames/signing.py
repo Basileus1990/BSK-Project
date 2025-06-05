@@ -39,6 +39,11 @@ PDF_READ_ERROR_TEXT = " selected source file is not a valid PDF file. Please ver
 SIGNING_ERROR_TEXT = "This PDF file may have already been signed or is unsuitable for signing. Please choose a different file."
 UNEXPECTED_SIGNING_ERROR_TEXT = "An unexpected error occurred during signing: {error_type}. Please try again"
 
+FOREGROUND_COLOR = "#ffffff"
+BACKGROUND_COLOR = "#1e1e1e"
+BACKGROUND2_COLOR = "#2d2d2d"
+BLUE_BUTTON_COLOR = "#007acc"
+ACTIVATE_BUTTON_COLOR = "#005f99"
 
 class SigningFrame(tk.Frame):
     def __init__(self, parent: tk.Tk, private_key: rsa.RSAPrivateKey, end_signing_callback: Callable[[], None]):
@@ -52,55 +57,66 @@ class SigningFrame(tk.Frame):
 
         self._setup_ui()
 
-    ##
-    # @brief Setup UI for the signing application.
-    #
-    # @details Creates and arranges UI elements within the frame.
-    #
     def _setup_ui(self):
+        self.configure(bg=BACKGROUND_COLOR)
         self.status_label = tk.Label(
             self,
             text=INITIAL_STATUS_TEXT,
             font=LARGE_FONT_CONFIG,
             wraplength=DEFAULT_WRAP_LENGTH,
+            fg=FOREGROUND_COLOR,
+            bg=BACKGROUND_COLOR
         )
+        """Creates and arranges UI elements within the frame."""
         self.status_label.pack(side=tk.TOP, fill=tk.X, padx=10, pady=10)
 
         # --- Source PDF Selection ---
-        source_pdf_label = tk.Label(self, text=SOURCE_PDF_LABEL_TEXT)
+        source_pdf_label = tk.Label(self, text=SOURCE_PDF_LABEL_TEXT, fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         source_pdf_label.pack(anchor='center', padx=5, pady=(10, 0))
 
         self.source_pdf_path_entry = tk.Entry(
             self,
             textvariable=self.source_pdf_path_var,
             width=70,
-            state="readonly"
+            state="normal",
+            fg = FOREGROUND_COLOR,
+            bg = BACKGROUND2_COLOR,
+            insertbackground = "white"
         )
         self.source_pdf_path_entry.pack(padx=10, pady=(0, 5), anchor="center")
 
         select_source_pdf_button = tk.Button(
             self,
             text=SELECT_SOURCE_BUTTON_TEXT,
-            command=self._select_source_pdf_file
+            command=self._select_source_pdf_file,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR
         )
         select_source_pdf_button.pack(padx=10, pady=(0, 20), anchor="center")
 
         # --- Target PDF Selection ---
-        target_pdf_label = tk.Label(self, text=TARGET_PDF_LABEL_TEXT)
+        target_pdf_label = tk.Label(self, text=TARGET_PDF_LABEL_TEXT, fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         target_pdf_label.pack(anchor='center', padx=5, pady=(10, 0))
 
         self.target_pdf_path_entry = tk.Entry(
             self,
             textvariable=self.target_pdf_path_var,
             width=70,
-            state="readonly"
+            state="normal",
+            fg=FOREGROUND_COLOR,
+            bg=BACKGROUND2_COLOR,
+            insertbackground="white"
         )
         self.target_pdf_path_entry.pack(padx=10, pady=(0, 5), anchor="center")
 
         select_target_pdf_button = tk.Button(
             self,
             text=SELECT_TARGET_BUTTON_TEXT,
-            command=self._select_target_pdf_path
+            command=self._select_target_pdf_path,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR
         )
         select_target_pdf_button.pack(padx=10, pady=(0, 20), anchor="center")
 
@@ -109,16 +125,16 @@ class SigningFrame(tk.Frame):
             self,
             text=SIGN_BUTTON_INITIAL_TEXT,
             command=self._sign_pdf_document,
-            font=LARGE_FONT_CONFIG
+            font=LARGE_FONT_CONFIG,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR
         )
         self.sign_button.pack(side=tk.TOP, padx=10, pady=20)
 
-    ##
-    # @brief Open external window to select pdf file for signing.
-    #
-    # @details Opens a dialog to select the source PDF file and updates the corresponding Entry.
-    #
+
     def _select_source_pdf_file(self):
+        """Opens a dialog to select the source PDF file and updates the corresponding Entry."""
         file_path = filedialog.askopenfilename(
             title=SELECT_SOURCE_PDF_TITLE,
             filetypes=PDF_FILE_TYPES
@@ -126,12 +142,8 @@ class SigningFrame(tk.Frame):
         if file_path:
             self.source_pdf_path_var.set(file_path)
 
-    ##
-    # @brief Open external window to select destination to save signed PDF file.
-    #
-    # @details Opens a dialog to select the target PDF file path and updates the corresponding Entry.
-    #
     def _select_target_pdf_path(self):
+        """Opens a dialog to select the target PDF file path and updates the corresponding Entry."""
         file_path = filedialog.asksaveasfilename(
             title=SELECT_TARGET_PDF_TITLE,
             filetypes=PDF_FILE_TYPES,
@@ -140,27 +152,15 @@ class SigningFrame(tk.Frame):
         if file_path:
             self.target_pdf_path_var.set(file_path)
 
-    ##
-    # @brief Update status label in the signing application.
-    #
-    # @details Helper to update status label and sign button.
-    #
-    # @param status_message Text message to be displayed in the status label.
-    # @param button_text Text message to be displayed in the button.
-    # @param button_command Command to do by button.
-    #
     def _update_feedback(self, status_message: str, button_text: str, button_command: Callable = None):
+        """Helper to update status label and sign button."""
         self.status_label.config(text=status_message)
         if button_command is None:
             button_command = self._sign_pdf_document
         self.sign_button.config(text=button_text, command=button_command)
 
-    ##
-    # @brief Handler to signed PDF files.
-    #
-    # @details Handles the PDF signing process and UI feedback.
-    #
     def _sign_pdf_document(self):
+        """Handles the PDF signing process and UI feedback."""
         source_pdf_path = self.source_pdf_path_var.get()
         target_pdf_path = self.target_pdf_path_var.get()
 
