@@ -41,7 +41,8 @@ SIGN_BUTTON_TEXT = "Sign a PDF file"
 VERIFY_BUTTON_TEXT = "Verify PDF file signature"
 
 
-## @brief The StartFrame class provides user interface for the application.
+## @class StartFrame
+#  @brief The StartFrame class provides user interface for the application.
 #  @details This frame displays options for the user to either start the PDF signing
 #           process or the PDF signature verification process. It inherits from tk.Frame.
 class StartFrame(tk.Frame):

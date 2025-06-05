@@ -90,7 +90,8 @@ SIGNING_ERROR_TEXT = "This PDF file may have already been signed or is unsuitabl
 UNEXPECTED_SIGNING_ERROR_TEXT = "An unexpected error occurred during signing: {error_type}. Please try again"
 
 
-## @brief The SigningFrame class provides the UI for the PDF signing process.
+## @class SigningFrame
+#  @brief The SigningFrame class provides the UI for the PDF signing process.
 #  @details This frame allows users to select a source PDF, specify a target location for the signed PDF,
 #           and initiate the signing operation. It handles user interactions and feedback.
 #           Inherits from tk.Frame.

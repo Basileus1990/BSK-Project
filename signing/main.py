@@ -19,7 +19,8 @@ APP_HEIGHT = 600
 #  @brief The title of the application window.
 APP_TITLE = 'TEST APP'
 
-## @brief Main application class that inherits from tkinter.Tk.
+## @class App
+#  @brief Main application class that inherits from tkinter.Tk.
 #  @details This class is responsible for initializing the main window and managing frame transitions.
 class App(tk.Tk):
     ## @brief Initializes the App class.

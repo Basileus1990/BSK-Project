@@ -103,7 +103,8 @@ SIGNATURE_VALID_MSG = "The signature is VALID."
 SIGNATURE_INVALID_MSG = "The signature is INVALID."
 
 
-## @brief The VerifyingFrame class provides the UI for PDF signature verification.
+## @class VerifyingFrame
+#  @brief The VerifyingFrame class provides the UI for PDF signature verification.
 #  @details This frame allows users to select a PDF file and a public key file.
 #           It then attempts to verify the PDF's signature using the provided key
 #           and displays the result (valid, invalid, or error messages).

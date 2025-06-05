@@ -87,7 +87,8 @@ KEY_OR_PIN_INVALID_MSG = "Invalid PIN or key file. Please verify your PIN and th
 KEY_INVALID_MSG = "The key file is invalid or corrupted. Please ensure you have the correct key file."
 
 
-## @brief The KeyFromUSBFrame class handles the UI for retrieving a private key from a USB drive.
+## @class KeyFromUSBFrame
+#  @brief The KeyFromUSBFrame class handles the UI for retrieving a private key from a USB drive.
 #  @details This frame prompts the user for a PIN, attempts to read and decrypt the key,
 #           and then calls a callback function with the retrieved key or displays error messages.
 #           It inherits from tk.Frame.
