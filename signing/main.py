@@ -1,7 +1,10 @@
+## @file main.py
+#  @brief Entry point for the signing application
+#  @details Launches the signing application GUI settings (width, height, title)
+
 import tkinter as tk
 
 from cryptography.hazmat.primitives.asymmetric import rsa
-
 from frames import KeyFromUSBFrame, StartFrame, SigningFrame, VerifyingFrame
 
 APP_WIDTH = 800
@@ -27,7 +30,7 @@ class App(tk.Tk):
 
     def start_verifying(self):
         self._change_frame(VerifyingFrame(self, self.main_menu))
-        
+
 
     def get_key_from_usb_result(self, key: rsa.RSAPrivateKey):
         self._change_frame(SigningFrame(self, key, self.main_menu))
