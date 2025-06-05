@@ -4,9 +4,14 @@ The package responsible for getting the key from the USB drive
 import os
 import platform
 
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.primitives.asymmetric import rsa
+
+from .AES_PIN_decryptor import aes_decrypt_file
+
 WINDOWS_PLATFORM_NAME = "Windows"
 LINUX_PLATFORM_NAME = "Linux"
-KEY_FILE_NAME = "PDF-KEY.key"
+KEY_FILE_NAME = "private_key.key"
 
 if platform.system() == WINDOWS_PLATFORM_NAME:
     from .usb_finder_windows import get_usb_mount_paths_windows
@@ -25,8 +30,14 @@ class NoKeyFoundException(Exception):
 class MultipleKeysFoundException(Exception):
     pass
 
+class KeyOrPinInvalidException(Exception):
+    pass
 
-def get_key() -> str:
+class KeyInvalidException(Exception):
+    pass
+
+
+def get_key(pin: str) -> rsa.RSAPrivateKey:
     """
     Returns the key from the USB drive.
 
@@ -39,26 +50,40 @@ def get_key() -> str:
       so it is impossible to determine which is the correct one.
     """
 
-    #TODO: Check if the key is in correct format (When we will have a generated key from the other application)
     if platform.system() == WINDOWS_PLATFORM_NAME:
-        return _get_key_windows()
+        encrypted_key = _get_key_windows()
     elif platform.system() == LINUX_PLATFORM_NAME:
-        return _get_key_linux()
+        encrypted_key = _get_key_linux()
     else:
         raise UnsupportedPlatformException()
 
+    try:
+        key = aes_decrypt_file(encrypted_key, pin)
+    except Exception:
+        raise KeyOrPinInvalidException()
 
-def _get_key_windows() -> str:
+    try:
+        private_key = serialization.load_pem_private_key(
+            key,
+            password=None,
+        )
+    except Exception:
+        raise KeyInvalidException()
+
+    return private_key
+
+
+def _get_key_windows() -> bytes:
     usb_paths = get_usb_mount_paths_windows()
-    return get_key_paths(usb_paths)
+    return _get_key_paths(usb_paths)
 
 
-def _get_key_linux() -> str:
+def _get_key_linux() -> bytes:
     usb_paths = get_usb_mount_paths_linux()
-    return get_key_paths(usb_paths)
+    return _get_key_paths(usb_paths)
 
 
-def get_key_paths(usb_paths):
+def _get_key_paths(usb_paths) -> bytes:
     if len(usb_paths) == 0:
         raise NoUSBDrivesFoundException()
 
@@ -67,7 +92,7 @@ def get_key_paths(usb_paths):
         if not os.path.exists(f"{usb_path}/{KEY_FILE_NAME}"):
             continue
 
-        with open(f"{usb_path}/{KEY_FILE_NAME}", "r") as key_file:
+        with open(f"{usb_path}/{KEY_FILE_NAME}", "rb") as key_file:
             tmp_key = key_file.read()
             if key is not None:
                 raise MultipleKeysFoundException()
