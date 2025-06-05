@@ -16,6 +16,11 @@ LABEL_TEXT = "Please choose whether you want to sign a PDF or verify the signatu
 SIGN_BUTTON_TEXT = "Sign a PDF file"
 VERIFY_BUTTON_TEXT = "Verify PDF file signature"
 
+FOREGROUND_COLOR = "#ffffff"
+BACKGROUND_COLOR = "#1e1e1e"
+BACKGROUND2_COLOR = "#2d2d2d"
+BLUE_BUTTON_COLOR = "#007acc"
+ACTIVATE_BUTTON_COLOR = "#005f99"
 
 class StartFrame(tk.Frame):
     def __init__(self, parent: tk.Tk, on_signing_chosen_callback: Callable[[], None], on_verifying_chosen_callback: Callable[[], None]):
@@ -28,11 +33,15 @@ class StartFrame(tk.Frame):
 
     def _setup_ui(self):
         """Creates and arranges UI elements within the frame."""
+        self.configure(bg=BACKGROUND_COLOR)
+
         instruction_label = tk.Label(
             self,
             text=LABEL_TEXT,
             font=LARGE_FONT_CONFIG,
             wraplength=DEFAULT_WRAP_LENGTH,
+            fg=FOREGROUND_COLOR,
+            bg=BACKGROUND_COLOR,
         )
         instruction_label.pack(
             side=tk.TOP,
@@ -44,7 +53,10 @@ class StartFrame(tk.Frame):
             self,
             text=SIGN_BUTTON_TEXT,
             command=self.on_signing_chosen_callback,
-            font=LARGE_FONT_CONFIG
+            font=LARGE_FONT_CONFIG,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR,
         )
         sign_button.pack(
             side=tk.TOP,
@@ -57,7 +69,10 @@ class StartFrame(tk.Frame):
             self,
             text=VERIFY_BUTTON_TEXT,
             command=self.on_verifying_chosen_callback,
-            font=LARGE_FONT_CONFIG
+            font=LARGE_FONT_CONFIG,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR,
         )
         verify_button.pack(
             side=tk.TOP,
