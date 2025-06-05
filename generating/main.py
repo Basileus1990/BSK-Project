@@ -6,7 +6,7 @@ import tkinter as tk
 from frames.generate_window import GenerateKeys
 
 APP_WIDTH = 400
-APP_HEIGHT = 440
+APP_HEIGHT = 500
 APP_TITLE = 'Generate keys'
 
 ##
