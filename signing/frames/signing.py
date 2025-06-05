@@ -125,7 +125,6 @@ class SigningFrame(tk.Frame):
     #           and buttons for file selection and signing.
     def _setup_ui(self):
         self.configure(bg=BACKGROUND_COLOR)
-
         self.status_label = tk.Label(
             self,
             text=INITIAL_STATUS_TEXT,

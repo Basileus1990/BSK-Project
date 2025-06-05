@@ -1,6 +1,15 @@
 from Crypto.PublicKey import RSA
 
-
+##
+# @brief Generate public/private key pairs.
+#
+# @details The function reads locations for public and private keys, keys generated with RSA algorithm.
+#
+# @param public_key_location Path to save generated a public key
+# @param private_key_location Path to save generated a private key
+#
+# @return True if RSA generation was successful; False if the RSA generation thrown exception.
+#
 def generate_keys(public_key_location: str, private_key_location: str) -> bool:
     try:
         key = RSA.generate(4096)

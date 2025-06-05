@@ -7,7 +7,7 @@ from hashlib import sha256
 ##
 # @brief Generates a 256-bit key from PIN code
 #
-# The function validates the given PIN code and generate a 256-bit code from given PIN code
+# @details The function validates the given PIN code and generate a 256-bit code from given PIN code
 #
 # @param pin A PIN code as string
 #
@@ -21,7 +21,7 @@ def hash_pin(pin: str):
 ##
 # @brief Encrypts a file using a 4-digit PIN code and AES encryption
 #
-# The function reads a file from the given path, changes the given 4-digit PIN code to a 256-bit key, and then
+# @details The function reads a file from the given path, changes the given 4-digit PIN code to a 256-bit key, and then
 # encrypt the file with this key using AES encryption.
 #
 # @param file_to_encrypt Path to the input file to encrypt
@@ -57,7 +57,7 @@ def aes_encrypt_file(file_to_encrypt: str, pin: str) -> bool:
 ##
 # @brief Decrypts a file using a 4-digit PIN code and AES decryption
 #
-# The function reads a file from the given path, changes the given 4-digit PIN code to a 256-bit key, and then
+# @details The function reads a file from the given path, changes the given 4-digit PIN code to a 256-bit key, and then
 # decrypt the file with this key using AES decryption.
 #
 # @param file_to_encrypt Path to the input file to decrypt
