@@ -17,7 +17,7 @@ APP_HEIGHT = 600
 
 ## @var APP_TITLE
 #  @brief The title of the application window.
-APP_TITLE = 'TEST APP'
+APP_TITLE = 'Signer APP'
 
 ## @class App
 #  @brief Main application class that inherits from tkinter.Tk.
