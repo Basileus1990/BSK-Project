@@ -1,9 +1,10 @@
 '''
     This frame is the view for keys generator app
 '''
-
+import time
 import tkinter as tk
-from tkinter import filedialog
+import threading
+from tkinter import filedialog, ttk
 from typing import Callable
 from generating.key_generate.RSA_key_generator import generate_keys
 from generating.key_generate.AES_key_generator import aes_encrypt_file, aes_decrypt_file
@@ -11,66 +12,117 @@ from generating.key_generate.AES_key_generator import aes_encrypt_file, aes_decr
 PRIVATE_KEY_NAME = "private_key.key"
 PUBLIC_KEY_NAME = "public_key.key"
 
+FOREGROUND_COLOR = "#ffffff"
+BACKGROUND_COLOR = "#1e1e1e"
+BACKGROUND2_COLOR = "#2d2d2d"
+BLUE_BUTTON_COLOR = "#007acc"
+ACTIVATE_BUTTON_COLOR = "#005f99"
 
 class GenerateKeys(tk.Frame):
     def __init__(self, parent: tk.Tk):
         tk.Frame.__init__(self, parent)
 
-        self.label = tk.Label(
+        self.configure(bg=BACKGROUND_COLOR, padx=20, pady=20)
+
+        self.progress_bar_style = ttk.Style(self)
+        self.progress_bar_style.theme_use("alt")
+        self.progress_bar_style.configure("green.Horizontal.TProgressbar",
+                             troughcolor="white",
+                             background="green")
+
+        self.progress_bar_style.configure("red.Horizontal.TProgressbar",
+                             troughcolor="white",
+                             background="red")
+
+        #Header label
+        self.header_label = tk.Label(
             self,
-            text="Generator",
+            text="Key Generator",
             font=("TkDefaultFont", 16),
-            wraplength=750,
+            fg=FOREGROUND_COLOR,
+            bg=BACKGROUND_COLOR,
+            wraplength=750
         )
-        self.label.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5)
+        self.header_label.pack(pady=(0,20))
 
-        # text area for entry keys uri
-        self.label_public_key = tk.Label(self, text="Public Key localization:")
+        # Header path selection
+        self.path_label = tk.Label(
+            self,
+            text="Key Storage Locations",
+            font=("TkDefaultFont", 16),
+            fg=FOREGROUND_COLOR,
+            bg=BACKGROUND_COLOR,
+            wraplength=750
+        )
+        self.path_label.pack(pady = 5)
+
+        # Public key selection
+        self.label_public_key = tk.Label(self, text="Public Key localization:",fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         self.label_public_key.pack(anchor='center', padx=5)
-        self.public_key_localization = tk.Entry(self, width=50)
-        self.public_key_localization.pack(padx=5, pady=(0, 10), anchor="center")
+        self.public_key_localization = tk.Entry(self, width=50, fg=FOREGROUND_COLOR, bg=BACKGROUND2_COLOR, insertbackground="white")
+        self.public_key_localization.pack(padx=5, pady=(0, 5), anchor="center")
 
-        self.label_private_key = tk.Label(self, text="Private Key localization:")
-        self.label_private_key.pack(anchor='center', padx=5)
-        self.private_key_localization = tk.Entry(self, width=50)
-        self.private_key_localization.pack(padx=5, pady=(0, 10),anchor="center")
-
+        # Public key button
         self.button_explore_public = tk.Button(
             self,
             text="Set Public Key localization",
-            command=lambda: self.folder(self.public_key_localization))
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR,
+            relief="flat",
+            command=lambda: self.open_folder(self.public_key_localization)
+        )
+        self.button_explore_public.pack(padx=5, pady=(0,15), anchor="center")
 
+        # Private key selection
+        self.label_private_key = tk.Label(self, text="Private Key localization:",fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
+        self.label_private_key.pack(anchor='center', padx=5)
+        self.private_key_localization = tk.Entry(self, width=50, fg=FOREGROUND_COLOR, bg=BACKGROUND2_COLOR, insertbackground="white")
+        self.private_key_localization.pack(padx=5, pady=(0, 5),anchor="center")
+
+        # Private key button
         self.button_explore_private = tk.Button(
             self,
             text="Set Private Key localization",
-            command=lambda: self.folder(self.private_key_localization))
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR,
+            relief="flat",
+            command=lambda: self.open_folder(self.private_key_localization)
+        )
+        self.button_explore_private.pack(padx=5, pady=(0,5), anchor="center")
 
+        # Generate keys button
         self.button_generate = tk.Button(
             self,
             text="Generate keys",
-            command=lambda: self.generate_keys(self.public_key_localization.get(), self.private_key_localization.get(),self.pin_entry.get()))
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR,
+            relief="flat",
+            command=lambda: self.generate_keys_manager(self.public_key_localization.get(), self.private_key_localization.get(),self.pin_entry.get())
+        )
+        self.button_generate.pack(padx=5, pady=(0,5), anchor="center")
 
-        self.label_pin = tk.Label(self, text="PIN:")
+        self.label_pin = tk.Label(self, text="PIN:", fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         self.label_pin.pack(anchor='center', padx=5)
         self.pin_entry = tk.Entry(self, width=10)
         self.pin_entry.pack(padx=5, pady=(0, 10), anchor="center")
 
-        # self.button_decrypt = tk.Button(
-        #     self,
-        #     text="Decrypt",
-        #     command=lambda: self.decrypt_private_key(self.private_key_entry.get()))
 
-        self.button_generate.pack(padx=5,pady=5)
-        # self.button_decrypt.pack(padx=5, pady=5)
         self.pin_entry.pack(padx=5,pady=5)
-        self.button_explore_public.pack(side=tk.TOP, padx=5, pady=5)
-        self.button_explore_private.pack(side=tk.TOP, padx=5, pady=5)
 
-        self.result = tk.Label(self,text=".")
-        self.result.pack(padx=5,pady=10)
+        # Progress bar
+        self.progress = ttk.Progressbar(self, orient="horizontal", length=300, mode="determinate", style="green.Horizontal.TProgressbar")
+        self.status_label = tk.Label(self, text="", fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
+        self.status_label.pack(pady=(10, 5))
+
+        self.status_label.configure(text="Status")
+        self.progress["value"] = 0
+        self.progress.pack(pady=(0, 10))
 
     # Open file dialog for choosing folder
-    def folder(self, entry):
+    def open_folder(self, entry):
         folder = filedialog.askdirectory(title="Select a public key")
 
         if folder:
@@ -78,40 +130,49 @@ class GenerateKeys(tk.Frame):
             entry.insert(0, folder)
 
     # generate a pair of keys in RSA
-    def generate_keys(self, public_location: str, private_location: str, pin: str):
+    def generate_keys_manager(self, public_path: str, private_path: str, pin: str):
+        self.update_status("Started...", 0, "green.Horizontal.TProgressbar")
         if not pin.isdigit() or len(pin) != 4:
-            self.result.configure(text="PIN code must be 4 digit")
+            self.update_status("ERROR: PIN code must be 4 digit", 100, "red.Horizontal.TProgressbar")
             return
 
-        # check if uri's are empty
-        if not public_location or not private_location:
-            self.result.configure(text="Choose destinations")
+        # check if paths are empty
+        if not public_path or not private_path:
+            self.update_status("ERROR: Choose destinations", 100, "red.Horizontal.TProgressbar")
             return
 
-        # add keys name to uri
-        public_location += ("/" + PUBLIC_KEY_NAME)
-        private_location += ("/" + PRIVATE_KEY_NAME)
+        # add keys name to path
+        public_path += ("/" + PUBLIC_KEY_NAME)
+        private_path += ("/" + PRIVATE_KEY_NAME)
 
-        if generate_keys(public_location, private_location):
-            self.result.configure(text="Done")
-            if aes_encrypt_file(private_location, pin):
-                self.result.configure(text="Done")
-            else:
-                self.result.configure(text="Failed")
+        threading.Thread(target=self.generate_keys_thread, args=(public_path, private_path, pin)).start()
+
+    def generate_keys_thread(self, public_path: str, private_path: str, pin: str):
+        self.update_status("Generating RSA keys...", 25,"green.Horizontal.TProgressbar")
+        time.sleep(0.1)
+
+        generating_rsa_success = generate_keys(public_path, private_path)
+
+        if generating_rsa_success:
+            self.update_status("RSA keys generated.",50,"green.Horizontal.TProgressbar")
+            time.sleep(1)
         else:
-            self.result.configure(text="Failed")
-
-    #@TODO do usuniecia bo tylko 2 aplikacji do podpisywania
-    def decrypt_private_key(self, private_location: str, pin: str):
-        if not pin.isdigit() or len(pin) != 4:
+            self.update_status("RSA keys generated failed",0,"green.Horizontal.TProgressbar")
             return
 
-        if private_location:
-            private_location += ("/" + PRIVATE_KEY_NAME)
-            data = aes_decrypt_file(private_location, pin)
-            if data[0]:
-                self.result.configure(text="Done")
-            else:
-                self.result.configure(text="Failed")
+        encrypted_aes_success = aes_encrypt_file(private_path, pin)
+        self.update_status("AES encryption...", 75,"green.Horizontal.TProgressbar")
+        time.sleep(1)
+
+        if encrypted_aes_success:
+            self.update_status("Private key encrypted by PIN", 100,"green.Horizontal.TProgressbar")
         else:
-            self.result.configure(text="Choose destinations")
+            self.update_status("Private key encryption failed", 100,"red.Horizontal.TProgressbar")
+
+    def update_status(self, message: str, progress: int, style: str):
+        def update():
+            self.status_label.configure(text=message)
+            self.progress["value"] = progress
+            self.progress.configure(style=style)
+            self.update_idletasks()
+        self.after(0, update)
