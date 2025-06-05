@@ -52,8 +52,12 @@ class SigningFrame(tk.Frame):
 
         self._setup_ui()
 
+    ##
+    # @brief Setup UI for the signing application.
+    #
+    # @details Creates and arranges UI elements within the frame.
+    #
     def _setup_ui(self):
-        """Creates and arranges UI elements within the frame."""
         self.status_label = tk.Label(
             self,
             text=INITIAL_STATUS_TEXT,
@@ -109,9 +113,12 @@ class SigningFrame(tk.Frame):
         )
         self.sign_button.pack(side=tk.TOP, padx=10, pady=20)
 
-
+    ##
+    # @brief Open external window to select pdf file for signing.
+    #
+    # @details Opens a dialog to select the source PDF file and updates the corresponding Entry.
+    #
     def _select_source_pdf_file(self):
-        """Opens a dialog to select the source PDF file and updates the corresponding Entry."""
         file_path = filedialog.askopenfilename(
             title=SELECT_SOURCE_PDF_TITLE,
             filetypes=PDF_FILE_TYPES
@@ -119,8 +126,12 @@ class SigningFrame(tk.Frame):
         if file_path:
             self.source_pdf_path_var.set(file_path)
 
+    ##
+    # @brief Open external window to select destination to save signed PDF file.
+    #
+    # @details Opens a dialog to select the target PDF file path and updates the corresponding Entry.
+    #
     def _select_target_pdf_path(self):
-        """Opens a dialog to select the target PDF file path and updates the corresponding Entry."""
         file_path = filedialog.asksaveasfilename(
             title=SELECT_TARGET_PDF_TITLE,
             filetypes=PDF_FILE_TYPES,
@@ -129,15 +140,27 @@ class SigningFrame(tk.Frame):
         if file_path:
             self.target_pdf_path_var.set(file_path)
 
+    ##
+    # @brief Update status label in the signing application.
+    #
+    # @details Helper to update status label and sign button.
+    #
+    # @param status_message Text message to be displayed in the status label.
+    # @param button_text Text message to be displayed in the button.
+    # @param button_command Command to do by button.
+    #
     def _update_feedback(self, status_message: str, button_text: str, button_command: Callable = None):
-        """Helper to update status label and sign button."""
         self.status_label.config(text=status_message)
         if button_command is None:
             button_command = self._sign_pdf_document
         self.sign_button.config(text=button_text, command=button_command)
 
+    ##
+    # @brief Handler to signed PDF files.
+    #
+    # @details Handles the PDF signing process and UI feedback.
+    #
     def _sign_pdf_document(self):
-        """Handles the PDF signing process and UI feedback."""
         source_pdf_path = self.source_pdf_path_var.get()
         target_pdf_path = self.target_pdf_path_var.get()
 
