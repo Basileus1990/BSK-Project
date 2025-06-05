@@ -86,6 +86,12 @@ KEY_OR_PIN_INVALID_MSG = "Invalid PIN or key file. Please verify your PIN and th
 #  @brief Error message when the key file itself is invalid or corrupted.
 KEY_INVALID_MSG = "The key file is invalid or corrupted. Please ensure you have the correct key file."
 
+FOREGROUND_COLOR = "#ffffff"
+BACKGROUND_COLOR = "#1e1e1e"
+BACKGROUND2_COLOR = "#2d2d2d"
+BLUE_BUTTON_COLOR = "#007acc"
+ACTIVATE_BUTTON_COLOR = "#005f99"
+
 
 ## @class KeyFromUSBFrame
 #  @brief The KeyFromUSBFrame class handles the UI for retrieving a private key from a USB drive.
@@ -109,18 +115,23 @@ class KeyFromUSBFrame(tk.Frame):
     #  @details This private method creates and arranges the instruction label, PIN entry field,
     #           and action button within the frame.
     def _setup_ui(self):
+        """Creates and arranges UI elements within the frame."""
+        self.configure(bg=BACKGROUND_COLOR)
+
         self.status_label = tk.Label(
             self,
             text=INITIAL_INSTRUCTION_TEXT,
             font=LARGE_FONT_CONFIG,
             wraplength=DEFAULT_WRAP_LENGTH,
+            fg=FOREGROUND_COLOR,
+            bg=BACKGROUND_COLOR,
         )
         self.status_label.pack(side=tk.TOP, fill=tk.X, padx=DEFAULT_PADDING_X, pady=(DEFAULT_PADDING_Y, BUTTON_PADDING_Y))
 
-        pin_label = tk.Label(self, text=PIN_LABEL_TEXT, font=("TkDefaultFont", 12))
+        pin_label = tk.Label(self, text=PIN_LABEL_TEXT, font=("TkDefaultFont", 12),fg=FOREGROUND_COLOR,bg=BACKGROUND_COLOR)
         pin_label.pack(anchor='center', padx=DEFAULT_PADDING_X, pady=(INPUT_AREA_PADDING_Y, 0))
 
-        self.pin_entry = tk.Entry(self, width=10, font=("TkDefaultFont", 14), justify='center', show='*')
+        self.pin_entry = tk.Entry(self, width=10, font=("TkDefaultFont", 14), justify='center', show='*', fg=FOREGROUND_COLOR, bg=BACKGROUND2_COLOR, insertbackground="white")
         self.pin_entry.pack(padx=DEFAULT_PADDING_X, pady=(0, INPUT_AREA_PADDING_Y * 2), anchor="center")
         self.pin_entry.focus_set()
 
@@ -128,7 +139,10 @@ class KeyFromUSBFrame(tk.Frame):
             self,
             text=ACTION_BUTTON_INITIAL_TEXT,
             command=self._process_pin_and_get_key,
-            font=LARGE_FONT_CONFIG
+            font=LARGE_FONT_CONFIG,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR,
         )
         self.action_button.pack(side=tk.TOP, padx=DEFAULT_PADDING_X, pady=BUTTON_PADDING_Y)
 

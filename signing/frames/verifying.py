@@ -102,6 +102,11 @@ SIGNATURE_VALID_MSG = "The signature is VALID."
 #  @brief Message displayed in the status label when the PDF signature is found to be invalid.
 SIGNATURE_INVALID_MSG = "The signature is INVALID."
 
+FOREGROUND_COLOR = "#ffffff"
+BACKGROUND_COLOR = "#1e1e1e"
+BACKGROUND2_COLOR = "#2d2d2d"
+BLUE_BUTTON_COLOR = "#007acc"
+ACTIVATE_BUTTON_COLOR = "#005f99"
 
 ## @class VerifyingFrame
 #  @brief The VerifyingFrame class provides the UI for PDF signature verification.
@@ -130,49 +135,64 @@ class VerifyingFrame(tk.Frame):
     #  @details This private method creates and arranges labels, entry fields for file paths,
     #           and buttons for file selection and initiating verification.
     def _setup_ui(self):
+        self.configure(bg=BACKGROUND_COLOR)
         self.status_label = tk.Label(
             self,
             text=INITIAL_INSTRUCTION_TEXT,
             font=LARGE_FONT_CONFIG,
             wraplength=DEFAULT_WRAP_LENGTH,
+            fg=FOREGROUND_COLOR,
+            bg=BACKGROUND_COLOR,
         )
         self.status_label.pack(side=tk.TOP, fill=tk.X, padx=DEFAULT_PADDING_X, pady=(DEFAULT_PADDING_Y, SECTION_SPACING_Y))
 
         # --- PDF to Verify Selection ---
-        pdf_selection_label = tk.Label(self, text="PDF file to verify:")
+        pdf_selection_label = tk.Label(self, text="PDF file to verify:", fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         pdf_selection_label.pack(anchor='center', padx=DEFAULT_PADDING_X, pady=(0, DEFAULT_PADDING_Y))
 
         self.pdf_to_verify_entry = tk.Entry(
             self,
             textvariable=self.pdf_to_verify_path_var,
             width=70,
-            state="readonly"
+            state="normal",
+            fg=FOREGROUND_COLOR,
+            bg=BACKGROUND2_COLOR,
+            insertbackground="white"
         )
         self.pdf_to_verify_entry.pack(padx=DEFAULT_PADDING_X, pady=(0, DEFAULT_PADDING_Y), anchor="center")
 
         select_pdf_button = tk.Button(
             self,
             text="Select PDF file",
-            command=self._select_pdf_to_verify_file
+            command=self._select_pdf_to_verify_file,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR
         )
         select_pdf_button.pack(padx=DEFAULT_PADDING_X, pady=(0, SECTION_SPACING_Y), anchor="center")
 
         # --- Public Key Selection ---
-        public_key_label = tk.Label(self, text="Public key file:")
+        public_key_label = tk.Label(self, text="Public key file:", fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         public_key_label.pack(anchor='center', padx=DEFAULT_PADDING_X, pady=(0, DEFAULT_PADDING_Y))
 
         self.public_key_entry = tk.Entry(
             self,
             textvariable=self.public_key_path_var,
             width=70,
-            state="readonly"
+            state="normal",
+            fg=FOREGROUND_COLOR,
+            bg=BACKGROUND2_COLOR,
+            insertbackground="white"
         )
         self.public_key_entry.pack(padx=DEFAULT_PADDING_X, pady=(0, DEFAULT_PADDING_Y), anchor="center")
 
         select_public_key_button = tk.Button(
             self,
             text="Select public key file",
-            command=self._select_public_key_file
+            command=self._select_public_key_file,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR
         )
         select_public_key_button.pack(padx=DEFAULT_PADDING_X, pady=(0, SECTION_SPACING_Y), anchor="center")
 
@@ -181,7 +201,10 @@ class VerifyingFrame(tk.Frame):
             self,
             text=VERIFY_BUTTON_INITIAL_TEXT,
             command=self._process_verification,
-            font=LARGE_FONT_CONFIG
+            font=LARGE_FONT_CONFIG,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR
         )
         self.verify_button.pack(side=tk.TOP, padx=DEFAULT_PADDING_X, pady=BUTTON_PADDING_Y)
 

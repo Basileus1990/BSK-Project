@@ -89,6 +89,11 @@ SIGNING_ERROR_TEXT = "This PDF file may have already been signed or is unsuitabl
 #  @brief Error message template for unexpected errors during the signing process.
 UNEXPECTED_SIGNING_ERROR_TEXT = "An unexpected error occurred during signing: {error_type}. Please try again"
 
+FOREGROUND_COLOR = "#ffffff"
+BACKGROUND_COLOR = "#1e1e1e"
+BACKGROUND2_COLOR = "#2d2d2d"
+BLUE_BUTTON_COLOR = "#007acc"
+ACTIVATE_BUTTON_COLOR = "#005f99"
 
 ## @class SigningFrame
 #  @brief The SigningFrame class provides the UI for the PDF signing process.
@@ -119,49 +124,66 @@ class SigningFrame(tk.Frame):
     #  @details This private method creates and arranges labels, entry fields for paths,
     #           and buttons for file selection and signing.
     def _setup_ui(self):
+        self.configure(bg=BACKGROUND_COLOR)
+
         self.status_label = tk.Label(
             self,
             text=INITIAL_STATUS_TEXT,
             font=LARGE_FONT_CONFIG,
             wraplength=DEFAULT_WRAP_LENGTH,
+            fg=FOREGROUND_COLOR,
+            bg=BACKGROUND_COLOR
         )
+        """Creates and arranges UI elements within the frame."""
         self.status_label.pack(side=tk.TOP, fill=tk.X, padx=10, pady=10)
 
         # --- Source PDF Selection ---
-        source_pdf_label = tk.Label(self, text=SOURCE_PDF_LABEL_TEXT)
+        source_pdf_label = tk.Label(self, text=SOURCE_PDF_LABEL_TEXT, fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         source_pdf_label.pack(anchor='center', padx=5, pady=(10, 0))
 
         self.source_pdf_path_entry = tk.Entry(
             self,
             textvariable=self.source_pdf_path_var,
             width=70,
-            state="readonly"
+            state="normal",
+            fg = FOREGROUND_COLOR,
+            bg = BACKGROUND2_COLOR,
+            insertbackground = "white"
         )
         self.source_pdf_path_entry.pack(padx=10, pady=(0, 5), anchor="center")
 
         select_source_pdf_button = tk.Button(
             self,
             text=SELECT_SOURCE_BUTTON_TEXT,
-            command=self._select_source_pdf_file
+            command=self._select_source_pdf_file,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR
         )
         select_source_pdf_button.pack(padx=10, pady=(0, 20), anchor="center")
 
         # --- Target PDF Selection ---
-        target_pdf_label = tk.Label(self, text=TARGET_PDF_LABEL_TEXT)
+        target_pdf_label = tk.Label(self, text=TARGET_PDF_LABEL_TEXT, fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         target_pdf_label.pack(anchor='center', padx=5, pady=(10, 0))
 
         self.target_pdf_path_entry = tk.Entry(
             self,
             textvariable=self.target_pdf_path_var,
             width=70,
-            state="readonly"
+            state="normal",
+            fg=FOREGROUND_COLOR,
+            bg=BACKGROUND2_COLOR,
+            insertbackground="white"
         )
         self.target_pdf_path_entry.pack(padx=10, pady=(0, 5), anchor="center")
 
         select_target_pdf_button = tk.Button(
             self,
             text=SELECT_TARGET_BUTTON_TEXT,
-            command=self._select_target_pdf_path
+            command=self._select_target_pdf_path,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR
         )
         select_target_pdf_button.pack(padx=10, pady=(0, 20), anchor="center")
 
@@ -170,7 +192,10 @@ class SigningFrame(tk.Frame):
             self,
             text=SIGN_BUTTON_INITIAL_TEXT,
             command=self._sign_pdf_document,
-            font=LARGE_FONT_CONFIG
+            font=LARGE_FONT_CONFIG,
+            bg=BLUE_BUTTON_COLOR,
+            fg="white",
+            activebackground=ACTIVATE_BUTTON_COLOR
         )
         self.sign_button.pack(side=tk.TOP, padx=10, pady=20)
 
