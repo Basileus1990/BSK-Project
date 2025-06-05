@@ -3,7 +3,9 @@
 #  @details Launches the signing application GUI settings (width, height, title)
 
 import tkinter as tk
-from frames.usb_check import GetKeyFromUSBFrame
+
+from cryptography.hazmat.primitives.asymmetric import rsa
+from frames import KeyFromUSBFrame, StartFrame, SigningFrame, VerifyingFrame
 
 APP_WIDTH = 800
 APP_HEIGHT = 600
@@ -18,14 +20,30 @@ class App(tk.Tk):
         self.geometry(f'{APP_WIDTH}x{APP_HEIGHT}')
         self.resizable(False, False)
 
-        self.current_frame = GetKeyFromUSBFrame(self, self.get_key_from_usb_result)
+        self.current_frame = StartFrame(self, self.start_signing, self.start_verifying)
         self.current_frame.pack(fill='both', expand=True)
 
-    def get_key_from_usb_result(self, key: str):
-        # self.current_frame.destroy()
-        # self.current_frame = GetKeyFromUSBFrame(self, lambda test: print(test))
-        # self.current_frame.pack(fill='both', expand=True)
-        print(key)
+
+    def start_signing(self):
+        self._change_frame(KeyFromUSBFrame(self, self.get_key_from_usb_result))
+
+
+    def start_verifying(self):
+        self._change_frame(VerifyingFrame(self, self.main_menu))
+
+
+    def get_key_from_usb_result(self, key: rsa.RSAPrivateKey):
+        self._change_frame(SigningFrame(self, key, self.main_menu))
+
+
+    def main_menu(self):
+        self._change_frame(StartFrame(self, self.start_signing, self.start_verifying))
+
+
+    def _change_frame(self, frame: tk.Frame):
+        self.current_frame.destroy()
+        self.current_frame = frame
+        self.current_frame.pack(fill='both', expand=True)
 
 
 if __name__ == "__main__":
