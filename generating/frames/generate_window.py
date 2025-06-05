@@ -5,7 +5,6 @@ import time
 import tkinter as tk
 import threading
 from tkinter import filedialog, ttk
-from typing import Callable
 from generating.key_generate.RSA_key_generator import generate_keys
 from generating.key_generate.AES_key_generator import aes_encrypt_file, aes_decrypt_file
 
