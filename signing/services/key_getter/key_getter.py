@@ -50,7 +50,6 @@ def get_key(pin: str) -> rsa.RSAPrivateKey:
       so it is impossible to determine which is the correct one.
     """
 
-    #TODO: Check if the key is in correct format (When we will have a generated key from the other application)
     if platform.system() == WINDOWS_PLATFORM_NAME:
         encrypted_key = _get_key_windows()
     elif platform.system() == LINUX_PLATFORM_NAME:

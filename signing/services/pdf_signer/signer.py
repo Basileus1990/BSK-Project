@@ -17,7 +17,6 @@ from asn1crypto import x509 as asn1_x509, keys as asn1_keys
 from pyhanko.pdf_utils.incremental_writer import IncrementalPdfFileWriter
 from pyhanko.sign import signers, PdfSignatureMetadata, PdfSigner
 from pyhanko.sign.fields import SigFieldSpec
-from pyhanko.sign.general import SigningError, UnacceptableSignerError
 from pyhanko.sign.timestamps import DummyTimeStamper
 from pyhanko_certvalidator.registry import SimpleCertificateStore
 
