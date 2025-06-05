@@ -1,5 +1,8 @@
-import tkinter as tk
+## @file main.py
+#  @brief Entry point for the signing application
+#  @details Launches the signing application GUI settings (width, height, title)
 
+import tkinter as tk
 from frames.usb_check import GetKeyFromUSBFrame
 
 APP_WIDTH = 800

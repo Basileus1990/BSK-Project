@@ -1,3 +1,7 @@
+## @file main.py
+#  @brief Entry point for the key generating application
+#  @details Launches the key generation GUI settings (width, height, title)
+
 import tkinter as tk
 from key_generate.RSA_key_generator import generate_keys
 from frames.generate_window import GenerateKeys
