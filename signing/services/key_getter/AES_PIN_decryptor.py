@@ -1,37 +1,32 @@
-import os.path
+## @file AES_PIN_decryptor.py
+#  @brief Provides cryptographic utility functions for hashing and AES decryption.
+#  @details This module contains functions to hash a PIN using SHA256 and to decrypt
+#           data encrypted with AES in EAX mode.
 
 from Crypto.Cipher import AES
 from hashlib import sha256
 
-
-##
-# @brief Generates a 256-bit key from PIN code
-#
-# The function validates the given PIN code and generate a 256-bit code from given PIN code
-#
-# @param pin A PIN code as string
-#
-# @return The derived PIN code as a 256-bit key
+## @brief Hashes a numeric PIN string using SHA256.
+#  @param pin The numeric PIN string to hash.
+#  @type pin str
+#  @return The SHA256 hash of the PIN as bytes.
+#  @rtype bytes
 def hash_pin(pin: str) -> bytes:
-    if not pin.isdigit():
-        raise ValueError("PIN must be a digit")
     return sha256(pin.encode()).digest()
 
 
-## TODO: fix the description
-# @brief Decrypts a file using a 4-digit PIN code and AES decryption
-#
-# The function reads a file from the given path, changes the given 4-digit PIN code to a 256-bit key, and then
-# decrypt the file with this key using AES decryption.
-#
-# @param file_to_encrypt Path to the input file to decrypt
-# @param pin 4-digit PIN code
-#
-# @return Tuple (True,data) if AES decryption was successful, where 'data' is the decryption content;
-#         Tuple (False, None) if the file was not found or decryption failed.
+## @brief Decrypts data encrypted using AES in EAX mode.
+#  @param encrypted_data The encrypted data, which includes a 16-byte nonce,
+#                        a 16-byte tag, and the ciphertext.
+#  @type encrypted_data bytes
+#  @param pin The numeric PIN string used to derive the decryption key.
+#  @type pin str
+#  @return The decrypted data as bytes.
+#  @rtype bytes
+#  @exception ValueError If the `encrypted_data` is less than 32 bytes (too short to contain nonce and tag).
 def aes_decrypt_file(encrypted_data: bytes, pin: str) -> bytes:
     if len(encrypted_data) < 32:
-        raise Exception
+        raise ValueError
     key = hash_pin(pin)
     nonce, tag, ciphertext = encrypted_data[:16], encrypted_data[16:32], encrypted_data[32:]
 
