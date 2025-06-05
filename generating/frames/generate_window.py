@@ -14,12 +14,25 @@ PUBLIC_KEY_NAME = "public_key.key"
 
 FOREGROUND_COLOR = "#ffffff"
 BACKGROUND_COLOR = "#1e1e1e"
+BACKGROUND2_COLOR = "#2d2d2d"
+BLUE_BUTTON_COLOR = "#007acc"
+ACTIVATE_BUTTON_COLOR = "#005f99"
 
 class GenerateKeys(tk.Frame):
     def __init__(self, parent: tk.Tk):
         tk.Frame.__init__(self, parent)
 
-        self.configure(bg='#1e1e1e', padx=20, pady=20)
+        self.configure(bg=BACKGROUND_COLOR, padx=20, pady=20)
+
+        self.progress_bar_style = ttk.Style(self)
+        self.progress_bar_style.theme_use("alt")
+        self.progress_bar_style.configure("green.Horizontal.TProgressbar",
+                             troughcolor="white",
+                             background="green")
+
+        self.progress_bar_style.configure("red.Horizontal.TProgressbar",
+                             troughcolor="white",
+                             background="red")
 
         #Header label
         self.header_label = tk.Label(
@@ -46,16 +59,16 @@ class GenerateKeys(tk.Frame):
         # Public key selection
         self.label_public_key = tk.Label(self, text="Public Key localization:",fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         self.label_public_key.pack(anchor='center', padx=5)
-        self.public_key_localization = tk.Entry(self, width=50, fg=FOREGROUND_COLOR, bg="#2d2d2d", insertbackground="white")
+        self.public_key_localization = tk.Entry(self, width=50, fg=FOREGROUND_COLOR, bg=BACKGROUND2_COLOR, insertbackground="white")
         self.public_key_localization.pack(padx=5, pady=(0, 5), anchor="center")
 
         # Public key button
         self.button_explore_public = tk.Button(
             self,
             text="Set Public Key localization",
-            bg="#007acc",
+            bg=BLUE_BUTTON_COLOR,
             fg="white",
-            activebackground="#005f99",
+            activebackground=ACTIVATE_BUTTON_COLOR,
             relief="flat",
             command=lambda: self.open_folder(self.public_key_localization)
         )
@@ -64,16 +77,16 @@ class GenerateKeys(tk.Frame):
         # Private key selection
         self.label_private_key = tk.Label(self, text="Private Key localization:",fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         self.label_private_key.pack(anchor='center', padx=5)
-        self.private_key_localization = tk.Entry(self, width=50, fg=FOREGROUND_COLOR, bg="#2d2d2d", insertbackground="white")
+        self.private_key_localization = tk.Entry(self, width=50, fg=FOREGROUND_COLOR, bg=BACKGROUND2_COLOR, insertbackground="white")
         self.private_key_localization.pack(padx=5, pady=(0, 5),anchor="center")
 
         # Private key button
         self.button_explore_private = tk.Button(
             self,
             text="Set Private Key localization",
-            bg="#007acc",
+            bg=BLUE_BUTTON_COLOR,
             fg="white",
-            activebackground="#005f99",
+            activebackground=ACTIVATE_BUTTON_COLOR,
             relief="flat",
             command=lambda: self.open_folder(self.private_key_localization)
         )
@@ -83,9 +96,9 @@ class GenerateKeys(tk.Frame):
         self.button_generate = tk.Button(
             self,
             text="Generate keys",
-            bg="#007acc",
+            bg=BLUE_BUTTON_COLOR,
             fg="white",
-            activebackground="#005f99",
+            activebackground=ACTIVATE_BUTTON_COLOR,
             relief="flat",
             command=lambda: self.generate_keys_manager(self.public_key_localization.get(), self.private_key_localization.get(),self.pin_entry.get())
         )
@@ -100,10 +113,11 @@ class GenerateKeys(tk.Frame):
         self.pin_entry.pack(padx=5,pady=5)
 
         # Progress bar
-        self.progress = ttk.Progressbar(self, orient="horizontal", length=300, mode="determinate")
+        self.progress = ttk.Progressbar(self, orient="horizontal", length=300, mode="determinate", style="green.Horizontal.TProgressbar")
         self.status_label = tk.Label(self, text="", fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
         self.status_label.pack(pady=(10, 5))
 
+        self.status_label.configure(text="Status")
         self.progress["value"] = 0
         self.progress.pack(pady=(0, 10))
 
@@ -117,14 +131,14 @@ class GenerateKeys(tk.Frame):
 
     # generate a pair of keys in RSA
     def generate_keys_manager(self, public_path: str, private_path: str, pin: str):
-        self.progress["value"] = 0
+        self.update_status("Started...", 0, "green.Horizontal.TProgressbar")
         if not pin.isdigit() or len(pin) != 4:
-            self.status_label.configure(text="ERROR: PIN code must be 4 digit")
+            self.update_status("ERROR: PIN code must be 4 digit", 100, "red.Horizontal.TProgressbar")
             return
 
         # check if paths are empty
         if not public_path or not private_path:
-            self.status_label.configure(text="ERROR: Choose destinations")
+            self.update_status("ERROR: Choose destinations", 100, "red.Horizontal.TProgressbar")
             return
 
         # add keys name to path
@@ -134,44 +148,31 @@ class GenerateKeys(tk.Frame):
         threading.Thread(target=self.generate_keys_thread, args=(public_path, private_path, pin)).start()
 
     def generate_keys_thread(self, public_path: str, private_path: str, pin: str):
-        self.update_status("Generating RSA keys...", 25)
+        self.update_status("Generating RSA keys...", 25,"green.Horizontal.TProgressbar")
         time.sleep(0.1)
 
         generating_rsa_success = generate_keys(public_path, private_path)
 
         if generating_rsa_success:
-            self.update_status("RSA keys generated.",50)
+            self.update_status("RSA keys generated.",50,"green.Horizontal.TProgressbar")
             time.sleep(1)
         else:
-            self.update_status("RSA keys generated failed",0)
+            self.update_status("RSA keys generated failed",0,"green.Horizontal.TProgressbar")
             return
 
         encrypted_aes_success = aes_encrypt_file(private_path, pin)
-        self.update_status("AES encryption...", 75)
+        self.update_status("AES encryption...", 75,"green.Horizontal.TProgressbar")
         time.sleep(1)
 
         if encrypted_aes_success:
-            self.update_status("Private key encrypted by PIN", 100)
+            self.update_status("Private key encrypted by PIN", 100,"green.Horizontal.TProgressbar")
         else:
-            self.update_status("Private key encryption failed", 0)
+            self.update_status("Private key encryption failed", 100,"red.Horizontal.TProgressbar")
 
-    def update_status(self, message: str, progress: int):
+    def update_status(self, message: str, progress: int, style: str):
         def update():
             self.status_label.configure(text=message)
             self.progress["value"] = progress
-
+            self.progress.configure(style=style)
+            self.update_idletasks()
         self.after(0, update)
-
-    def decrypt_private_key(self, private_location: str, pin: str):
-        if not pin.isdigit() or len(pin) != 4:
-            return
-
-        if private_location:
-            private_location += ("/" + PRIVATE_KEY_NAME)
-            data = aes_decrypt_file(private_location, pin)
-            if data[0]:
-                self.status_label.configure(text="Done")
-            else:
-                self.status_label.configure(text="Failed")
-        else:
-            self.status_label.configure(text="Choose destinations")
