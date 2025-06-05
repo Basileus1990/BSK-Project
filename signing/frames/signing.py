@@ -59,7 +59,6 @@ class SigningFrame(tk.Frame):
 
     def _setup_ui(self):
         self.configure(bg=BACKGROUND_COLOR)
-
         self.status_label = tk.Label(
             self,
             text=INITIAL_STATUS_TEXT,

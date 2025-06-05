@@ -11,6 +11,13 @@ APP_WIDTH = 800
 APP_HEIGHT = 600
 APP_TITLE = 'TEST APP'
 
+##
+# @class App
+# @brief Main application class for the signing GUI.
+#
+# This class inherits from `tk.Tk` and loads the main GUI frame responsible
+# for signing PDF files and verify theirs authentication.
+#
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
