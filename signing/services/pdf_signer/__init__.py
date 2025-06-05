@@ -1,2 +1,2 @@
 from .signer import sign
-from .verifier import verify
+from .verifier import verify, NoSignatureFound

@@ -3,6 +3,7 @@ This package is responsible for signing and verifying the pdf file using the pri
 """
 
 import datetime
+import os
 from typing import Tuple
 
 from cryptography import x509
@@ -20,7 +21,6 @@ from pyhanko.sign.general import SigningError, UnacceptableSignerError
 from pyhanko.sign.timestamps import DummyTimeStamper
 from pyhanko_certvalidator.registry import SimpleCertificateStore
 
-# TODO: More error handling
 
 def sign(private_key: rsa.RSAPrivateKey, pdf_in_path: str, pdf_out_path: str):
     """
@@ -34,22 +34,16 @@ def sign(private_key: rsa.RSAPrivateKey, pdf_in_path: str, pdf_out_path: str):
             pdf_out_path: Path where the signed PDF file will be saved.
         """
 
-    try:
-        asn1_cert, asn1_private_key = _generate_self_signed_cert(private_key)
-    except Exception as e:
-        raise Exception("TODO: Handle this error properly")
+    asn1_cert, asn1_private_key = _generate_self_signed_cert(private_key)
 
     certification_store = SimpleCertificateStore()
     certification_store.register(asn1_cert)
 
-    try:
-        signer = signers.SimpleSigner(
-            signing_cert=asn1_cert,
-            signing_key=asn1_private_key,
-            cert_registry=certification_store,
-        )
-    except Exception as e:
-        raise Exception("TODO: Handle this error properly")
+    signer = signers.SimpleSigner(
+        signing_cert=asn1_cert,
+        signing_key=asn1_private_key,
+        cert_registry=certification_store,
+    )
 
     timestamper = DummyTimeStamper(asn1_cert, asn1_private_key)
 
@@ -74,22 +68,13 @@ def sign(private_key: rsa.RSAPrivateKey, pdf_in_path: str, pdf_out_path: str):
                 new_field_spec=sig_spec
             )
             pdf_signer.sign_pdf(writer, output=outf)
-
-        print(f"PDF signed successfully (PAdES-like): {pdf_out_path}")
-        return True
-    except FileNotFoundError:
-        print(f"Error: Input PDF '{pdf_in_path}' not found.")
-        raise Exception("TODO: Handle this error properly")
-    except UnacceptableSignerError as e:
-        print(f"Signer error: The key/cert might not meet requirements (e.g., key usage). Error: {e}")
-        print("Ensure the self-signed certificate has Digital Signature key usage.")
-        raise Exception("TODO: Handle this error properly")
-    except SigningError as e:
-        print(f"Error during PDF signing process: {e}")
-        raise Exception("TODO: Handle this error properly")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-        raise Exception("TODO: Handle this error properly")
+        if os.path.exists(pdf_out_path):
+            os.remove(pdf_out_path)
+        raise e
+
+    return True
+
 
 
 def _generate_self_signed_cert(private_key: rsa.RSAPrivateKey) -> Tuple[asn1_x509.Certificate, asn1_keys.PrivateKeyInfo]:
@@ -129,7 +114,7 @@ def _generate_self_signed_cert(private_key: rsa.RSAPrivateKey) -> Tuple[asn1_x50
                 ExtendedKeyUsageOID.CODE_SIGNING,
                 ExtendedKeyUsageOID.TIME_STAMPING,
             ]),
-            critical=False,  # EKU can generally be non‐critical for document signing
+            critical=False,
         )
     )
 

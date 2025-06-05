@@ -1,38 +1,67 @@
 """
-This frame is the start view. From here it is possible to go to signing or verifying part of application
+A Tkinter Frame providing options to navigate to PDF signing or verification sections.
 """
 
 import tkinter as tk
 from typing import Callable
 
+# Constants for UI elements
+LARGE_FONT_CONFIG = ("TkDefaultFont", 16)
+DEFAULT_WRAP_LENGTH = 750
+DEFAULT_PADDING_X = 200
+DEFAULT_PADDING_Y = 10
+BUTTON_PADDING_Y = 20
+
+LABEL_TEXT = "Please choose whether you want to sign a PDF or verify the signature of a PDF file."
+SIGN_BUTTON_TEXT = "Sign a PDF file"
+VERIFY_BUTTON_TEXT = "Verify PDF file signature"
+
 
 class StartFrame(tk.Frame):
-    def __init__(self, parent: tk.Tk, signing_chosen: Callable[[], None], verifying_chosen: Callable[[], None]):
-        tk.Frame.__init__(self, parent)
+    def __init__(self, parent: tk.Tk, on_signing_chosen_callback: Callable[[], None], on_verifying_chosen_callback: Callable[[], None]):
+        super().__init__(parent)
 
-        self.signing_chosen = signing_chosen
-        self.verifying_chosen = verifying_chosen
+        self.on_signing_chosen_callback = on_signing_chosen_callback
+        self.on_verifying_chosen_callback = on_verifying_chosen_callback
 
-        self.label = tk.Label(
+        self._setup_ui()
+
+    def _setup_ui(self):
+        """Creates and arranges UI elements within the frame."""
+        instruction_label = tk.Label(
             self,
-            text="Please choose whether you want to sign a PDF or verify the signature",
-            font=("TkDefaultFont", 16),
-            wraplength=750,
+            text=LABEL_TEXT,
+            font=LARGE_FONT_CONFIG,
+            wraplength=DEFAULT_WRAP_LENGTH,
         )
-        self.label.pack(side=tk.TOP, fill=tk.X, padx=5, pady=5)
+        instruction_label.pack(
+            side=tk.TOP,
+            fill=tk.X,
+            pady=(DEFAULT_PADDING_Y, BUTTON_PADDING_Y * 2)
+        )
 
-        self.sign_button = tk.Button(
+        sign_button = tk.Button(
             self,
-            text="Sign a PDF file",
-            command=lambda : self.signing_chosen(),
-            font=("TkDefaultFont", 16)
+            text=SIGN_BUTTON_TEXT,
+            command=self.on_signing_chosen_callback,
+            font=LARGE_FONT_CONFIG
         )
-        self.sign_button.pack(side=tk.TOP, padx=5, pady=5)
+        sign_button.pack(
+            side=tk.TOP,
+            padx=DEFAULT_PADDING_X,
+            pady=BUTTON_PADDING_Y,
+            fill=tk.X
+        )
 
-        self.verify_button = tk.Button(
+        verify_button = tk.Button(
             self,
-            text="Verify a PDF file",
-            command=lambda : self.verifying_chosen(),
-            font=("TkDefaultFont", 16)
+            text=VERIFY_BUTTON_TEXT,
+            command=self.on_verifying_chosen_callback,
+            font=LARGE_FONT_CONFIG
         )
-        self.verify_button.pack(side=tk.TOP, padx=5, pady=5)
+        verify_button.pack(
+            side=tk.TOP,
+            padx=DEFAULT_PADDING_X,
+            pady=BUTTON_PADDING_Y,
+            fill=tk.X
+        )
