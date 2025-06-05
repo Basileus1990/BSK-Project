@@ -1,15 +1,21 @@
-'''
-    This frame is the view for keys generator app
-'''
+##
+# @file generate_window.py
+# @brief GUI window for generating RSA key pairs
+# @details Provides input fields for taking a path to saving public/private keys, setting 4-digit PIN and a progress bar to display the current status of the generating process.
+#
 import time
 import tkinter as tk
 import threading
 from tkinter import filedialog, ttk
-from typing import Callable
 from generating.key_generate.RSA_key_generator import generate_keys
-from generating.key_generate.AES_key_generator import aes_encrypt_file, aes_decrypt_file
+from generating.key_generate.AES_key_generator import aes_encrypt_file
 
+## @var PRIVATE_KEY_NAME
+#  @brief Default filename for the private key
 PRIVATE_KEY_NAME = "private_key.key"
+
+## @var PUBLIC_KEY_NAME
+#  @brief Default filename for the public key
 PUBLIC_KEY_NAME = "public_key.key"
 
 FOREGROUND_COLOR = "#ffffff"
@@ -34,7 +40,14 @@ class GenerateKeys(tk.Frame):
                              troughcolor="white",
                              background="red")
 
-        #Header label
+        self.show_header_label()
+        self.show_path_field()
+        self.show_generate_button()
+        self.show_pin()
+        self.show_progress_bar()
+
+    def show_header_label(self):
+        # Header label
         self.header_label = tk.Label(
             self,
             text="Key Generator",
@@ -43,8 +56,9 @@ class GenerateKeys(tk.Frame):
             bg=BACKGROUND_COLOR,
             wraplength=750
         )
-        self.header_label.pack(pady=(0,20))
+        self.header_label.pack(pady=(0, 20))
 
+    def show_path_field(self):
         # Header path selection
         self.path_label = tk.Label(
             self,
@@ -54,12 +68,14 @@ class GenerateKeys(tk.Frame):
             bg=BACKGROUND_COLOR,
             wraplength=750
         )
-        self.path_label.pack(pady = 5)
+        self.path_label.pack(pady=5)
 
         # Public key selection
-        self.label_public_key = tk.Label(self, text="Public Key localization:",fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
+        self.label_public_key = tk.Label(self, text="Public Key localization:", fg=FOREGROUND_COLOR,
+                                         bg=BACKGROUND_COLOR)
         self.label_public_key.pack(anchor='center', padx=5)
-        self.public_key_localization = tk.Entry(self, width=50, fg=FOREGROUND_COLOR, bg=BACKGROUND2_COLOR, insertbackground="white")
+        self.public_key_localization = tk.Entry(self, width=50, fg=FOREGROUND_COLOR, bg=BACKGROUND2_COLOR,
+                                                insertbackground="white")
         self.public_key_localization.pack(padx=5, pady=(0, 5), anchor="center")
 
         # Public key button
@@ -72,13 +88,15 @@ class GenerateKeys(tk.Frame):
             relief="flat",
             command=lambda: self.open_folder(self.public_key_localization)
         )
-        self.button_explore_public.pack(padx=5, pady=(0,15), anchor="center")
+        self.button_explore_public.pack(padx=5, pady=(0, 15), anchor="center")
 
         # Private key selection
-        self.label_private_key = tk.Label(self, text="Private Key localization:",fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
+        self.label_private_key = tk.Label(self, text="Private Key localization:", fg=FOREGROUND_COLOR,
+                                          bg=BACKGROUND_COLOR)
         self.label_private_key.pack(anchor='center', padx=5)
-        self.private_key_localization = tk.Entry(self, width=50, fg=FOREGROUND_COLOR, bg=BACKGROUND2_COLOR, insertbackground="white")
-        self.private_key_localization.pack(padx=5, pady=(0, 5),anchor="center")
+        self.private_key_localization = tk.Entry(self, width=50, fg=FOREGROUND_COLOR, bg=BACKGROUND2_COLOR,
+                                                 insertbackground="white")
+        self.private_key_localization.pack(padx=5, pady=(0, 5), anchor="center")
 
         # Private key button
         self.button_explore_private = tk.Button(
@@ -90,8 +108,25 @@ class GenerateKeys(tk.Frame):
             relief="flat",
             command=lambda: self.open_folder(self.private_key_localization)
         )
-        self.button_explore_private.pack(padx=5, pady=(0,5), anchor="center")
+        self.button_explore_private.pack(padx=5, pady=(0, 5), anchor="center")
 
+    def show_pin(self):
+        self.label_pin = tk.Label(self, text="PIN:", fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
+        self.label_pin.pack(anchor='center', padx=5)
+        self.pin_entry = tk.Entry(self, width=10)
+        self.pin_entry.pack(padx=5, pady=(0, 10), anchor="center")
+        self.pin_entry.pack(padx=5, pady=5)
+
+    def show_progress_bar(self):
+        # Progress bar
+        self.progress = ttk.Progressbar(self, orient="horizontal", length=300, mode="determinate",style="green.Horizontal.TProgressbar")
+        self.status_label = tk.Label(self, text="", fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
+        self.status_label.pack(pady=(10, 5))
+        self.status_label.configure(text="Status")
+        self.progress["value"] = 0
+        self.progress.pack(pady=(0, 10))
+
+    def show_generate_button(self):
         # Generate keys button
         self.button_generate = tk.Button(
             self,
@@ -100,26 +135,10 @@ class GenerateKeys(tk.Frame):
             fg="white",
             activebackground=ACTIVATE_BUTTON_COLOR,
             relief="flat",
-            command=lambda: self.generate_keys_manager(self.public_key_localization.get(), self.private_key_localization.get(),self.pin_entry.get())
+            command=lambda: self.generate_keys_manager(self.public_key_localization.get(),
+                                                       self.private_key_localization.get(), self.pin_entry.get())
         )
-        self.button_generate.pack(padx=5, pady=(0,5), anchor="center")
-
-        self.label_pin = tk.Label(self, text="PIN:", fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
-        self.label_pin.pack(anchor='center', padx=5)
-        self.pin_entry = tk.Entry(self, width=10)
-        self.pin_entry.pack(padx=5, pady=(0, 10), anchor="center")
-
-
-        self.pin_entry.pack(padx=5,pady=5)
-
-        # Progress bar
-        self.progress = ttk.Progressbar(self, orient="horizontal", length=300, mode="determinate", style="green.Horizontal.TProgressbar")
-        self.status_label = tk.Label(self, text="", fg=FOREGROUND_COLOR, bg=BACKGROUND_COLOR)
-        self.status_label.pack(pady=(10, 5))
-
-        self.status_label.configure(text="Status")
-        self.progress["value"] = 0
-        self.progress.pack(pady=(0, 10))
+        self.button_generate.pack(padx=5, pady=(0, 5), anchor="center")
 
     # Open file dialog for choosing folder
     def open_folder(self, entry):
