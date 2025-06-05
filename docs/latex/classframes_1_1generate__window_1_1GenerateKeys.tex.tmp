@@ -1,0 +1,298 @@
+\hypertarget{classframes_1_1generate__window_1_1GenerateKeys}{}\doxysection{frames.\+generate\+\_\+window.\+Generate\+Keys Class Reference}
+\label{classframes_1_1generate__window_1_1GenerateKeys}\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+
+
+Inheritance diagram for frames.\+generate\+\_\+window.\+Generate\+Keys\+:
+% FIG 0
+
+
+Collaboration diagram for frames.\+generate\+\_\+window.\+Generate\+Keys\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_ab98f5ad27532ab3d8765172821ff7499}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, tk.\+Tk parent)
+\item 
+def \mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a146a00abc0d1499e4df8434e103f1683}{show\+\_\+header\+\_\+label}} (self)
+\begin{DoxyCompactList}\small\item\em Show header label. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_af88f1b2b0735fbf9668e3c6ffe0dac77}{show\+\_\+path\+\_\+field}} (self)
+\begin{DoxyCompactList}\small\item\em Show the path field. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a42014b08e9519b996e19412b67310e9c}{show\+\_\+pin}} (self)
+\begin{DoxyCompactList}\small\item\em Show the PIN field. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a8dfb82b1315ef23b2309e53ce7e107da}{show\+\_\+progress\+\_\+bar}} (self)
+\begin{DoxyCompactList}\small\item\em Show the progress bar. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a2524ebd2e7f71b959d15e950d0fb8c1e}{show\+\_\+generate\+\_\+button}} (self)
+\begin{DoxyCompactList}\small\item\em Show the generate button. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a9aca49e75eff609f98ceff6651c70350}{open\+\_\+folder}} (self, entry)
+\begin{DoxyCompactList}\small\item\em Open external window to choose a folder. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a0c7c8f9c0806603ee1a86c42d5bdd70a}{generate\+\_\+keys\+\_\+manager}} (self, str public\+\_\+path, str private\+\_\+path, str pin)
+\begin{DoxyCompactList}\small\item\em Manager to generation of keys. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_aa8590ed72cbef6b582fea5d1f527554a}{generate\+\_\+keys\+\_\+thread}} (self, str public\+\_\+path, str private\+\_\+path, str pin)
+\begin{DoxyCompactList}\small\item\em Generate keys status function in the thread. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a8e275076e09c660d80b239957fecc8f8}{update\+\_\+status}} (self, str message, int \mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_ae583909cd075aefc3ed5073b2bb54bce}{progress}}, str style)
+\begin{DoxyCompactList}\small\item\em Update status of the progress bar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_ad0c28865cf3e5ed384f090620d72840c}{progress\+\_\+bar\+\_\+style}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a1799cfe99bff723a878e800f464997ff}{header\+\_\+label}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a7109a826f3f455217320c91c5a5b5f55}{path\+\_\+label}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a38418b8455cb968b35e217562705cc29}{label\+\_\+public\+\_\+key}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a03e520825c2bea192026d4c60e0e86c7}{public\+\_\+key\+\_\+localization}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_aeff86c17ca0b09b578a51912b6a7038e}{button\+\_\+explore\+\_\+public}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a1faac11272931b4e4de2b6c40dccab21}{label\+\_\+private\+\_\+key}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_ad7a637b1179f0be886e0d7e5ed3345de}{private\+\_\+key\+\_\+localization}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a83c812324e4fb84b4b665b4b15ba19ad}{button\+\_\+explore\+\_\+private}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_aee6135c385687028f3816fca26ce3563}{label\+\_\+pin}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_a558b2ce45c67af61d667f923446091a8}{pin\+\_\+entry}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_ae583909cd075aefc3ed5073b2bb54bce}{progress}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_ae14d42476d8f3cea38ba43549994a045}{status\+\_\+label}}
+\item 
+\mbox{\hyperlink{classframes_1_1generate__window_1_1GenerateKeys_acc18850f642e514d5581164656e46478}{button\+\_\+generate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_ab98f5ad27532ab3d8765172821ff7499}\label{classframes_1_1generate__window_1_1GenerateKeys_ab98f5ad27532ab3d8765172821ff7499}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def frames.\+generate\+\_\+window.\+Generate\+Keys.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{tk.\+Tk}]{parent }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a0c7c8f9c0806603ee1a86c42d5bdd70a}\label{classframes_1_1generate__window_1_1GenerateKeys_a0c7c8f9c0806603ee1a86c42d5bdd70a}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!generate\_keys\_manager@{generate\_keys\_manager}}
+\index{generate\_keys\_manager@{generate\_keys\_manager}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{generate\_keys\_manager()}{generate\_keys\_manager()}}
+{\footnotesize\ttfamily def frames.\+generate\+\_\+window.\+Generate\+Keys.\+generate\+\_\+keys\+\_\+manager (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{public\+\_\+path,  }\item[{str}]{private\+\_\+path,  }\item[{str}]{pin }\end{DoxyParamCaption})}
+
+
+
+Manager to generation of keys. 
+
+The function are the simple manager to entry correctly params for generate\+\_\+keys\+\_\+thread function, which is running on the other thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em public\+\_\+path} & Path to the public key. \\
+\hline
+{\em private\+\_\+path} & Path to the private key. \\
+\hline
+{\em pin} & Code PIN to encrypt private key. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_aa8590ed72cbef6b582fea5d1f527554a}\label{classframes_1_1generate__window_1_1GenerateKeys_aa8590ed72cbef6b582fea5d1f527554a}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!generate\_keys\_thread@{generate\_keys\_thread}}
+\index{generate\_keys\_thread@{generate\_keys\_thread}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{generate\_keys\_thread()}{generate\_keys\_thread()}}
+{\footnotesize\ttfamily def frames.\+generate\+\_\+window.\+Generate\+Keys.\+generate\+\_\+keys\+\_\+thread (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{public\+\_\+path,  }\item[{str}]{private\+\_\+path,  }\item[{str}]{pin }\end{DoxyParamCaption})}
+
+
+
+Generate keys status function in the thread. 
+
+This function calls the generate\+\_\+keys function from RSA\+\_\+key\+\_\+generator and the aes\+\_\+encrypt\+\_\+file function from AES\+\_\+key\+\_\+generator to generate a public/private RSA key pairs and encrypt the private key using a 4-\/digit PIN code. Additionally, it updates the progress bar to reflect the current stage of the operation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em public\+\_\+path} & Path to the public key. \\
+\hline
+{\em private\+\_\+path} & Path to the private key. \\
+\hline
+{\em pin} & Code PIN to encrypt private key. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a9aca49e75eff609f98ceff6651c70350}\label{classframes_1_1generate__window_1_1GenerateKeys_a9aca49e75eff609f98ceff6651c70350}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!open\_folder@{open\_folder}}
+\index{open\_folder@{open\_folder}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{open\_folder()}{open\_folder()}}
+{\footnotesize\ttfamily def frames.\+generate\+\_\+window.\+Generate\+Keys.\+open\+\_\+folder (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{entry }\end{DoxyParamCaption})}
+
+
+
+Open external window to choose a folder. 
+
+This function open external window, where you might choose a folder.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & Path, where we save the chosen location. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a2524ebd2e7f71b959d15e950d0fb8c1e}\label{classframes_1_1generate__window_1_1GenerateKeys_a2524ebd2e7f71b959d15e950d0fb8c1e}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!show\_generate\_button@{show\_generate\_button}}
+\index{show\_generate\_button@{show\_generate\_button}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{show\_generate\_button()}{show\_generate\_button()}}
+{\footnotesize\ttfamily def frames.\+generate\+\_\+window.\+Generate\+Keys.\+show\+\_\+generate\+\_\+button (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Show the generate button. 
+
+The function display the button to start of the generation function. \mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a146a00abc0d1499e4df8434e103f1683}\label{classframes_1_1generate__window_1_1GenerateKeys_a146a00abc0d1499e4df8434e103f1683}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!show\_header\_label@{show\_header\_label}}
+\index{show\_header\_label@{show\_header\_label}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{show\_header\_label()}{show\_header\_label()}}
+{\footnotesize\ttfamily def frames.\+generate\+\_\+window.\+Generate\+Keys.\+show\+\_\+header\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Show header label. 
+
+The function display on the top of window title text. \mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_af88f1b2b0735fbf9668e3c6ffe0dac77}\label{classframes_1_1generate__window_1_1GenerateKeys_af88f1b2b0735fbf9668e3c6ffe0dac77}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!show\_path\_field@{show\_path\_field}}
+\index{show\_path\_field@{show\_path\_field}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{show\_path\_field()}{show\_path\_field()}}
+{\footnotesize\ttfamily def frames.\+generate\+\_\+window.\+Generate\+Keys.\+show\+\_\+path\+\_\+field (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Show the path field. 
+
+The function display the section title, text field with the public/private keys generation location and buttons to open window for choosing a final destinations. \mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a42014b08e9519b996e19412b67310e9c}\label{classframes_1_1generate__window_1_1GenerateKeys_a42014b08e9519b996e19412b67310e9c}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!show\_pin@{show\_pin}}
+\index{show\_pin@{show\_pin}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{show\_pin()}{show\_pin()}}
+{\footnotesize\ttfamily def frames.\+generate\+\_\+window.\+Generate\+Keys.\+show\+\_\+pin (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Show the PIN field. 
+
+The function display the section label and text field to get a 4-\/digit PIN. \mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a8dfb82b1315ef23b2309e53ce7e107da}\label{classframes_1_1generate__window_1_1GenerateKeys_a8dfb82b1315ef23b2309e53ce7e107da}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!show\_progress\_bar@{show\_progress\_bar}}
+\index{show\_progress\_bar@{show\_progress\_bar}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{show\_progress\_bar()}{show\_progress\_bar()}}
+{\footnotesize\ttfamily def frames.\+generate\+\_\+window.\+Generate\+Keys.\+show\+\_\+progress\+\_\+bar (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Show the progress bar. 
+
+The function display the progress bar label with description of the current status and bar to display graphical representation of progress \mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a8e275076e09c660d80b239957fecc8f8}\label{classframes_1_1generate__window_1_1GenerateKeys_a8e275076e09c660d80b239957fecc8f8}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!update\_status@{update\_status}}
+\index{update\_status@{update\_status}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{update\_status()}{update\_status()}}
+{\footnotesize\ttfamily def frames.\+generate\+\_\+window.\+Generate\+Keys.\+update\+\_\+status (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{message,  }\item[{int}]{progress,  }\item[{str}]{style }\end{DoxyParamCaption})}
+
+
+
+Update status of the progress bar. 
+
+This function changes the status bar label, value and its style.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Text message to be displayed in the status label above the progress bar. \\
+\hline
+{\em progress} & Integer value (0-\/100) indicating the completion percentage of the progress bar. \\
+\hline
+{\em style} & TTK style name to apply to the progress bar. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a83c812324e4fb84b4b665b4b15ba19ad}\label{classframes_1_1generate__window_1_1GenerateKeys_a83c812324e4fb84b4b665b4b15ba19ad}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!button\_explore\_private@{button\_explore\_private}}
+\index{button\_explore\_private@{button\_explore\_private}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{button\_explore\_private}{button\_explore\_private}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+button\+\_\+explore\+\_\+private}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_aeff86c17ca0b09b578a51912b6a7038e}\label{classframes_1_1generate__window_1_1GenerateKeys_aeff86c17ca0b09b578a51912b6a7038e}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!button\_explore\_public@{button\_explore\_public}}
+\index{button\_explore\_public@{button\_explore\_public}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{button\_explore\_public}{button\_explore\_public}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+button\+\_\+explore\+\_\+public}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_acc18850f642e514d5581164656e46478}\label{classframes_1_1generate__window_1_1GenerateKeys_acc18850f642e514d5581164656e46478}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!button\_generate@{button\_generate}}
+\index{button\_generate@{button\_generate}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{button\_generate}{button\_generate}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+button\+\_\+generate}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a1799cfe99bff723a878e800f464997ff}\label{classframes_1_1generate__window_1_1GenerateKeys_a1799cfe99bff723a878e800f464997ff}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!header\_label@{header\_label}}
+\index{header\_label@{header\_label}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{header\_label}{header\_label}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+header\+\_\+label}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_aee6135c385687028f3816fca26ce3563}\label{classframes_1_1generate__window_1_1GenerateKeys_aee6135c385687028f3816fca26ce3563}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!label\_pin@{label\_pin}}
+\index{label\_pin@{label\_pin}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{label\_pin}{label\_pin}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+label\+\_\+pin}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a1faac11272931b4e4de2b6c40dccab21}\label{classframes_1_1generate__window_1_1GenerateKeys_a1faac11272931b4e4de2b6c40dccab21}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!label\_private\_key@{label\_private\_key}}
+\index{label\_private\_key@{label\_private\_key}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{label\_private\_key}{label\_private\_key}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+label\+\_\+private\+\_\+key}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a38418b8455cb968b35e217562705cc29}\label{classframes_1_1generate__window_1_1GenerateKeys_a38418b8455cb968b35e217562705cc29}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!label\_public\_key@{label\_public\_key}}
+\index{label\_public\_key@{label\_public\_key}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{label\_public\_key}{label\_public\_key}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+label\+\_\+public\+\_\+key}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a7109a826f3f455217320c91c5a5b5f55}\label{classframes_1_1generate__window_1_1GenerateKeys_a7109a826f3f455217320c91c5a5b5f55}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!path\_label@{path\_label}}
+\index{path\_label@{path\_label}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{path\_label}{path\_label}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+path\+\_\+label}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a558b2ce45c67af61d667f923446091a8}\label{classframes_1_1generate__window_1_1GenerateKeys_a558b2ce45c67af61d667f923446091a8}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!pin\_entry@{pin\_entry}}
+\index{pin\_entry@{pin\_entry}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{pin\_entry}{pin\_entry}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+pin\+\_\+entry}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_ad7a637b1179f0be886e0d7e5ed3345de}\label{classframes_1_1generate__window_1_1GenerateKeys_ad7a637b1179f0be886e0d7e5ed3345de}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!private\_key\_localization@{private\_key\_localization}}
+\index{private\_key\_localization@{private\_key\_localization}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{private\_key\_localization}{private\_key\_localization}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+private\+\_\+key\+\_\+localization}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_ae583909cd075aefc3ed5073b2bb54bce}\label{classframes_1_1generate__window_1_1GenerateKeys_ae583909cd075aefc3ed5073b2bb54bce}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!progress@{progress}}
+\index{progress@{progress}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{progress}{progress}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+progress}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_ad0c28865cf3e5ed384f090620d72840c}\label{classframes_1_1generate__window_1_1GenerateKeys_ad0c28865cf3e5ed384f090620d72840c}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!progress\_bar\_style@{progress\_bar\_style}}
+\index{progress\_bar\_style@{progress\_bar\_style}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{progress\_bar\_style}{progress\_bar\_style}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+progress\+\_\+bar\+\_\+style}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_a03e520825c2bea192026d4c60e0e86c7}\label{classframes_1_1generate__window_1_1GenerateKeys_a03e520825c2bea192026d4c60e0e86c7}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!public\_key\_localization@{public\_key\_localization}}
+\index{public\_key\_localization@{public\_key\_localization}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{public\_key\_localization}{public\_key\_localization}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+public\+\_\+key\+\_\+localization}
+
+\mbox{\Hypertarget{classframes_1_1generate__window_1_1GenerateKeys_ae14d42476d8f3cea38ba43549994a045}\label{classframes_1_1generate__window_1_1GenerateKeys_ae14d42476d8f3cea38ba43549994a045}} 
+\index{frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}!status\_label@{status\_label}}
+\index{status\_label@{status\_label}!frames.generate\_window.GenerateKeys@{frames.generate\_window.GenerateKeys}}
+\doxysubsubsection{\texorpdfstring{status\_label}{status\_label}}
+{\footnotesize\ttfamily frames.\+generate\+\_\+window.\+Generate\+Keys.\+status\+\_\+label}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+generating/frames/\mbox{\hyperlink{generate__window_8py}{generate\+\_\+window.\+py}}\end{DoxyCompactItemize}

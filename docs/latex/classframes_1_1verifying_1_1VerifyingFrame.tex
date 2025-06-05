@@ -1,0 +1,229 @@
+\hypertarget{classframes_1_1verifying_1_1VerifyingFrame}{}\doxysection{frames.\+verifying.\+Verifying\+Frame Class Reference}
+\label{classframes_1_1verifying_1_1VerifyingFrame}\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+
+
+The \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame}{Verifying\+Frame}} class provides the UI for PDF signature verification.  
+
+
+
+
+Inheritance diagram for frames.\+verifying.\+Verifying\+Frame\+:
+% FIG 0
+
+
+Collaboration diagram for frames.\+verifying.\+Verifying\+Frame\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_aac8e55ec5c2a75f084779b1340f23e77}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, tk.\+Tk parent, Callable\mbox{[}\mbox{[}$\,$\mbox{]}, None\mbox{]} \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_ae5b4007f74bf270e25aba93a133cb474}{end\+\_\+verifying\+\_\+callback}})
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame}{Verifying\+Frame}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_ae5b4007f74bf270e25aba93a133cb474}{end\+\_\+verifying\+\_\+callback}}
+\item 
+\mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_a8294e776353e3d19314901d2dd6fc360}{pdf\+\_\+to\+\_\+verify\+\_\+path\+\_\+var}}
+\item 
+\mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_a372907c0afa9170d1c01ea91de599cef}{public\+\_\+key\+\_\+path\+\_\+var}}
+\item 
+\mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_a510cfcd337082edcfcc032bea51b0232}{status\+\_\+label}}
+\item 
+\mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_a720ebf1131b25b0c89bc1660eba044c1}{pdf\+\_\+to\+\_\+verify\+\_\+entry}}
+\item 
+\mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_a7015d51b7f3082d083fdc5a3ce6b48da}{public\+\_\+key\+\_\+entry}}
+\item 
+\mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_a991ba44a95164afc7822dbf2ea47be63}{verify\+\_\+button}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_af5e6d9f48f67592b3c239a6ea1622cdb}{\+\_\+setup\+\_\+ui}} (self)
+\begin{DoxyCompactList}\small\item\em Sets up the user interface elements for the \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame}{Verifying\+Frame}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_aba90111570b527fcdb154256c47047dd}{\+\_\+select\+\_\+file}} (self, str title, list file\+\_\+types, tk.\+String\+Var string\+\_\+var)
+\begin{DoxyCompactList}\small\item\em Generic helper method to open a file dialog and update a Tkinter String\+Var with the selected path. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_a6bc8075793908f7ec11890a353f11bc1}{\+\_\+select\+\_\+pdf\+\_\+to\+\_\+verify\+\_\+file}} (self)
+\begin{DoxyCompactList}\small\item\em Opens a file dialog for the user to select the PDF file to be verified. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_a6e41c7ff59d13ff0a384da1065bccacd}{\+\_\+select\+\_\+public\+\_\+key\+\_\+file}} (self)
+\begin{DoxyCompactList}\small\item\em Opens a file dialog for the user to select the public key file. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_a83270513cdbd1a7a12175fd0d63fc555}{\+\_\+update\+\_\+feedback}} (self, str status\+\_\+message, str button\+\_\+text, Callable button\+\_\+command=None)
+\begin{DoxyCompactList}\small\item\em Helper method to update the status label and the main action button. \end{DoxyCompactList}\item 
+rsa.\+RSAPublic\+Key$\vert$None \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_a4d69359427f306e41dbb4de91e92da58}{\+\_\+load\+\_\+public\+\_\+key}} (self, str path)
+\begin{DoxyCompactList}\small\item\em Loads an RSA public key from a PEM-\/encoded file at the given path. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame_a53ee94782b1d9f1a19a53eec511c4a54}{\+\_\+process\+\_\+verification}} (self)
+\begin{DoxyCompactList}\small\item\em Handles the PDF signature verification process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame}{Verifying\+Frame}} class provides the UI for PDF signature verification. 
+
+This frame allows users to select a PDF file and a public key file. It then attempts to verify the PDF\textquotesingle{}s signature using the provided key and displays the result (valid, invalid, or error messages). Inherits from tk.\+Frame. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_aac8e55ec5c2a75f084779b1340f23e77}\label{classframes_1_1verifying_1_1VerifyingFrame_aac8e55ec5c2a75f084779b1340f23e77}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def frames.\+verifying.\+Verifying\+Frame.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{tk.\+Tk}]{parent,  }\item[{Callable\mbox{[}\mbox{[}$\,$\mbox{]}, None\mbox{]}}]{end\+\_\+verifying\+\_\+callback }\end{DoxyParamCaption})}
+
+
+
+Initializes the \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame}{Verifying\+Frame}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent tk.\+Tk window or tk.\+Frame that this frame will be placed in. @type parent tk.\+Tk \\
+\hline
+{\em end\+\_\+verifying\+\_\+callback} & A function to be called when the verification process is completed. This callback should take no arguments and return None. @type end\+\_\+verifying\+\_\+callback Callable\mbox{[}\mbox{[}\mbox{]}, None\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_a4d69359427f306e41dbb4de91e92da58}\label{classframes_1_1verifying_1_1VerifyingFrame_a4d69359427f306e41dbb4de91e92da58}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!\_load\_public\_key@{\_load\_public\_key}}
+\index{\_load\_public\_key@{\_load\_public\_key}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{\_load\_public\_key()}{\_load\_public\_key()}}
+{\footnotesize\ttfamily  rsa.\+RSAPublic\+Key $\vert$ None frames.\+verifying.\+Verifying\+Frame.\+\_\+load\+\_\+public\+\_\+key (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loads an RSA public key from a PEM-\/encoded file at the given path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The file system path to the public key file. @type path str \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded rsa.\+RSAPublic\+Key object if successful, otherwise None.
+\end{DoxyReturn}
+If the file is not found or an error occurs during parsing, it updates the UI with an error message via {\ttfamily \+\_\+update\+\_\+feedback} and returns None. \mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_a53ee94782b1d9f1a19a53eec511c4a54}\label{classframes_1_1verifying_1_1VerifyingFrame_a53ee94782b1d9f1a19a53eec511c4a54}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!\_process\_verification@{\_process\_verification}}
+\index{\_process\_verification@{\_process\_verification}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{\_process\_verification()}{\_process\_verification()}}
+{\footnotesize\ttfamily def frames.\+verifying.\+Verifying\+Frame.\+\_\+process\+\_\+verification (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handles the PDF signature verification process. 
+
+This method is called when the verify button is pressed. It retrieves the PDF and public key paths from the UI. Validates that both paths are provided. Loads the public key using {\ttfamily \+\_\+load\+\_\+public\+\_\+key}. Calls {\ttfamily pdf\+\_\+signer.\+verify} to perform the signature verification. Updates the UI with the result (valid, invalid) or an error message \mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_aba90111570b527fcdb154256c47047dd}\label{classframes_1_1verifying_1_1VerifyingFrame_aba90111570b527fcdb154256c47047dd}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!\_select\_file@{\_select\_file}}
+\index{\_select\_file@{\_select\_file}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{\_select\_file()}{\_select\_file()}}
+{\footnotesize\ttfamily def frames.\+verifying.\+Verifying\+Frame.\+\_\+select\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{title,  }\item[{list}]{file\+\_\+types,  }\item[{tk.\+String\+Var}]{string\+\_\+var }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Generic helper method to open a file dialog and update a Tkinter String\+Var with the selected path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & The title for the file dialog window. @type title str \\
+\hline
+{\em file\+\_\+types} & A list of tuples defining the acceptable file types for the dialog. @type file\+\_\+types list \\
+\hline
+{\em string\+\_\+var} & The tk.\+String\+Var instance to update with the selected file path. @type string\+\_\+var tk.\+String\+Var\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}Helper to open a file dialog and update a StringVar.\end{DoxyVerb}
+ \mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_a6bc8075793908f7ec11890a353f11bc1}\label{classframes_1_1verifying_1_1VerifyingFrame_a6bc8075793908f7ec11890a353f11bc1}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!\_select\_pdf\_to\_verify\_file@{\_select\_pdf\_to\_verify\_file}}
+\index{\_select\_pdf\_to\_verify\_file@{\_select\_pdf\_to\_verify\_file}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{\_select\_pdf\_to\_verify\_file()}{\_select\_pdf\_to\_verify\_file()}}
+{\footnotesize\ttfamily def frames.\+verifying.\+Verifying\+Frame.\+\_\+select\+\_\+pdf\+\_\+to\+\_\+verify\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Opens a file dialog for the user to select the PDF file to be verified. 
+
+Calls {\ttfamily \+\_\+select\+\_\+file} with appropriate parameters for PDF selection and updates {\ttfamily self.\+pdf\+\_\+to\+\_\+verify\+\_\+path\+\_\+var}. \mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_a6e41c7ff59d13ff0a384da1065bccacd}\label{classframes_1_1verifying_1_1VerifyingFrame_a6e41c7ff59d13ff0a384da1065bccacd}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!\_select\_public\_key\_file@{\_select\_public\_key\_file}}
+\index{\_select\_public\_key\_file@{\_select\_public\_key\_file}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{\_select\_public\_key\_file()}{\_select\_public\_key\_file()}}
+{\footnotesize\ttfamily def frames.\+verifying.\+Verifying\+Frame.\+\_\+select\+\_\+public\+\_\+key\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Opens a file dialog for the user to select the public key file. 
+
+Calls {\ttfamily \+\_\+select\+\_\+file} with appropriate parameters for public key selection and updates {\ttfamily self.\+public\+\_\+key\+\_\+path\+\_\+var}. \mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_af5e6d9f48f67592b3c239a6ea1622cdb}\label{classframes_1_1verifying_1_1VerifyingFrame_af5e6d9f48f67592b3c239a6ea1622cdb}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!\_setup\_ui@{\_setup\_ui}}
+\index{\_setup\_ui@{\_setup\_ui}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{\_setup\_ui()}{\_setup\_ui()}}
+{\footnotesize\ttfamily def frames.\+verifying.\+Verifying\+Frame.\+\_\+setup\+\_\+ui (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets up the user interface elements for the \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame}{Verifying\+Frame}}. 
+
+This private method creates and arranges labels, entry fields for file paths, and buttons for file selection and initiating verification. \mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_a83270513cdbd1a7a12175fd0d63fc555}\label{classframes_1_1verifying_1_1VerifyingFrame_a83270513cdbd1a7a12175fd0d63fc555}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!\_update\_feedback@{\_update\_feedback}}
+\index{\_update\_feedback@{\_update\_feedback}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{\_update\_feedback()}{\_update\_feedback()}}
+{\footnotesize\ttfamily def frames.\+verifying.\+Verifying\+Frame.\+\_\+update\+\_\+feedback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{status\+\_\+message,  }\item[{str}]{button\+\_\+text,  }\item[{Callable }]{button\+\_\+command = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper method to update the status label and the main action button. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+\_\+message} & The message to display in the status label. @type status\+\_\+message str \\
+\hline
+{\em button\+\_\+text} & The new text for the action button. @type button\+\_\+text str \\
+\hline
+{\em button\+\_\+command} & The new command to associate with the action button. Defaults to {\ttfamily \+\_\+process\+\_\+verification} if None. @type button\+\_\+command Callable \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_ae5b4007f74bf270e25aba93a133cb474}\label{classframes_1_1verifying_1_1VerifyingFrame_ae5b4007f74bf270e25aba93a133cb474}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!end\_verifying\_callback@{end\_verifying\_callback}}
+\index{end\_verifying\_callback@{end\_verifying\_callback}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{end\_verifying\_callback}{end\_verifying\_callback}}
+{\footnotesize\ttfamily frames.\+verifying.\+Verifying\+Frame.\+end\+\_\+verifying\+\_\+callback}
+
+\mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_a720ebf1131b25b0c89bc1660eba044c1}\label{classframes_1_1verifying_1_1VerifyingFrame_a720ebf1131b25b0c89bc1660eba044c1}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!pdf\_to\_verify\_entry@{pdf\_to\_verify\_entry}}
+\index{pdf\_to\_verify\_entry@{pdf\_to\_verify\_entry}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{pdf\_to\_verify\_entry}{pdf\_to\_verify\_entry}}
+{\footnotesize\ttfamily frames.\+verifying.\+Verifying\+Frame.\+pdf\+\_\+to\+\_\+verify\+\_\+entry}
+
+\mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_a8294e776353e3d19314901d2dd6fc360}\label{classframes_1_1verifying_1_1VerifyingFrame_a8294e776353e3d19314901d2dd6fc360}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!pdf\_to\_verify\_path\_var@{pdf\_to\_verify\_path\_var}}
+\index{pdf\_to\_verify\_path\_var@{pdf\_to\_verify\_path\_var}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{pdf\_to\_verify\_path\_var}{pdf\_to\_verify\_path\_var}}
+{\footnotesize\ttfamily frames.\+verifying.\+Verifying\+Frame.\+pdf\+\_\+to\+\_\+verify\+\_\+path\+\_\+var}
+
+\mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_a7015d51b7f3082d083fdc5a3ce6b48da}\label{classframes_1_1verifying_1_1VerifyingFrame_a7015d51b7f3082d083fdc5a3ce6b48da}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!public\_key\_entry@{public\_key\_entry}}
+\index{public\_key\_entry@{public\_key\_entry}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{public\_key\_entry}{public\_key\_entry}}
+{\footnotesize\ttfamily frames.\+verifying.\+Verifying\+Frame.\+public\+\_\+key\+\_\+entry}
+
+\mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_a372907c0afa9170d1c01ea91de599cef}\label{classframes_1_1verifying_1_1VerifyingFrame_a372907c0afa9170d1c01ea91de599cef}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!public\_key\_path\_var@{public\_key\_path\_var}}
+\index{public\_key\_path\_var@{public\_key\_path\_var}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{public\_key\_path\_var}{public\_key\_path\_var}}
+{\footnotesize\ttfamily frames.\+verifying.\+Verifying\+Frame.\+public\+\_\+key\+\_\+path\+\_\+var}
+
+\mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_a510cfcd337082edcfcc032bea51b0232}\label{classframes_1_1verifying_1_1VerifyingFrame_a510cfcd337082edcfcc032bea51b0232}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!status\_label@{status\_label}}
+\index{status\_label@{status\_label}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{status\_label}{status\_label}}
+{\footnotesize\ttfamily frames.\+verifying.\+Verifying\+Frame.\+status\+\_\+label}
+
+\mbox{\Hypertarget{classframes_1_1verifying_1_1VerifyingFrame_a991ba44a95164afc7822dbf2ea47be63}\label{classframes_1_1verifying_1_1VerifyingFrame_a991ba44a95164afc7822dbf2ea47be63}} 
+\index{frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}!verify\_button@{verify\_button}}
+\index{verify\_button@{verify\_button}!frames.verifying.VerifyingFrame@{frames.verifying.VerifyingFrame}}
+\doxysubsubsection{\texorpdfstring{verify\_button}{verify\_button}}
+{\footnotesize\ttfamily frames.\+verifying.\+Verifying\+Frame.\+verify\+\_\+button}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+signing/frames/\mbox{\hyperlink{verifying_8py}{verifying.\+py}}\end{DoxyCompactItemize}

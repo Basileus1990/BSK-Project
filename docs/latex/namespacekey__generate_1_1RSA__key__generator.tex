@@ -1,0 +1,32 @@
+\hypertarget{namespacekey__generate_1_1RSA__key__generator}{}\doxysection{key\+\_\+generate.\+RSA\+\_\+key\+\_\+generator Namespace Reference}
+\label{namespacekey__generate_1_1RSA__key__generator}\index{key\_generate.RSA\_key\_generator@{key\_generate.RSA\_key\_generator}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacekey__generate_1_1RSA__key__generator_a98da761065242e54513e6551b42fdf43}{generate\+\_\+keys}} (str public\+\_\+key\+\_\+location, str private\+\_\+key\+\_\+location)
+\begin{DoxyCompactList}\small\item\em Generate public/private key pairs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacekey__generate_1_1RSA__key__generator_a98da761065242e54513e6551b42fdf43}\label{namespacekey__generate_1_1RSA__key__generator_a98da761065242e54513e6551b42fdf43}} 
+\index{key\_generate.RSA\_key\_generator@{key\_generate.RSA\_key\_generator}!generate\_keys@{generate\_keys}}
+\index{generate\_keys@{generate\_keys}!key\_generate.RSA\_key\_generator@{key\_generate.RSA\_key\_generator}}
+\doxysubsubsection{\texorpdfstring{generate\_keys()}{generate\_keys()}}
+{\footnotesize\ttfamily  bool key\+\_\+generate.\+RSA\+\_\+key\+\_\+generator.\+generate\+\_\+keys (\begin{DoxyParamCaption}\item[{str}]{public\+\_\+key\+\_\+location,  }\item[{str}]{private\+\_\+key\+\_\+location }\end{DoxyParamCaption})}
+
+
+
+Generate public/private key pairs. 
+
+The function reads locations for public and private keys, keys generated with RSA algorithm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em public\+\_\+key\+\_\+location} & Path to save generated a public key \\
+\hline
+{\em private\+\_\+key\+\_\+location} & Path to save generated a private key\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if RSA generation was successful; False if the RSA generation thrown exception. 
+\end{DoxyReturn}

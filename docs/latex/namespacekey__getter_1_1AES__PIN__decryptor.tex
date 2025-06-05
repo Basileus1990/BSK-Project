@@ -1,0 +1,55 @@
+\hypertarget{namespacekey__getter_1_1AES__PIN__decryptor}{}\doxysection{key\+\_\+getter.\+AES\+\_\+\+PIN\+\_\+decryptor Namespace Reference}
+\label{namespacekey__getter_1_1AES__PIN__decryptor}\index{key\_getter.AES\_PIN\_decryptor@{key\_getter.AES\_PIN\_decryptor}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bytes \mbox{\hyperlink{namespacekey__getter_1_1AES__PIN__decryptor_ad4ea55de7d7adef837d0a543c9a1617e}{hash\+\_\+pin}} (str pin)
+\begin{DoxyCompactList}\small\item\em Hashes a numeric PIN string using SHA256. \end{DoxyCompactList}\item 
+bytes \mbox{\hyperlink{namespacekey__getter_1_1AES__PIN__decryptor_a4850d537b6eac07439daeb9a48fe7518}{aes\+\_\+decrypt\+\_\+file}} (bytes encrypted\+\_\+data, str pin)
+\begin{DoxyCompactList}\small\item\em Decrypts data encrypted using AES in EAX mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacekey__getter_1_1AES__PIN__decryptor_a4850d537b6eac07439daeb9a48fe7518}\label{namespacekey__getter_1_1AES__PIN__decryptor_a4850d537b6eac07439daeb9a48fe7518}} 
+\index{key\_getter.AES\_PIN\_decryptor@{key\_getter.AES\_PIN\_decryptor}!aes\_decrypt\_file@{aes\_decrypt\_file}}
+\index{aes\_decrypt\_file@{aes\_decrypt\_file}!key\_getter.AES\_PIN\_decryptor@{key\_getter.AES\_PIN\_decryptor}}
+\doxysubsubsection{\texorpdfstring{aes\_decrypt\_file()}{aes\_decrypt\_file()}}
+{\footnotesize\ttfamily  bytes key\+\_\+getter.\+AES\+\_\+\+PIN\+\_\+decryptor.\+aes\+\_\+decrypt\+\_\+file (\begin{DoxyParamCaption}\item[{bytes}]{encrypted\+\_\+data,  }\item[{str}]{pin }\end{DoxyParamCaption})}
+
+
+
+Decrypts data encrypted using AES in EAX mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encrypted\+\_\+data} & The encrypted data, which includes a 16-\/byte nonce, a 16-\/byte tag, and the ciphertext. @type encrypted\+\_\+data bytes \\
+\hline
+{\em pin} & The numeric PIN string used to derive the decryption key. @type pin str \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decrypted data as bytes. @rtype bytes 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & If the {\ttfamily encrypted\+\_\+data} is less than 32 bytes (too short to contain nonce and tag). \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{namespacekey__getter_1_1AES__PIN__decryptor_ad4ea55de7d7adef837d0a543c9a1617e}\label{namespacekey__getter_1_1AES__PIN__decryptor_ad4ea55de7d7adef837d0a543c9a1617e}} 
+\index{key\_getter.AES\_PIN\_decryptor@{key\_getter.AES\_PIN\_decryptor}!hash\_pin@{hash\_pin}}
+\index{hash\_pin@{hash\_pin}!key\_getter.AES\_PIN\_decryptor@{key\_getter.AES\_PIN\_decryptor}}
+\doxysubsubsection{\texorpdfstring{hash\_pin()}{hash\_pin()}}
+{\footnotesize\ttfamily  bytes key\+\_\+getter.\+AES\+\_\+\+PIN\+\_\+decryptor.\+hash\+\_\+pin (\begin{DoxyParamCaption}\item[{str}]{pin }\end{DoxyParamCaption})}
+
+
+
+Hashes a numeric PIN string using SHA256. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The numeric PIN string to hash. @type pin str \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The SHA256 hash of the PIN as bytes. @rtype bytes 
+\end{DoxyReturn}

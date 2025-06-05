@@ -1,0 +1,25 @@
+\hypertarget{usb__finder__linux_8py}{}\doxysection{signing/services/key\+\_\+getter/usb\+\_\+finder\+\_\+linux.py File Reference}
+\label{usb__finder__linux_8py}\index{signing/services/key\_getter/usb\_finder\_linux.py@{signing/services/key\_getter/usb\_finder\_linux.py}}
+
+
+Provides functions to find USB device mount paths on Linux systems.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacekey__getter_1_1usb__finder__linux}{key\+\_\+getter.\+usb\+\_\+finder\+\_\+linux}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacekey__getter_1_1usb__finder__linux_a8bdc964cc48b4492853912e9fedd4be8}{key\+\_\+getter.\+usb\+\_\+finder\+\_\+linux.\+\_\+get\+\_\+usb\+\_\+devices\+\_\+linux}} ()
+\begin{DoxyCompactList}\small\item\em Identifies USB block devices connected to a Linux system. \end{DoxyCompactList}\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacekey__getter_1_1usb__finder__linux_a8ef182c700482f76c6c7a0c10fed2a6d}{key\+\_\+getter.\+usb\+\_\+finder\+\_\+linux.\+get\+\_\+usb\+\_\+mount\+\_\+paths\+\_\+linux}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the mount paths for all connected USB storage devices on a Linux system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functions to find USB device mount paths on Linux systems. 
+
+This module uses system utilities like {\ttfamily glob} and {\ttfamily lsblk} to identify connected USB storage devices and determine their mount points. The primary function {\ttfamily get\+\_\+usb\+\_\+mount\+\_\+paths\+\_\+linux} is intended for use by other modules needing to access files on USB drives. 

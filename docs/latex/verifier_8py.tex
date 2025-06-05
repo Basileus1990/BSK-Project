@@ -1,0 +1,28 @@
+\hypertarget{verifier_8py}{}\doxysection{signing/services/pdf\+\_\+signer/verifier.py File Reference}
+\label{verifier_8py}\index{signing/services/pdf\_signer/verifier.py@{signing/services/pdf\_signer/verifier.py}}
+
+
+Provides functionality to verify digital signatures in PDF documents.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpdf__signer_1_1verifier_1_1NoSignatureFound}{pdf\+\_\+signer.\+verifier.\+No\+Signature\+Found}}
+\begin{DoxyCompactList}\small\item\em Exception raised when a PDF document does not contain any embedded digital signatures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacepdf__signer_1_1verifier}{pdf\+\_\+signer.\+verifier}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacepdf__signer_1_1verifier_abdad9dac4a2124fcd15b2d58564ff412}{pdf\+\_\+signer.\+verifier.\+verify}} (rsa.\+RSAPublic\+Key public\+\_\+key, str pdf\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Verifies the digital signature found in a PDF document against a provided public key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functionality to verify digital signatures in PDF documents. 
+
+This module uses {\ttfamily pyhanko} and {\ttfamily cryptography} libraries to validate the integrity of a PDF signature and compare the embedded public key with a provided public key. 

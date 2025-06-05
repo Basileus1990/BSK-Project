@@ -1,0 +1,53 @@
+\hypertarget{key__getter_8py}{}\doxysection{signing/services/key\+\_\+getter/key\+\_\+getter.py File Reference}
+\label{key__getter_8py}\index{signing/services/key\_getter/key\_getter.py@{signing/services/key\_getter/key\_getter.py}}
+
+
+Retrieves and decrypts a private key from a USB drive.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1UnsupportedPlatformException}{key\+\_\+getter.\+key\+\_\+getter.\+Unsupported\+Platform\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when the current operating system is not supported for USB key retrieval. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoUSBDrivesFoundException}{key\+\_\+getter.\+key\+\_\+getter.\+No\+USBDrives\+Found\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when no USB drives are found connected to the system. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoKeyFoundException}{key\+\_\+getter.\+key\+\_\+getter.\+No\+Key\+Found\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when the key file is not found on any detected USB drives. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1MultipleKeysFoundException}{key\+\_\+getter.\+key\+\_\+getter.\+Multiple\+Keys\+Found\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when the key file is found on multiple USB drives, creating ambiguity. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1KeyOrPinInvalidException}{key\+\_\+getter.\+key\+\_\+getter.\+Key\+Or\+Pin\+Invalid\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when the provided PIN is incorrect or the key file is corrupted/cannot be decrypted with the PIN. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1KeyInvalidException}{key\+\_\+getter.\+key\+\_\+getter.\+Key\+Invalid\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when the decrypted key data cannot be parsed as a valid RSA private key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacekey__getter_1_1key__getter}{key\+\_\+getter.\+key\+\_\+getter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+rsa.\+RSAPrivate\+Key \mbox{\hyperlink{namespacekey__getter_1_1key__getter_aa40b8cce6a67693cb8f47f205c8c28fc}{key\+\_\+getter.\+key\+\_\+getter.\+get\+\_\+key}} (str pin)
+\begin{DoxyCompactList}\small\item\em Retrieves and decrypts the RSA private key from a USB drive using a PIN. \end{DoxyCompactList}\item 
+bytes \mbox{\hyperlink{namespacekey__getter_1_1key__getter_a09f2e383bec74d85d21a9a8da467b10f}{key\+\_\+getter.\+key\+\_\+getter.\+\_\+get\+\_\+key\+\_\+windows}} ()
+\begin{DoxyCompactList}\small\item\em Internal function to retrieve the encrypted key data from USB drives on Windows. \end{DoxyCompactList}\item 
+bytes \mbox{\hyperlink{namespacekey__getter_1_1key__getter_a257bf6528a628ff2a34bd75106257d4f}{key\+\_\+getter.\+key\+\_\+getter.\+\_\+get\+\_\+key\+\_\+linux}} ()
+\begin{DoxyCompactList}\small\item\em Internal function to retrieve the encrypted key data from USB drives on Linux. \end{DoxyCompactList}\item 
+bytes \mbox{\hyperlink{namespacekey__getter_1_1key__getter_a3524154f84dffe07615ea3b77225614b}{key\+\_\+getter.\+key\+\_\+getter.\+\_\+get\+\_\+key\+\_\+paths}} (list\mbox{[}str\mbox{]} usb\+\_\+paths)
+\begin{DoxyCompactList}\small\item\em Internal function to search for and read the key file from a list of USB paths. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacekey__getter_1_1key__getter_ad0f635a517c68f9277ecfaf30de76460}{key\+\_\+getter.\+key\+\_\+getter.\+WINDOWS\+\_\+\+PLATFORM\+\_\+\+NAME}} = \char`\"{}Windows\char`\"{}
+\begin{DoxyCompactList}\small\item\em String constant representing the Windows platform identifier. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespacekey__getter_1_1key__getter_a7b5751c900d5f7f880a264717c63ead5}{key\+\_\+getter.\+key\+\_\+getter.\+LINUX\+\_\+\+PLATFORM\+\_\+\+NAME}} = \char`\"{}Linux\char`\"{}
+\begin{DoxyCompactList}\small\item\em String constant representing the Linux platform identifier. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespacekey__getter_1_1key__getter_a4a203769b0ad4860c12ed8a2e54800a3}{key\+\_\+getter.\+key\+\_\+getter.\+KEY\+\_\+\+FILE\+\_\+\+NAME}} = \char`\"{}private\+\_\+key.\+key\char`\"{}
+\begin{DoxyCompactList}\small\item\em The expected filename of the encrypted private key on the USB drive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Retrieves and decrypts a private key from a USB drive. 
+
+This module provides functionality to locate USB drives on Windows and Linux, find a specific key file ({\ttfamily private\+\_\+key.\+key}), read its encrypted content, and decrypt it using a PIN to obtain an RSA private key. It defines several custom exceptions to handle various error conditions during this process. 

@@ -1,0 +1,201 @@
+\hypertarget{classframes_1_1signing_1_1SigningFrame}{}\doxysection{frames.\+signing.\+Signing\+Frame Class Reference}
+\label{classframes_1_1signing_1_1SigningFrame}\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+
+
+The \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame}{Signing\+Frame}} class provides the UI for the PDF signing process.  
+
+
+
+
+Inheritance diagram for frames.\+signing.\+Signing\+Frame\+:
+% FIG 0
+
+
+Collaboration diagram for frames.\+signing.\+Signing\+Frame\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a3aa057e08e59e554bebe13b7b21015b8}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, tk.\+Tk parent, rsa.\+RSAPrivate\+Key \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a64a8afb2656540e875fb9acf1357a61c}{private\+\_\+key}}, Callable\mbox{[}\mbox{[}$\,$\mbox{]}, None\mbox{]} \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a43eddedc6086db0e15c8b17f82849d55}{end\+\_\+signing\+\_\+callback}})
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame}{Signing\+Frame}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a64a8afb2656540e875fb9acf1357a61c}{private\+\_\+key}}
+\item 
+\mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a43eddedc6086db0e15c8b17f82849d55}{end\+\_\+signing\+\_\+callback}}
+\item 
+\mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_ab6f37ce20e7c1c689dbb28d71e0076e8}{source\+\_\+pdf\+\_\+path\+\_\+var}}
+\item 
+\mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_ad64154281d2b8f799cbcfce9cf40162d}{target\+\_\+pdf\+\_\+path\+\_\+var}}
+\item 
+\mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_ae1de1c455a090f17e1d3d75fd72eaf7d}{status\+\_\+label}}
+\item 
+\mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a3fd8ff49509c751499819c5abc773098}{source\+\_\+pdf\+\_\+path\+\_\+entry}}
+\item 
+\mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a79444f15d9a99d785c3897bb6e4e6f70}{target\+\_\+pdf\+\_\+path\+\_\+entry}}
+\item 
+\mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a8d6dab9a788d44d6dd810a3ca66fa442}{sign\+\_\+button}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a33487590a38c99b0ff875be6f2c4c841}{\+\_\+setup\+\_\+ui}} (self)
+\begin{DoxyCompactList}\small\item\em Sets up the user interface elements for the \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame}{Signing\+Frame}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a2c0852ea047853317fed78d882106cc9}{\+\_\+select\+\_\+source\+\_\+pdf\+\_\+file}} (self)
+\begin{DoxyCompactList}\small\item\em Opens a file dialog to allow the user to select the source PDF file. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a536869ab43048eda00dc88d1fe2d8098}{\+\_\+select\+\_\+target\+\_\+pdf\+\_\+path}} (self)
+\begin{DoxyCompactList}\small\item\em Opens a file dialog to allow the user to select the target path and filename for the signed PDF. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a91d9ba0ced400bbc7e991b4abc2163e4}{\+\_\+update\+\_\+feedback}} (self, str status\+\_\+message, str button\+\_\+text, Callable button\+\_\+command=None)
+\begin{DoxyCompactList}\small\item\em Helper method to update the status label and the main action button\textquotesingle{}s text and command. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame_a2b9918ec78e7e2cb20d37c639ef51cbf}{\+\_\+sign\+\_\+pdf\+\_\+document}} (self)
+\begin{DoxyCompactList}\small\item\em Handles the PDF signing process based on selected file paths and the provided private key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame}{Signing\+Frame}} class provides the UI for the PDF signing process. 
+
+This frame allows users to select a source PDF, specify a target location for the signed PDF, and initiate the signing operation. It handles user interactions and feedback. Inherits from tk.\+Frame. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_a3aa057e08e59e554bebe13b7b21015b8}\label{classframes_1_1signing_1_1SigningFrame_a3aa057e08e59e554bebe13b7b21015b8}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def frames.\+signing.\+Signing\+Frame.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{tk.\+Tk}]{parent,  }\item[{rsa.\+RSAPrivate\+Key}]{private\+\_\+key,  }\item[{Callable\mbox{[}\mbox{[}$\,$\mbox{]}, None\mbox{]}}]{end\+\_\+signing\+\_\+callback }\end{DoxyParamCaption})}
+
+
+
+Initializes the \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame}{Signing\+Frame}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent tk.\+Tk window or tk.\+Frame that this frame will be placed in. @type parent tk.\+Tk \\
+\hline
+{\em private\+\_\+key} & The RSA private key to be used for signing the PDF document. @type private\+\_\+key rsa.\+RSAPrivate\+Key \\
+\hline
+{\em end\+\_\+signing\+\_\+callback} & A function to be called when the signing process is completed (either successfully or to go back). This callback should take no arguments and return None. @type end\+\_\+signing\+\_\+callback Callable\mbox{[}\mbox{[}\mbox{]}, None\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_a2c0852ea047853317fed78d882106cc9}\label{classframes_1_1signing_1_1SigningFrame_a2c0852ea047853317fed78d882106cc9}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!\_select\_source\_pdf\_file@{\_select\_source\_pdf\_file}}
+\index{\_select\_source\_pdf\_file@{\_select\_source\_pdf\_file}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{\_select\_source\_pdf\_file()}{\_select\_source\_pdf\_file()}}
+{\footnotesize\ttfamily def frames.\+signing.\+Signing\+Frame.\+\_\+select\+\_\+source\+\_\+pdf\+\_\+file (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Opens a file dialog to allow the user to select the source PDF file. 
+
+Updates the {\ttfamily source\+\_\+pdf\+\_\+path\+\_\+var} and the corresponding entry field with the path of the file selected by the user. \mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_a536869ab43048eda00dc88d1fe2d8098}\label{classframes_1_1signing_1_1SigningFrame_a536869ab43048eda00dc88d1fe2d8098}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!\_select\_target\_pdf\_path@{\_select\_target\_pdf\_path}}
+\index{\_select\_target\_pdf\_path@{\_select\_target\_pdf\_path}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{\_select\_target\_pdf\_path()}{\_select\_target\_pdf\_path()}}
+{\footnotesize\ttfamily def frames.\+signing.\+Signing\+Frame.\+\_\+select\+\_\+target\+\_\+pdf\+\_\+path (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Opens a file dialog to allow the user to select the target path and filename for the signed PDF. 
+
+Updates the {\ttfamily target\+\_\+pdf\+\_\+path\+\_\+var} and the corresponding entry field with the path chosen by the user. Suggests \char`\"{}.\+pdf\char`\"{} as the default extension. \mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_a33487590a38c99b0ff875be6f2c4c841}\label{classframes_1_1signing_1_1SigningFrame_a33487590a38c99b0ff875be6f2c4c841}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!\_setup\_ui@{\_setup\_ui}}
+\index{\_setup\_ui@{\_setup\_ui}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{\_setup\_ui()}{\_setup\_ui()}}
+{\footnotesize\ttfamily def frames.\+signing.\+Signing\+Frame.\+\_\+setup\+\_\+ui (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets up the user interface elements for the \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame}{Signing\+Frame}}. 
+
+This private method creates and arranges labels, entry fields for paths, and buttons for file selection and signing. \mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_a2b9918ec78e7e2cb20d37c639ef51cbf}\label{classframes_1_1signing_1_1SigningFrame_a2b9918ec78e7e2cb20d37c639ef51cbf}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!\_sign\_pdf\_document@{\_sign\_pdf\_document}}
+\index{\_sign\_pdf\_document@{\_sign\_pdf\_document}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{\_sign\_pdf\_document()}{\_sign\_pdf\_document()}}
+{\footnotesize\ttfamily def frames.\+signing.\+Signing\+Frame.\+\_\+sign\+\_\+pdf\+\_\+document (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handles the PDF signing process based on selected file paths and the provided private key. 
+
+This method is called when the sign button is pressed. It validates that both source and target paths are provided and are not the same. It then attempts to sign the PDF using {\ttfamily pdf\+\_\+signer.\+sign} and updates the UI with success or error messages via {\ttfamily \+\_\+update\+\_\+feedback}.
+
+\begin{DoxyVerb}Handles the PDF signing process and UI feedback.\end{DoxyVerb}
+ \mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_a91d9ba0ced400bbc7e991b4abc2163e4}\label{classframes_1_1signing_1_1SigningFrame_a91d9ba0ced400bbc7e991b4abc2163e4}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!\_update\_feedback@{\_update\_feedback}}
+\index{\_update\_feedback@{\_update\_feedback}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{\_update\_feedback()}{\_update\_feedback()}}
+{\footnotesize\ttfamily def frames.\+signing.\+Signing\+Frame.\+\_\+update\+\_\+feedback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{status\+\_\+message,  }\item[{str}]{button\+\_\+text,  }\item[{Callable }]{button\+\_\+command = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper method to update the status label and the main action button\textquotesingle{}s text and command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+\_\+message} & The message to display in the status label. @type status\+\_\+message str \\
+\hline
+{\em button\+\_\+text} & The new text for the action. @type button\+\_\+text str \\
+\hline
+{\em button\+\_\+command} & The new command to associate with the action button. Defaults to {\ttfamily \+\_\+sign\+\_\+pdf\+\_\+document} if None. @type button\+\_\+command Callable\\
+\hline
+\end{DoxyParams}
+\begin{DoxyVerb}Helper to update status label and sign button.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_a43eddedc6086db0e15c8b17f82849d55}\label{classframes_1_1signing_1_1SigningFrame_a43eddedc6086db0e15c8b17f82849d55}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!end\_signing\_callback@{end\_signing\_callback}}
+\index{end\_signing\_callback@{end\_signing\_callback}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{end\_signing\_callback}{end\_signing\_callback}}
+{\footnotesize\ttfamily frames.\+signing.\+Signing\+Frame.\+end\+\_\+signing\+\_\+callback}
+
+\mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_a64a8afb2656540e875fb9acf1357a61c}\label{classframes_1_1signing_1_1SigningFrame_a64a8afb2656540e875fb9acf1357a61c}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!private\_key@{private\_key}}
+\index{private\_key@{private\_key}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{private\_key}{private\_key}}
+{\footnotesize\ttfamily frames.\+signing.\+Signing\+Frame.\+private\+\_\+key}
+
+\mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_a8d6dab9a788d44d6dd810a3ca66fa442}\label{classframes_1_1signing_1_1SigningFrame_a8d6dab9a788d44d6dd810a3ca66fa442}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!sign\_button@{sign\_button}}
+\index{sign\_button@{sign\_button}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{sign\_button}{sign\_button}}
+{\footnotesize\ttfamily frames.\+signing.\+Signing\+Frame.\+sign\+\_\+button}
+
+\mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_a3fd8ff49509c751499819c5abc773098}\label{classframes_1_1signing_1_1SigningFrame_a3fd8ff49509c751499819c5abc773098}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!source\_pdf\_path\_entry@{source\_pdf\_path\_entry}}
+\index{source\_pdf\_path\_entry@{source\_pdf\_path\_entry}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{source\_pdf\_path\_entry}{source\_pdf\_path\_entry}}
+{\footnotesize\ttfamily frames.\+signing.\+Signing\+Frame.\+source\+\_\+pdf\+\_\+path\+\_\+entry}
+
+\mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_ab6f37ce20e7c1c689dbb28d71e0076e8}\label{classframes_1_1signing_1_1SigningFrame_ab6f37ce20e7c1c689dbb28d71e0076e8}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!source\_pdf\_path\_var@{source\_pdf\_path\_var}}
+\index{source\_pdf\_path\_var@{source\_pdf\_path\_var}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{source\_pdf\_path\_var}{source\_pdf\_path\_var}}
+{\footnotesize\ttfamily frames.\+signing.\+Signing\+Frame.\+source\+\_\+pdf\+\_\+path\+\_\+var}
+
+\mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_ae1de1c455a090f17e1d3d75fd72eaf7d}\label{classframes_1_1signing_1_1SigningFrame_ae1de1c455a090f17e1d3d75fd72eaf7d}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!status\_label@{status\_label}}
+\index{status\_label@{status\_label}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{status\_label}{status\_label}}
+{\footnotesize\ttfamily frames.\+signing.\+Signing\+Frame.\+status\+\_\+label}
+
+\mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_a79444f15d9a99d785c3897bb6e4e6f70}\label{classframes_1_1signing_1_1SigningFrame_a79444f15d9a99d785c3897bb6e4e6f70}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!target\_pdf\_path\_entry@{target\_pdf\_path\_entry}}
+\index{target\_pdf\_path\_entry@{target\_pdf\_path\_entry}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{target\_pdf\_path\_entry}{target\_pdf\_path\_entry}}
+{\footnotesize\ttfamily frames.\+signing.\+Signing\+Frame.\+target\+\_\+pdf\+\_\+path\+\_\+entry}
+
+\mbox{\Hypertarget{classframes_1_1signing_1_1SigningFrame_ad64154281d2b8f799cbcfce9cf40162d}\label{classframes_1_1signing_1_1SigningFrame_ad64154281d2b8f799cbcfce9cf40162d}} 
+\index{frames.signing.SigningFrame@{frames.signing.SigningFrame}!target\_pdf\_path\_var@{target\_pdf\_path\_var}}
+\index{target\_pdf\_path\_var@{target\_pdf\_path\_var}!frames.signing.SigningFrame@{frames.signing.SigningFrame}}
+\doxysubsubsection{\texorpdfstring{target\_pdf\_path\_var}{target\_pdf\_path\_var}}
+{\footnotesize\ttfamily frames.\+signing.\+Signing\+Frame.\+target\+\_\+pdf\+\_\+path\+\_\+var}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+signing/frames/\mbox{\hyperlink{signing_8py}{signing.\+py}}\end{DoxyCompactItemize}

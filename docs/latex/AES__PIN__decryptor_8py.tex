@@ -1,0 +1,25 @@
+\hypertarget{AES__PIN__decryptor_8py}{}\doxysection{signing/services/key\+\_\+getter/\+AES\+\_\+\+PIN\+\_\+decryptor.py File Reference}
+\label{AES__PIN__decryptor_8py}\index{signing/services/key\_getter/AES\_PIN\_decryptor.py@{signing/services/key\_getter/AES\_PIN\_decryptor.py}}
+
+
+Provides cryptographic utility functions for hashing and AES decryption.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacekey__getter_1_1AES__PIN__decryptor}{key\+\_\+getter.\+AES\+\_\+\+PIN\+\_\+decryptor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bytes \mbox{\hyperlink{namespacekey__getter_1_1AES__PIN__decryptor_ad4ea55de7d7adef837d0a543c9a1617e}{key\+\_\+getter.\+AES\+\_\+\+PIN\+\_\+decryptor.\+hash\+\_\+pin}} (str pin)
+\begin{DoxyCompactList}\small\item\em Hashes a numeric PIN string using SHA256. \end{DoxyCompactList}\item 
+bytes \mbox{\hyperlink{namespacekey__getter_1_1AES__PIN__decryptor_a4850d537b6eac07439daeb9a48fe7518}{key\+\_\+getter.\+AES\+\_\+\+PIN\+\_\+decryptor.\+aes\+\_\+decrypt\+\_\+file}} (bytes encrypted\+\_\+data, str pin)
+\begin{DoxyCompactList}\small\item\em Decrypts data encrypted using AES in EAX mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides cryptographic utility functions for hashing and AES decryption. 
+
+This module contains functions to hash a PIN using SHA256 and to decrypt data encrypted with AES in EAX mode. 

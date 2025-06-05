@@ -1,0 +1,49 @@
+\hypertarget{namespacepdf__signer_1_1verifier}{}\doxysection{pdf\+\_\+signer.\+verifier Namespace Reference}
+\label{namespacepdf__signer_1_1verifier}\index{pdf\_signer.verifier@{pdf\_signer.verifier}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classpdf__signer_1_1verifier_1_1NoSignatureFound}{No\+Signature\+Found}}
+\begin{DoxyCompactList}\small\item\em Exception raised when a PDF document does not contain any embedded digital signatures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacepdf__signer_1_1verifier_abdad9dac4a2124fcd15b2d58564ff412}{verify}} (rsa.\+RSAPublic\+Key public\+\_\+key, str pdf\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Verifies the digital signature found in a PDF document against a provided public key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepdf__signer_1_1verifier_abdad9dac4a2124fcd15b2d58564ff412}\label{namespacepdf__signer_1_1verifier_abdad9dac4a2124fcd15b2d58564ff412}} 
+\index{pdf\_signer.verifier@{pdf\_signer.verifier}!verify@{verify}}
+\index{verify@{verify}!pdf\_signer.verifier@{pdf\_signer.verifier}}
+\doxysubsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily  bool pdf\+\_\+signer.\+verifier.\+verify (\begin{DoxyParamCaption}\item[{rsa.\+RSAPublic\+Key}]{public\+\_\+key,  }\item[{str}]{pdf\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Verifies the digital signature found in a PDF document against a provided public key. 
+
+This function reads a PDF, extracts its first embedded signature, and performs two main checks\+:
+\begin{DoxyEnumerate}
+\item It compares the public key embedded in the signature\textquotesingle{}s certificate with the {\ttfamily public\+\_\+key} argument. If they do not match, verification fails (returns {\ttfamily False}).
+\item It validates the integrity of the signature itself using {\ttfamily pyhanko}\textquotesingle{}s validation mechanism. For self-\/signed certificates, it creates a {\ttfamily Validation\+Context} trusting the embedded certificate itself to validate the signature. 
+\begin{DoxyParams}{Parameters}
+{\em public\+\_\+key} & The RSA public key expected to correspond to the signature. @type public\+\_\+key rsa.\+RSAPublic\+Key \\
+\hline
+{\em pdf\+\_\+path} & The file system path to the PDF document whose signature is to be verified. @type pdf\+\_\+path str \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily True} if the embedded public key matches the provided {\ttfamily public\+\_\+key} AND the signature is intact Returns {\ttfamily False} otherwise. @rtype bool 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Error} & If the {\ttfamily pdf\+\_\+path} does not exist. \\
+\hline
+{\em \mbox{\hyperlink{classpdf__signer_1_1verifier_1_1NoSignatureFound}{No\+Signature\+Found}}} & If the PDF document does not contain any embedded signatures. \\
+\hline
+{\em Pdf\+Read\+Error} & When an error occurs during verifying or while reading the PDF file \\
+\hline
+\end{DoxyExceptions}
+
+\end{DoxyEnumerate}

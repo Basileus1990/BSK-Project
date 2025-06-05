@@ -1,0 +1,25 @@
+\hypertarget{usb__finder__windows_8py}{}\doxysection{signing/services/key\+\_\+getter/usb\+\_\+finder\+\_\+windows.py File Reference}
+\label{usb__finder__windows_8py}\index{signing/services/key\_getter/usb\_finder\_windows.py@{signing/services/key\_getter/usb\_finder\_windows.py}}
+
+
+Provides functions to find USB drive letters on Windows systems.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacekey__getter_1_1usb__finder__windows}{key\+\_\+getter.\+usb\+\_\+finder\+\_\+windows}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacekey__getter_1_1usb__finder__windows_a2821ca291f7ff69b0133056082d1b41c}{key\+\_\+getter.\+usb\+\_\+finder\+\_\+windows.\+get\+\_\+usb\+\_\+mount\+\_\+paths\+\_\+windows}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the drive letters for all connected USB storage devices on a Windows system. \end{DoxyCompactList}\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacekey__getter_1_1usb__finder__windows_a7d9a00c9988fbe3ec185d5849887f9be}{key\+\_\+getter.\+usb\+\_\+finder\+\_\+windows.\+\_\+get\+\_\+usb\+\_\+devices\+\_\+windows}} ()
+\begin{DoxyCompactList}\small\item\em Identifies removable logical disks on a Windows system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functions to find USB drive letters on Windows systems. 
+
+This module uses the Windows Management Instrumentation (WMI) library to identify removable disk drives (typically USB drives) and retrieve their assigned drive letters. 

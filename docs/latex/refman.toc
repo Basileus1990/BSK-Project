@@ -1,0 +1,286 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Namespace Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Namespace List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Hierarchical Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class Hierarchy}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Namespace Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}frames Namespace Reference}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}frames.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}window Namespace Reference}{9}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Variable Documentation}{9}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}ACTIVATE\_BUTTON\_COLOR}{10}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}BACKGROUND2\_COLOR}{10}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.2.1.3}BACKGROUND\_COLOR}{10}{subsubsection.5.2.1.3}%
+\contentsline {subsubsection}{\numberline {5.2.1.4}BLUE\_BUTTON\_COLOR}{10}{subsubsection.5.2.1.4}%
+\contentsline {subsubsection}{\numberline {5.2.1.5}FOREGROUND\_COLOR}{10}{subsubsection.5.2.1.5}%
+\contentsline {subsubsection}{\numberline {5.2.1.6}PRIVATE\_KEY\_NAME}{10}{subsubsection.5.2.1.6}%
+\contentsline {subsubsection}{\numberline {5.2.1.7}PUBLIC\_KEY\_NAME}{10}{subsubsection.5.2.1.7}%
+\contentsline {section}{\numberline {5.3}frames.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}signing Namespace Reference}{11}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Variable Documentation}{12}{subsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}ACTIVATE\_BUTTON\_COLOR}{12}{subsubsection.5.3.1.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.2}BACKGROUND2\_COLOR}{12}{subsubsection.5.3.1.2}%
+\contentsline {subsubsection}{\numberline {5.3.1.3}BACKGROUND\_COLOR}{12}{subsubsection.5.3.1.3}%
+\contentsline {subsubsection}{\numberline {5.3.1.4}BLUE\_BUTTON\_COLOR}{12}{subsubsection.5.3.1.4}%
+\contentsline {subsubsection}{\numberline {5.3.1.5}DEFAULT\_WRAP\_LENGTH}{12}{subsubsection.5.3.1.5}%
+\contentsline {subsubsection}{\numberline {5.3.1.6}FOREGROUND\_COLOR}{13}{subsubsection.5.3.1.6}%
+\contentsline {subsubsection}{\numberline {5.3.1.7}GO\_BACK\_BUTTON\_TEXT}{13}{subsubsection.5.3.1.7}%
+\contentsline {subsubsection}{\numberline {5.3.1.8}INITIAL\_STATUS\_TEXT}{13}{subsubsection.5.3.1.8}%
+\contentsline {subsubsection}{\numberline {5.3.1.9}LARGE\_FONT\_CONFIG}{13}{subsubsection.5.3.1.9}%
+\contentsline {subsubsection}{\numberline {5.3.1.10}PATHS\_CANNOT\_BE\_THE\_SAME\_ERROR\_TEXT}{13}{subsubsection.5.3.1.10}%
+\contentsline {subsubsection}{\numberline {5.3.1.11}PATHS\_REQUIRED\_ERROR\_TEXT}{13}{subsubsection.5.3.1.11}%
+\contentsline {subsubsection}{\numberline {5.3.1.12}PDF\_FILE\_TYPES}{14}{subsubsection.5.3.1.12}%
+\contentsline {subsubsection}{\numberline {5.3.1.13}PDF\_READ\_ERROR\_TEXT}{14}{subsubsection.5.3.1.13}%
+\contentsline {subsubsection}{\numberline {5.3.1.14}RETRY\_BUTTON\_TEXT}{14}{subsubsection.5.3.1.14}%
+\contentsline {subsubsection}{\numberline {5.3.1.15}SELECT\_SOURCE\_BUTTON\_TEXT}{14}{subsubsection.5.3.1.15}%
+\contentsline {subsubsection}{\numberline {5.3.1.16}SELECT\_SOURCE\_PDF\_TITLE}{14}{subsubsection.5.3.1.16}%
+\contentsline {subsubsection}{\numberline {5.3.1.17}SELECT\_TARGET\_BUTTON\_TEXT}{14}{subsubsection.5.3.1.17}%
+\contentsline {subsubsection}{\numberline {5.3.1.18}SELECT\_TARGET\_PDF\_TITLE}{15}{subsubsection.5.3.1.18}%
+\contentsline {subsubsection}{\numberline {5.3.1.19}SIGN\_BUTTON\_INITIAL\_TEXT}{15}{subsubsection.5.3.1.19}%
+\contentsline {subsubsection}{\numberline {5.3.1.20}SIGNING\_ERROR\_TEXT}{15}{subsubsection.5.3.1.20}%
+\contentsline {subsubsection}{\numberline {5.3.1.21}SIGNING\_SUCCESS\_TEXT}{15}{subsubsection.5.3.1.21}%
+\contentsline {subsubsection}{\numberline {5.3.1.22}SOURCE\_PDF\_LABEL\_TEXT}{15}{subsubsection.5.3.1.22}%
+\contentsline {subsubsection}{\numberline {5.3.1.23}TARGET\_PDF\_LABEL\_TEXT}{15}{subsubsection.5.3.1.23}%
+\contentsline {subsubsection}{\numberline {5.3.1.24}UNEXPECTED\_SIGNING\_ERROR\_TEXT}{16}{subsubsection.5.3.1.24}%
+\contentsline {section}{\numberline {5.4}frames.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}start Namespace Reference}{16}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Variable Documentation}{16}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}ACTIVATE\_BUTTON\_COLOR}{16}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}BACKGROUND2\_COLOR}{17}{subsubsection.5.4.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.1.3}BACKGROUND\_COLOR}{17}{subsubsection.5.4.1.3}%
+\contentsline {subsubsection}{\numberline {5.4.1.4}BLUE\_BUTTON\_COLOR}{17}{subsubsection.5.4.1.4}%
+\contentsline {subsubsection}{\numberline {5.4.1.5}BUTTON\_PADDING\_Y}{17}{subsubsection.5.4.1.5}%
+\contentsline {subsubsection}{\numberline {5.4.1.6}DEFAULT\_PADDING\_X}{17}{subsubsection.5.4.1.6}%
+\contentsline {subsubsection}{\numberline {5.4.1.7}DEFAULT\_PADDING\_Y}{17}{subsubsection.5.4.1.7}%
+\contentsline {subsubsection}{\numberline {5.4.1.8}DEFAULT\_WRAP\_LENGTH}{17}{subsubsection.5.4.1.8}%
+\contentsline {subsubsection}{\numberline {5.4.1.9}FOREGROUND\_COLOR}{18}{subsubsection.5.4.1.9}%
+\contentsline {subsubsection}{\numberline {5.4.1.10}LABEL\_TEXT}{18}{subsubsection.5.4.1.10}%
+\contentsline {subsubsection}{\numberline {5.4.1.11}LARGE\_FONT\_CONFIG}{18}{subsubsection.5.4.1.11}%
+\contentsline {subsubsection}{\numberline {5.4.1.12}SIGN\_BUTTON\_TEXT}{18}{subsubsection.5.4.1.12}%
+\contentsline {subsubsection}{\numberline {5.4.1.13}VERIFY\_BUTTON\_TEXT}{18}{subsubsection.5.4.1.13}%
+\contentsline {section}{\numberline {5.5}frames.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}usb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}get Namespace Reference}{18}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Variable Documentation}{20}{subsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.1}ACTION\_BUTTON\_EXIT\_TEXT}{20}{subsubsection.5.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.2}ACTION\_BUTTON\_INITIAL\_TEXT}{20}{subsubsection.5.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.5.1.3}ACTION\_BUTTON\_RETRY\_TEXT}{20}{subsubsection.5.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.5.1.4}ACTIVATE\_BUTTON\_COLOR}{20}{subsubsection.5.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.5.1.5}BACKGROUND2\_COLOR}{20}{subsubsection.5.5.1.5}%
+\contentsline {subsubsection}{\numberline {5.5.1.6}BACKGROUND\_COLOR}{20}{subsubsection.5.5.1.6}%
+\contentsline {subsubsection}{\numberline {5.5.1.7}BLUE\_BUTTON\_COLOR}{21}{subsubsection.5.5.1.7}%
+\contentsline {subsubsection}{\numberline {5.5.1.8}BUTTON\_PADDING\_Y}{21}{subsubsection.5.5.1.8}%
+\contentsline {subsubsection}{\numberline {5.5.1.9}DEFAULT\_PADDING\_X}{21}{subsubsection.5.5.1.9}%
+\contentsline {subsubsection}{\numberline {5.5.1.10}DEFAULT\_PADDING\_Y}{21}{subsubsection.5.5.1.10}%
+\contentsline {subsubsection}{\numberline {5.5.1.11}DEFAULT\_WRAP\_LENGTH}{21}{subsubsection.5.5.1.11}%
+\contentsline {subsubsection}{\numberline {5.5.1.12}FOREGROUND\_COLOR}{21}{subsubsection.5.5.1.12}%
+\contentsline {subsubsection}{\numberline {5.5.1.13}INITIAL\_INSTRUCTION\_TEXT}{22}{subsubsection.5.5.1.13}%
+\contentsline {subsubsection}{\numberline {5.5.1.14}INPUT\_AREA\_PADDING\_Y}{22}{subsubsection.5.5.1.14}%
+\contentsline {subsubsection}{\numberline {5.5.1.15}KEY\_INVALID\_MSG}{22}{subsubsection.5.5.1.15}%
+\contentsline {subsubsection}{\numberline {5.5.1.16}KEY\_OR\_PIN\_INVALID\_MSG}{22}{subsubsection.5.5.1.16}%
+\contentsline {subsubsection}{\numberline {5.5.1.17}LARGE\_FONT\_CONFIG}{22}{subsubsection.5.5.1.17}%
+\contentsline {subsubsection}{\numberline {5.5.1.18}MULTIPLE\_KEYS\_MSG}{22}{subsubsection.5.5.1.18}%
+\contentsline {subsubsection}{\numberline {5.5.1.19}NO\_KEY\_FILE\_MSG}{23}{subsubsection.5.5.1.19}%
+\contentsline {subsubsection}{\numberline {5.5.1.20}NO\_USB\_DRIVES\_MSG}{23}{subsubsection.5.5.1.20}%
+\contentsline {subsubsection}{\numberline {5.5.1.21}PIN\_INVALID\_FORMAT\_MSG}{23}{subsubsection.5.5.1.21}%
+\contentsline {subsubsection}{\numberline {5.5.1.22}PIN\_LABEL\_TEXT}{23}{subsubsection.5.5.1.22}%
+\contentsline {subsubsection}{\numberline {5.5.1.23}PIN\_REQUIRED\_MSG}{23}{subsubsection.5.5.1.23}%
+\contentsline {subsubsection}{\numberline {5.5.1.24}UNSUPPORTED\_PLATFORM\_MSG}{23}{subsubsection.5.5.1.24}%
+\contentsline {section}{\numberline {5.6}frames.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}verifying Namespace Reference}{24}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Variable Documentation}{25}{subsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.1}ACTIVATE\_BUTTON\_COLOR}{25}{subsubsection.5.6.1.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.2}BACKGROUND2\_COLOR}{25}{subsubsection.5.6.1.2}%
+\contentsline {subsubsection}{\numberline {5.6.1.3}BACKGROUND\_COLOR}{25}{subsubsection.5.6.1.3}%
+\contentsline {subsubsection}{\numberline {5.6.1.4}BLUE\_BUTTON\_COLOR}{25}{subsubsection.5.6.1.4}%
+\contentsline {subsubsection}{\numberline {5.6.1.5}BUTTON\_PADDING\_Y}{25}{subsubsection.5.6.1.5}%
+\contentsline {subsubsection}{\numberline {5.6.1.6}DEFAULT\_PADDING\_X}{26}{subsubsection.5.6.1.6}%
+\contentsline {subsubsection}{\numberline {5.6.1.7}DEFAULT\_PADDING\_Y}{26}{subsubsection.5.6.1.7}%
+\contentsline {subsubsection}{\numberline {5.6.1.8}DEFAULT\_WRAP\_LENGTH}{26}{subsubsection.5.6.1.8}%
+\contentsline {subsubsection}{\numberline {5.6.1.9}FOREGROUND\_COLOR}{26}{subsubsection.5.6.1.9}%
+\contentsline {subsubsection}{\numberline {5.6.1.10}INITIAL\_INSTRUCTION\_TEXT}{26}{subsubsection.5.6.1.10}%
+\contentsline {subsubsection}{\numberline {5.6.1.11}LARGE\_FONT\_CONFIG}{26}{subsubsection.5.6.1.11}%
+\contentsline {subsubsection}{\numberline {5.6.1.12}NO\_SIGNATURE\_MSG}{27}{subsubsection.5.6.1.12}%
+\contentsline {subsubsection}{\numberline {5.6.1.13}PATHS\_REQUIRED\_MSG}{27}{subsubsection.5.6.1.13}%
+\contentsline {subsubsection}{\numberline {5.6.1.14}PDF\_FILE\_TYPES}{27}{subsubsection.5.6.1.14}%
+\contentsline {subsubsection}{\numberline {5.6.1.15}PDF\_INVALID\_MSG}{27}{subsubsection.5.6.1.15}%
+\contentsline {subsubsection}{\numberline {5.6.1.16}PUBLIC\_KEY\_FILE\_TYPES}{27}{subsubsection.5.6.1.16}%
+\contentsline {subsubsection}{\numberline {5.6.1.17}PUBLIC\_KEY\_INVALID\_MSG}{27}{subsubsection.5.6.1.17}%
+\contentsline {subsubsection}{\numberline {5.6.1.18}PUBLIC\_KEY\_NOT\_FOUND\_MSG}{28}{subsubsection.5.6.1.18}%
+\contentsline {subsubsection}{\numberline {5.6.1.19}SECTION\_SPACING\_Y}{28}{subsubsection.5.6.1.19}%
+\contentsline {subsubsection}{\numberline {5.6.1.20}SELECT\_PDF\_TO\_VERIFY\_TITLE}{28}{subsubsection.5.6.1.20}%
+\contentsline {subsubsection}{\numberline {5.6.1.21}SELECT\_PUBLIC\_KEY\_TITLE}{28}{subsubsection.5.6.1.21}%
+\contentsline {subsubsection}{\numberline {5.6.1.22}SIGNATURE\_INVALID\_MSG}{28}{subsubsection.5.6.1.22}%
+\contentsline {subsubsection}{\numberline {5.6.1.23}SIGNATURE\_VALID\_MSG}{28}{subsubsection.5.6.1.23}%
+\contentsline {subsubsection}{\numberline {5.6.1.24}VERIFICATION\_ERROR\_MSG}{29}{subsubsection.5.6.1.24}%
+\contentsline {subsubsection}{\numberline {5.6.1.25}VERIFY\_BUTTON\_GO\_BACK\_TEXT}{29}{subsubsection.5.6.1.25}%
+\contentsline {subsubsection}{\numberline {5.6.1.26}VERIFY\_BUTTON\_INITIAL\_TEXT}{29}{subsubsection.5.6.1.26}%
+\contentsline {subsubsection}{\numberline {5.6.1.27}VERIFY\_BUTTON\_RETRY\_TEXT}{29}{subsubsection.5.6.1.27}%
+\contentsline {section}{\numberline {5.7}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generate Namespace Reference}{29}{section.5.7}%
+\contentsline {section}{\numberline {5.8}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generate.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}AES\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generator Namespace Reference}{29}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Function Documentation}{30}{subsection.5.8.1}%
+\contentsline {subsubsection}{\numberline {5.8.1.1}aes\_decrypt\_file()}{30}{subsubsection.5.8.1.1}%
+\contentsline {subsubsection}{\numberline {5.8.1.2}aes\_encrypt\_file()}{30}{subsubsection.5.8.1.2}%
+\contentsline {subsubsection}{\numberline {5.8.1.3}hash\_pin()}{31}{subsubsection.5.8.1.3}%
+\contentsline {section}{\numberline {5.9}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generate.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}RSA\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generator Namespace Reference}{31}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Function Documentation}{31}{subsection.5.9.1}%
+\contentsline {subsubsection}{\numberline {5.9.1.1}generate\_keys()}{31}{subsubsection.5.9.1.1}%
+\contentsline {section}{\numberline {5.10}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter Namespace Reference}{32}{section.5.10}%
+\contentsline {section}{\numberline {5.11}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}AES\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PIN\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}decryptor Namespace Reference}{32}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Function Documentation}{32}{subsection.5.11.1}%
+\contentsline {subsubsection}{\numberline {5.11.1.1}aes\_decrypt\_file()}{32}{subsubsection.5.11.1.1}%
+\contentsline {subsubsection}{\numberline {5.11.1.2}hash\_pin()}{33}{subsubsection.5.11.1.2}%
+\contentsline {section}{\numberline {5.12}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter Namespace Reference}{33}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Function Documentation}{34}{subsection.5.12.1}%
+\contentsline {subsubsection}{\numberline {5.12.1.1}\_get\_key\_linux()}{34}{subsubsection.5.12.1.1}%
+\contentsline {subsubsection}{\numberline {5.12.1.2}\_get\_key\_paths()}{34}{subsubsection.5.12.1.2}%
+\contentsline {subsubsection}{\numberline {5.12.1.3}\_get\_key\_windows()}{35}{subsubsection.5.12.1.3}%
+\contentsline {subsubsection}{\numberline {5.12.1.4}get\_key()}{35}{subsubsection.5.12.1.4}%
+\contentsline {subsection}{\numberline {5.12.2}Variable Documentation}{36}{subsection.5.12.2}%
+\contentsline {subsubsection}{\numberline {5.12.2.1}KEY\_FILE\_NAME}{36}{subsubsection.5.12.2.1}%
+\contentsline {subsubsection}{\numberline {5.12.2.2}LINUX\_PLATFORM\_NAME}{36}{subsubsection.5.12.2.2}%
+\contentsline {subsubsection}{\numberline {5.12.2.3}WINDOWS\_PLATFORM\_NAME}{36}{subsubsection.5.12.2.3}%
+\contentsline {section}{\numberline {5.13}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}usb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}finder\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}linux Namespace Reference}{36}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Function Documentation}{36}{subsection.5.13.1}%
+\contentsline {subsubsection}{\numberline {5.13.1.1}\_get\_usb\_devices\_linux()}{37}{subsubsection.5.13.1.1}%
+\contentsline {subsubsection}{\numberline {5.13.1.2}get\_usb\_mount\_paths\_linux()}{37}{subsubsection.5.13.1.2}%
+\contentsline {section}{\numberline {5.14}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}usb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}finder\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}windows Namespace Reference}{37}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}Function Documentation}{37}{subsection.5.14.1}%
+\contentsline {subsubsection}{\numberline {5.14.1.1}\_get\_usb\_devices\_windows()}{38}{subsubsection.5.14.1.1}%
+\contentsline {subsubsection}{\numberline {5.14.1.2}get\_usb\_mount\_paths\_windows()}{38}{subsubsection.5.14.1.2}%
+\contentsline {section}{\numberline {5.15}main Namespace Reference}{38}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Variable Documentation}{39}{subsection.5.15.1}%
+\contentsline {subsubsection}{\numberline {5.15.1.1}APP\_HEIGHT}{39}{subsubsection.5.15.1.1}%
+\contentsline {subsubsection}{\numberline {5.15.1.2}APP\_TITLE}{39}{subsubsection.5.15.1.2}%
+\contentsline {subsubsection}{\numberline {5.15.1.3}APP\_WIDTH}{39}{subsubsection.5.15.1.3}%
+\contentsline {section}{\numberline {5.16}pdf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}signer Namespace Reference}{39}{section.5.16}%
+\contentsline {section}{\numberline {5.17}pdf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}signer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}signer Namespace Reference}{39}{section.5.17}%
+\contentsline {subsection}{\numberline {5.17.1}Function Documentation}{39}{subsection.5.17.1}%
+\contentsline {subsubsection}{\numberline {5.17.1.1}\_generate\_self\_signed\_cert()}{39}{subsubsection.5.17.1.1}%
+\contentsline {subsubsection}{\numberline {5.17.1.2}sign()}{40}{subsubsection.5.17.1.2}%
+\contentsline {section}{\numberline {5.18}pdf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}signer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}verifier Namespace Reference}{40}{section.5.18}%
+\contentsline {subsection}{\numberline {5.18.1}Function Documentation}{41}{subsection.5.18.1}%
+\contentsline {subsubsection}{\numberline {5.18.1.1}verify()}{41}{subsubsection.5.18.1.1}%
+\contentsline {chapter}{\numberline {6}Class Documentation}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App Class Reference}{43}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{44}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Constructor \& Destructor Documentation}{44}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{44}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}\_\_init\_\_()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{44}{subsubsection.6.1.2.2}%
+\contentsline {subsection}{\numberline {6.1.3}Member Function Documentation}{44}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}\_change\_frame()}{44}{subsubsection.6.1.3.1}%
+\contentsline {subsubsection}{\numberline {6.1.3.2}get\_key\_from\_usb\_result()}{45}{subsubsection.6.1.3.2}%
+\contentsline {subsubsection}{\numberline {6.1.3.3}main\_menu()}{45}{subsubsection.6.1.3.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.4}start\_signing()}{45}{subsubsection.6.1.3.4}%
+\contentsline {subsubsection}{\numberline {6.1.3.5}start\_verifying()}{45}{subsubsection.6.1.3.5}%
+\contentsline {subsection}{\numberline {6.1.4}Member Data Documentation}{45}{subsection.6.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.4.1}current\_frame}{45}{subsubsection.6.1.4.1}%
+\contentsline {section}{\numberline {6.2}frames.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}window.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Generate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Keys Class Reference}{46}{section.6.2}%
+\contentsline {section}{\numberline {6.3}frames.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}usb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}get.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}From\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}USBFrame Class Reference}{46}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{46}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Constructor \& Destructor Documentation}{46}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}\_\_init\_\_()}{46}{subsubsection.6.3.2.1}%
+\contentsline {subsection}{\numberline {6.3.3}Member Function Documentation}{47}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}\_process\_pin\_and\_get\_key()}{47}{subsubsection.6.3.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.3.2}\_setup\_ui()}{47}{subsubsection.6.3.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3.3}\_update\_feedback()}{47}{subsubsection.6.3.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Member Data Documentation}{48}{subsection.6.3.4}%
+\contentsline {subsubsection}{\numberline {6.3.4.1}action\_button}{48}{subsubsection.6.3.4.1}%
+\contentsline {subsubsection}{\numberline {6.3.4.2}on\_key\_retrieved\_callback}{48}{subsubsection.6.3.4.2}%
+\contentsline {subsubsection}{\numberline {6.3.4.3}pin\_entry}{48}{subsubsection.6.3.4.3}%
+\contentsline {subsubsection}{\numberline {6.3.4.4}status\_label}{48}{subsubsection.6.3.4.4}%
+\contentsline {section}{\numberline {6.4}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Invalid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{48}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{49}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Or\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Invalid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{49}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{49}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.6}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Multiple\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Keys\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Found\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{49}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{49}{subsection.6.6.1}%
+\contentsline {section}{\numberline {6.7}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}No\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Found\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{49}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{50}{subsection.6.7.1}%
+\contentsline {section}{\numberline {6.8}pdf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}signer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}verifier.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}No\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Signature\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Found Class Reference}{50}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{50}{subsection.6.8.1}%
+\contentsline {section}{\numberline {6.9}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}No\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}USBDrives\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Found\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{50}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{50}{subsection.6.9.1}%
+\contentsline {section}{\numberline {6.10}frames.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}signing.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Signing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Frame Class Reference}{51}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Detailed Description}{51}{subsection.6.10.1}%
+\contentsline {subsection}{\numberline {6.10.2}Constructor \& Destructor Documentation}{51}{subsection.6.10.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.1}\_\_init\_\_()}{51}{subsubsection.6.10.2.1}%
+\contentsline {subsection}{\numberline {6.10.3}Member Function Documentation}{52}{subsection.6.10.3}%
+\contentsline {subsubsection}{\numberline {6.10.3.1}\_select\_source\_pdf\_file()}{52}{subsubsection.6.10.3.1}%
+\contentsline {subsubsection}{\numberline {6.10.3.2}\_select\_target\_pdf\_path()}{52}{subsubsection.6.10.3.2}%
+\contentsline {subsubsection}{\numberline {6.10.3.3}\_setup\_ui()}{52}{subsubsection.6.10.3.3}%
+\contentsline {subsubsection}{\numberline {6.10.3.4}\_sign\_pdf\_document()}{53}{subsubsection.6.10.3.4}%
+\contentsline {subsubsection}{\numberline {6.10.3.5}\_update\_feedback()}{53}{subsubsection.6.10.3.5}%
+\contentsline {subsection}{\numberline {6.10.4}Member Data Documentation}{53}{subsection.6.10.4}%
+\contentsline {subsubsection}{\numberline {6.10.4.1}end\_signing\_callback}{53}{subsubsection.6.10.4.1}%
+\contentsline {subsubsection}{\numberline {6.10.4.2}private\_key}{53}{subsubsection.6.10.4.2}%
+\contentsline {subsubsection}{\numberline {6.10.4.3}sign\_button}{54}{subsubsection.6.10.4.3}%
+\contentsline {subsubsection}{\numberline {6.10.4.4}source\_pdf\_path\_entry}{54}{subsubsection.6.10.4.4}%
+\contentsline {subsubsection}{\numberline {6.10.4.5}source\_pdf\_path\_var}{54}{subsubsection.6.10.4.5}%
+\contentsline {subsubsection}{\numberline {6.10.4.6}status\_label}{54}{subsubsection.6.10.4.6}%
+\contentsline {subsubsection}{\numberline {6.10.4.7}target\_pdf\_path\_entry}{54}{subsubsection.6.10.4.7}%
+\contentsline {subsubsection}{\numberline {6.10.4.8}target\_pdf\_path\_var}{54}{subsubsection.6.10.4.8}%
+\contentsline {section}{\numberline {6.11}frames.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}start.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Start\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Frame Class Reference}{54}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Detailed Description}{55}{subsection.6.11.1}%
+\contentsline {subsection}{\numberline {6.11.2}Constructor \& Destructor Documentation}{55}{subsection.6.11.2}%
+\contentsline {subsubsection}{\numberline {6.11.2.1}\_\_init\_\_()}{55}{subsubsection.6.11.2.1}%
+\contentsline {subsection}{\numberline {6.11.3}Member Function Documentation}{56}{subsection.6.11.3}%
+\contentsline {subsubsection}{\numberline {6.11.3.1}\_setup\_ui()}{56}{subsubsection.6.11.3.1}%
+\contentsline {subsection}{\numberline {6.11.4}Member Data Documentation}{56}{subsection.6.11.4}%
+\contentsline {subsubsection}{\numberline {6.11.4.1}on\_signing\_chosen\_callback}{56}{subsubsection.6.11.4.1}%
+\contentsline {subsubsection}{\numberline {6.11.4.2}on\_verifying\_chosen\_callback}{56}{subsubsection.6.11.4.2}%
+\contentsline {section}{\numberline {6.12}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Unsupported\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Platform\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception Class Reference}{56}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{57}{subsection.6.12.1}%
+\contentsline {section}{\numberline {6.13}frames.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}verifying.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Verifying\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Frame Class Reference}{57}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Detailed Description}{58}{subsection.6.13.1}%
+\contentsline {subsection}{\numberline {6.13.2}Constructor \& Destructor Documentation}{58}{subsection.6.13.2}%
+\contentsline {subsubsection}{\numberline {6.13.2.1}\_\_init\_\_()}{58}{subsubsection.6.13.2.1}%
+\contentsline {subsection}{\numberline {6.13.3}Member Function Documentation}{58}{subsection.6.13.3}%
+\contentsline {subsubsection}{\numberline {6.13.3.1}\_load\_public\_key()}{58}{subsubsection.6.13.3.1}%
+\contentsline {subsubsection}{\numberline {6.13.3.2}\_process\_verification()}{59}{subsubsection.6.13.3.2}%
+\contentsline {subsubsection}{\numberline {6.13.3.3}\_select\_file()}{59}{subsubsection.6.13.3.3}%
+\contentsline {subsubsection}{\numberline {6.13.3.4}\_select\_pdf\_to\_verify\_file()}{59}{subsubsection.6.13.3.4}%
+\contentsline {subsubsection}{\numberline {6.13.3.5}\_select\_public\_key\_file()}{60}{subsubsection.6.13.3.5}%
+\contentsline {subsubsection}{\numberline {6.13.3.6}\_setup\_ui()}{60}{subsubsection.6.13.3.6}%
+\contentsline {subsubsection}{\numberline {6.13.3.7}\_update\_feedback()}{60}{subsubsection.6.13.3.7}%
+\contentsline {subsection}{\numberline {6.13.4}Member Data Documentation}{60}{subsection.6.13.4}%
+\contentsline {subsubsection}{\numberline {6.13.4.1}end\_verifying\_callback}{60}{subsubsection.6.13.4.1}%
+\contentsline {subsubsection}{\numberline {6.13.4.2}pdf\_to\_verify\_entry}{61}{subsubsection.6.13.4.2}%
+\contentsline {subsubsection}{\numberline {6.13.4.3}pdf\_to\_verify\_path\_var}{61}{subsubsection.6.13.4.3}%
+\contentsline {subsubsection}{\numberline {6.13.4.4}public\_key\_entry}{61}{subsubsection.6.13.4.4}%
+\contentsline {subsubsection}{\numberline {6.13.4.5}public\_key\_path\_var}{61}{subsubsection.6.13.4.5}%
+\contentsline {subsubsection}{\numberline {6.13.4.6}status\_label}{61}{subsubsection.6.13.4.6}%
+\contentsline {subsubsection}{\numberline {6.13.4.7}verify\_button}{61}{subsubsection.6.13.4.7}%
+\contentsline {chapter}{\numberline {7}File Documentation}{63}{chapter.7}%
+\contentsline {section}{\numberline {7.1}generating/frames/generate\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}window.py File Reference}{63}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{63}{subsection.7.1.1}%
+\contentsline {section}{\numberline {7.2}generating/key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generate/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}AES\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generator.py File Reference}{64}{section.7.2}%
+\contentsline {section}{\numberline {7.3}generating/key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generate/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}RSA\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generator.py File Reference}{64}{section.7.3}%
+\contentsline {section}{\numberline {7.4}signing/frames/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{64}{section.7.4}%
+\contentsline {section}{\numberline {7.5}signing/services/key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{64}{section.7.5}%
+\contentsline {section}{\numberline {7.6}signing/services/pdf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}signer/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{64}{section.7.6}%
+\contentsline {section}{\numberline {7.7}generating/frames/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{65}{section.7.7}%
+\contentsline {section}{\numberline {7.8}generating/key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}generate/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}.py File Reference}{65}{section.7.8}%
+\contentsline {section}{\numberline {7.9}signing/frames/signing.py File Reference}{65}{section.7.9}%
+\contentsline {subsection}{\numberline {7.9.1}Detailed Description}{66}{subsection.7.9.1}%
+\contentsline {section}{\numberline {7.10}signing/frames/start.py File Reference}{66}{section.7.10}%
+\contentsline {subsection}{\numberline {7.10.1}Detailed Description}{67}{subsection.7.10.1}%
+\contentsline {section}{\numberline {7.11}signing/frames/usb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}get.py File Reference}{67}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}Detailed Description}{69}{subsection.7.11.1}%
+\contentsline {section}{\numberline {7.12}signing/frames/verifying.py File Reference}{69}{section.7.12}%
+\contentsline {subsection}{\numberline {7.12.1}Detailed Description}{70}{subsection.7.12.1}%
+\contentsline {section}{\numberline {7.13}signing/main.py File Reference}{70}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{71}{subsection.7.13.1}%
+\contentsline {section}{\numberline {7.14}generating/main.py File Reference}{71}{section.7.14}%
+\contentsline {subsection}{\numberline {7.14.1}Detailed Description}{71}{subsection.7.14.1}%
+\contentsline {section}{\numberline {7.15}signing/services/key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}AES\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}PIN\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}decryptor.py File Reference}{71}{section.7.15}%
+\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{72}{subsection.7.15.1}%
+\contentsline {section}{\numberline {7.16}signing/services/key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter/key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter.py File Reference}{72}{section.7.16}%
+\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{73}{subsection.7.16.1}%
+\contentsline {section}{\numberline {7.17}signing/services/key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter/usb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}finder\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}linux.py File Reference}{73}{section.7.17}%
+\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{74}{subsection.7.17.1}%
+\contentsline {section}{\numberline {7.18}signing/services/key\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}getter/usb\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}finder\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}windows.py File Reference}{74}{section.7.18}%
+\contentsline {subsection}{\numberline {7.18.1}Detailed Description}{74}{subsection.7.18.1}%
+\contentsline {section}{\numberline {7.19}signing/services/pdf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}signer/signer.py File Reference}{74}{section.7.19}%
+\contentsline {subsection}{\numberline {7.19.1}Detailed Description}{75}{subsection.7.19.1}%
+\contentsline {section}{\numberline {7.20}signing/services/pdf\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}signer/verifier.py File Reference}{75}{section.7.20}%
+\contentsline {subsection}{\numberline {7.20.1}Detailed Description}{75}{subsection.7.20.1}%
+\contentsline {chapter}{Index}{77}{section*.87}%

@@ -1,0 +1,95 @@
+\hypertarget{classframes_1_1start_1_1StartFrame}{}\doxysection{frames.\+start.\+Start\+Frame Class Reference}
+\label{classframes_1_1start_1_1StartFrame}\index{frames.start.StartFrame@{frames.start.StartFrame}}
+
+
+The \mbox{\hyperlink{classframes_1_1start_1_1StartFrame}{Start\+Frame}} class provides user interface for the application.  
+
+
+
+
+Inheritance diagram for frames.\+start.\+Start\+Frame\+:
+% FIG 0
+
+
+Collaboration diagram for frames.\+start.\+Start\+Frame\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classframes_1_1start_1_1StartFrame_abfe0a408c073c7056a5feae4719ec040}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, tk.\+Tk parent, Callable\mbox{[}\mbox{[}$\,$\mbox{]}, None\mbox{]} \mbox{\hyperlink{classframes_1_1start_1_1StartFrame_abb3d7436c3eb3c007579f97be3963e85}{on\+\_\+signing\+\_\+chosen\+\_\+callback}}, Callable\mbox{[}\mbox{[}$\,$\mbox{]}, None\mbox{]} \mbox{\hyperlink{classframes_1_1start_1_1StartFrame_a49224a3b2501190e9faba9d47ef6063a}{on\+\_\+verifying\+\_\+chosen\+\_\+callback}})
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{classframes_1_1start_1_1StartFrame}{Start\+Frame}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classframes_1_1start_1_1StartFrame_abb3d7436c3eb3c007579f97be3963e85}{on\+\_\+signing\+\_\+chosen\+\_\+callback}}
+\item 
+\mbox{\hyperlink{classframes_1_1start_1_1StartFrame_a49224a3b2501190e9faba9d47ef6063a}{on\+\_\+verifying\+\_\+chosen\+\_\+callback}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classframes_1_1start_1_1StartFrame_aa2aa8f7f15d8edfc6c10539bf1be4168}{\+\_\+setup\+\_\+ui}} (self)
+\begin{DoxyCompactList}\small\item\em Sets up the user interface elements for the \mbox{\hyperlink{classframes_1_1start_1_1StartFrame}{Start\+Frame}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classframes_1_1start_1_1StartFrame}{Start\+Frame}} class provides user interface for the application. 
+
+This frame displays options for the user to either start the PDF signing process or the PDF signature verification process. It inherits from tk.\+Frame. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classframes_1_1start_1_1StartFrame_abfe0a408c073c7056a5feae4719ec040}\label{classframes_1_1start_1_1StartFrame_abfe0a408c073c7056a5feae4719ec040}} 
+\index{frames.start.StartFrame@{frames.start.StartFrame}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!frames.start.StartFrame@{frames.start.StartFrame}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def frames.\+start.\+Start\+Frame.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{tk.\+Tk}]{parent,  }\item[{Callable\mbox{[}\mbox{[}$\,$\mbox{]}, None\mbox{]}}]{on\+\_\+signing\+\_\+chosen\+\_\+callback,  }\item[{Callable\mbox{[}\mbox{[}$\,$\mbox{]}, None\mbox{]}}]{on\+\_\+verifying\+\_\+chosen\+\_\+callback }\end{DoxyParamCaption})}
+
+
+
+Initializes the \mbox{\hyperlink{classframes_1_1start_1_1StartFrame}{Start\+Frame}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent tk.\+Tk window or tk.\+Frame that this frame will be placed in. @type parent tk.\+Tk \\
+\hline
+{\em on\+\_\+signing\+\_\+chosen\+\_\+callback} & A function to be called when the user chooses to sign a PDF. This callback should take no arguments and return None. @type on\+\_\+signing\+\_\+chosen\+\_\+callback Callable\mbox{[}\mbox{[}\mbox{]}, None\mbox{]} \\
+\hline
+{\em on\+\_\+verifying\+\_\+chosen\+\_\+callback} & A function to be called when the user chooses to verify a PDF signature. This callback should take no arguments and return None. @type on\+\_\+verifying\+\_\+chosen\+\_\+callback Callable\mbox{[}\mbox{[}\mbox{]}, None\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classframes_1_1start_1_1StartFrame_aa2aa8f7f15d8edfc6c10539bf1be4168}\label{classframes_1_1start_1_1StartFrame_aa2aa8f7f15d8edfc6c10539bf1be4168}} 
+\index{frames.start.StartFrame@{frames.start.StartFrame}!\_setup\_ui@{\_setup\_ui}}
+\index{\_setup\_ui@{\_setup\_ui}!frames.start.StartFrame@{frames.start.StartFrame}}
+\doxysubsubsection{\texorpdfstring{\_setup\_ui()}{\_setup\_ui()}}
+{\footnotesize\ttfamily def frames.\+start.\+Start\+Frame.\+\_\+setup\+\_\+ui (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets up the user interface elements for the \mbox{\hyperlink{classframes_1_1start_1_1StartFrame}{Start\+Frame}}. 
+
+This private method creates and arranges the instruction label and the sign and verify buttons within the frame.
+
+\begin{DoxyVerb}Creates and arranges UI elements within the frame.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classframes_1_1start_1_1StartFrame_abb3d7436c3eb3c007579f97be3963e85}\label{classframes_1_1start_1_1StartFrame_abb3d7436c3eb3c007579f97be3963e85}} 
+\index{frames.start.StartFrame@{frames.start.StartFrame}!on\_signing\_chosen\_callback@{on\_signing\_chosen\_callback}}
+\index{on\_signing\_chosen\_callback@{on\_signing\_chosen\_callback}!frames.start.StartFrame@{frames.start.StartFrame}}
+\doxysubsubsection{\texorpdfstring{on\_signing\_chosen\_callback}{on\_signing\_chosen\_callback}}
+{\footnotesize\ttfamily frames.\+start.\+Start\+Frame.\+on\+\_\+signing\+\_\+chosen\+\_\+callback}
+
+\mbox{\Hypertarget{classframes_1_1start_1_1StartFrame_a49224a3b2501190e9faba9d47ef6063a}\label{classframes_1_1start_1_1StartFrame_a49224a3b2501190e9faba9d47ef6063a}} 
+\index{frames.start.StartFrame@{frames.start.StartFrame}!on\_verifying\_chosen\_callback@{on\_verifying\_chosen\_callback}}
+\index{on\_verifying\_chosen\_callback@{on\_verifying\_chosen\_callback}!frames.start.StartFrame@{frames.start.StartFrame}}
+\doxysubsubsection{\texorpdfstring{on\_verifying\_chosen\_callback}{on\_verifying\_chosen\_callback}}
+{\footnotesize\ttfamily frames.\+start.\+Start\+Frame.\+on\+\_\+verifying\+\_\+chosen\+\_\+callback}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+signing/frames/\mbox{\hyperlink{start_8py}{start.\+py}}\end{DoxyCompactItemize}

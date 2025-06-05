@@ -1,0 +1,142 @@
+\hypertarget{classframes_1_1usb__key__get_1_1KeyFromUSBFrame}{}\doxysection{frames.\+usb\+\_\+key\+\_\+get.\+Key\+From\+USBFrame Class Reference}
+\label{classframes_1_1usb__key__get_1_1KeyFromUSBFrame}\index{frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}}
+
+
+The \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame}{Key\+From\+USBFrame}} class handles the UI for retrieving a private key from a USB drive.  
+
+
+
+
+Inheritance diagram for frames.\+usb\+\_\+key\+\_\+get.\+Key\+From\+USBFrame\+:
+% FIG 0
+
+
+Collaboration diagram for frames.\+usb\+\_\+key\+\_\+get.\+Key\+From\+USBFrame\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a83529550a6cd3e4c89d5bb6e9aff6eec}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, tk.\+Tk parent, Callable\mbox{[}\mbox{[}rsa.\+RSAPrivate\+Key\mbox{]}, None\mbox{]} \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a30b5f6b1a61a6dd03ea41112733503ed}{on\+\_\+key\+\_\+retrieved\+\_\+callback}})
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame}{Key\+From\+USBFrame}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a30b5f6b1a61a6dd03ea41112733503ed}{on\+\_\+key\+\_\+retrieved\+\_\+callback}}
+\item 
+\mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a4d76ebb556e601c116ebb66ba362c024}{status\+\_\+label}}
+\item 
+\mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_ac1ce826627f9f1e79dfcd755b6dc6f36}{pin\+\_\+entry}}
+\item 
+\mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a736add0cc711646c729b0edbbbbac1f2}{action\+\_\+button}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_aadc0692225cbca46654b3708dac43933}{\+\_\+setup\+\_\+ui}} (self)
+\begin{DoxyCompactList}\small\item\em Sets up the user interface elements for the \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame}{Key\+From\+USBFrame}}. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_af39eeaec92a4201640e182c945a3eabc}{\+\_\+update\+\_\+feedback}} (self, str status\+\_\+message, str button\+\_\+text, Callable button\+\_\+command=None)
+\begin{DoxyCompactList}\small\item\em Updates the status label and action button with new messages and commands. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a0b48c10750ad78dd4e6339d02d296ac2}{\+\_\+process\+\_\+pin\+\_\+and\+\_\+get\+\_\+key}} (self)
+\begin{DoxyCompactList}\small\item\em Processes the entered PIN and attempts to retrieve the private key from a USB drive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame}{Key\+From\+USBFrame}} class handles the UI for retrieving a private key from a USB drive. 
+
+This frame prompts the user for a PIN, attempts to read and decrypt the key, and then calls a callback function with the retrieved key or displays error messages. It inherits from tk.\+Frame. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a83529550a6cd3e4c89d5bb6e9aff6eec}\label{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a83529550a6cd3e4c89d5bb6e9aff6eec}} 
+\index{frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def frames.\+usb\+\_\+key\+\_\+get.\+Key\+From\+USBFrame.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{tk.\+Tk}]{parent,  }\item[{Callable\mbox{[}\mbox{[}rsa.\+RSAPrivate\+Key\mbox{]}, None\mbox{]}}]{on\+\_\+key\+\_\+retrieved\+\_\+callback }\end{DoxyParamCaption})}
+
+
+
+Initializes the \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame}{Key\+From\+USBFrame}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent tk.\+Tk window or tk.\+Frame that this frame will be placed in. @type parent tk.\+Tk \\
+\hline
+{\em on\+\_\+key\+\_\+retrieved\+\_\+callback} & A function to be called when the private key is successfully retrieved. This callback should take one argument, the rsa.\+RSAPrivate\+Key, and return None. @type on\+\_\+key\+\_\+retrieved\+\_\+callback Callable\mbox{[}\mbox{[}rsa.\+RSAPrivate\+Key\mbox{]}, None\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a0b48c10750ad78dd4e6339d02d296ac2}\label{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a0b48c10750ad78dd4e6339d02d296ac2}} 
+\index{frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}!\_process\_pin\_and\_get\_key@{\_process\_pin\_and\_get\_key}}
+\index{\_process\_pin\_and\_get\_key@{\_process\_pin\_and\_get\_key}!frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}}
+\doxysubsubsection{\texorpdfstring{\_process\_pin\_and\_get\_key()}{\_process\_pin\_and\_get\_key()}}
+{\footnotesize\ttfamily def frames.\+usb\+\_\+key\+\_\+get.\+Key\+From\+USBFrame.\+\_\+process\+\_\+pin\+\_\+and\+\_\+get\+\_\+key (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Processes the entered PIN and attempts to retrieve the private key from a USB drive. 
+
+This method is called when the action button is pressed. It validates the PIN format, then calls the {\ttfamily key\+\_\+getter.\+get\+\_\+key} service. Based on the outcome, it either calls the {\ttfamily on\+\_\+key\+\_\+retrieved\+\_\+callback} with the key or updates the UI with an appropriate error message using {\ttfamily \+\_\+update\+\_\+feedback}. It handles various exceptions that can be raised during the key retrieval process. \mbox{\Hypertarget{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_aadc0692225cbca46654b3708dac43933}\label{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_aadc0692225cbca46654b3708dac43933}} 
+\index{frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}!\_setup\_ui@{\_setup\_ui}}
+\index{\_setup\_ui@{\_setup\_ui}!frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}}
+\doxysubsubsection{\texorpdfstring{\_setup\_ui()}{\_setup\_ui()}}
+{\footnotesize\ttfamily def frames.\+usb\+\_\+key\+\_\+get.\+Key\+From\+USBFrame.\+\_\+setup\+\_\+ui (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets up the user interface elements for the \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame}{Key\+From\+USBFrame}}. 
+
+This private method creates and arranges the instruction label, PIN entry field, and action button within the frame.
+
+\begin{DoxyVerb}Creates and arranges UI elements within the frame.\end{DoxyVerb}
+ \mbox{\Hypertarget{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_af39eeaec92a4201640e182c945a3eabc}\label{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_af39eeaec92a4201640e182c945a3eabc}} 
+\index{frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}!\_update\_feedback@{\_update\_feedback}}
+\index{\_update\_feedback@{\_update\_feedback}!frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}}
+\doxysubsubsection{\texorpdfstring{\_update\_feedback()}{\_update\_feedback()}}
+{\footnotesize\ttfamily def frames.\+usb\+\_\+key\+\_\+get.\+Key\+From\+USBFrame.\+\_\+update\+\_\+feedback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{status\+\_\+message,  }\item[{str}]{button\+\_\+text,  }\item[{Callable }]{button\+\_\+command = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the status label and action button with new messages and commands. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status\+\_\+message} & The message to display in the status label. @type status\+\_\+message str \\
+\hline
+{\em button\+\_\+text} & The new text for the action button. @type button\+\_\+text str \\
+\hline
+{\em button\+\_\+command} & The new command to associate with the action button. Defaults to \+\_\+process\+\_\+pin\+\_\+and\+\_\+get\+\_\+key. @type button\+\_\+command Callable\\
+\hline
+\end{DoxyParams}
+This is a helper method to centralize UI updates for feedback. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a736add0cc711646c729b0edbbbbac1f2}\label{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a736add0cc711646c729b0edbbbbac1f2}} 
+\index{frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}!action\_button@{action\_button}}
+\index{action\_button@{action\_button}!frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}}
+\doxysubsubsection{\texorpdfstring{action\_button}{action\_button}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+Key\+From\+USBFrame.\+action\+\_\+button}
+
+\mbox{\Hypertarget{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a30b5f6b1a61a6dd03ea41112733503ed}\label{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a30b5f6b1a61a6dd03ea41112733503ed}} 
+\index{frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}!on\_key\_retrieved\_callback@{on\_key\_retrieved\_callback}}
+\index{on\_key\_retrieved\_callback@{on\_key\_retrieved\_callback}!frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}}
+\doxysubsubsection{\texorpdfstring{on\_key\_retrieved\_callback}{on\_key\_retrieved\_callback}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+Key\+From\+USBFrame.\+on\+\_\+key\+\_\+retrieved\+\_\+callback}
+
+\mbox{\Hypertarget{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_ac1ce826627f9f1e79dfcd755b6dc6f36}\label{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_ac1ce826627f9f1e79dfcd755b6dc6f36}} 
+\index{frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}!pin\_entry@{pin\_entry}}
+\index{pin\_entry@{pin\_entry}!frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}}
+\doxysubsubsection{\texorpdfstring{pin\_entry}{pin\_entry}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+Key\+From\+USBFrame.\+pin\+\_\+entry}
+
+\mbox{\Hypertarget{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a4d76ebb556e601c116ebb66ba362c024}\label{classframes_1_1usb__key__get_1_1KeyFromUSBFrame_a4d76ebb556e601c116ebb66ba362c024}} 
+\index{frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}!status\_label@{status\_label}}
+\index{status\_label@{status\_label}!frames.usb\_key\_get.KeyFromUSBFrame@{frames.usb\_key\_get.KeyFromUSBFrame}}
+\doxysubsubsection{\texorpdfstring{status\_label}{status\_label}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+Key\+From\+USBFrame.\+status\+\_\+label}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+signing/frames/\mbox{\hyperlink{usb__key__get_8py}{usb\+\_\+key\+\_\+get.\+py}}\end{DoxyCompactItemize}

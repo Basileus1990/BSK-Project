@@ -1,0 +1,78 @@
+\hypertarget{namespacekey__generate_1_1AES__key__generator}{}\doxysection{key\+\_\+generate.\+AES\+\_\+key\+\_\+generator Namespace Reference}
+\label{namespacekey__generate_1_1AES__key__generator}\index{key\_generate.AES\_key\_generator@{key\_generate.AES\_key\_generator}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacekey__generate_1_1AES__key__generator_aaec5e26fdaffaadbe99072443f8913ea}{hash\+\_\+pin}} (str pin)
+\begin{DoxyCompactList}\small\item\em Generates a 256-\/bit key from PIN code. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacekey__generate_1_1AES__key__generator_abcb7fecd9bad29b1b45ed8094dfc0aaa}{aes\+\_\+encrypt\+\_\+file}} (str file\+\_\+to\+\_\+encrypt, str pin)
+\begin{DoxyCompactList}\small\item\em Encrypts a file using a 4-\/digit PIN code and AES encryption. \end{DoxyCompactList}\item 
+(bool, bytes) \mbox{\hyperlink{namespacekey__generate_1_1AES__key__generator_a48190b7a923f6d37956be78c61347754}{aes\+\_\+decrypt\+\_\+file}} (str file\+\_\+to\+\_\+decrypt, str pin)
+\begin{DoxyCompactList}\small\item\em Decrypts a file using a 4-\/digit PIN code and AES decryption. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacekey__generate_1_1AES__key__generator_a48190b7a923f6d37956be78c61347754}\label{namespacekey__generate_1_1AES__key__generator_a48190b7a923f6d37956be78c61347754}} 
+\index{key\_generate.AES\_key\_generator@{key\_generate.AES\_key\_generator}!aes\_decrypt\_file@{aes\_decrypt\_file}}
+\index{aes\_decrypt\_file@{aes\_decrypt\_file}!key\_generate.AES\_key\_generator@{key\_generate.AES\_key\_generator}}
+\doxysubsubsection{\texorpdfstring{aes\_decrypt\_file()}{aes\_decrypt\_file()}}
+{\footnotesize\ttfamily  (bool, bytes) key\+\_\+generate.\+AES\+\_\+key\+\_\+generator.\+aes\+\_\+decrypt\+\_\+file (\begin{DoxyParamCaption}\item[{str}]{file\+\_\+to\+\_\+decrypt,  }\item[{str}]{pin }\end{DoxyParamCaption})}
+
+
+
+Decrypts a file using a 4-\/digit PIN code and AES decryption. 
+
+The function reads a file from the given path, changes the given 4-\/digit PIN code to a 256-\/bit key, and then decrypt the file with this key using AES decryption.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+to\+\_\+encrypt} & Path to the input file to decrypt \\
+\hline
+{\em pin} & 4-\/digit PIN code\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tuple (True,data) if AES decryption was successful, where \textquotesingle{}data\textquotesingle{} is the decryption content; Tuple (False, None) if the file was not found or decryption failed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacekey__generate_1_1AES__key__generator_abcb7fecd9bad29b1b45ed8094dfc0aaa}\label{namespacekey__generate_1_1AES__key__generator_abcb7fecd9bad29b1b45ed8094dfc0aaa}} 
+\index{key\_generate.AES\_key\_generator@{key\_generate.AES\_key\_generator}!aes\_encrypt\_file@{aes\_encrypt\_file}}
+\index{aes\_encrypt\_file@{aes\_encrypt\_file}!key\_generate.AES\_key\_generator@{key\_generate.AES\_key\_generator}}
+\doxysubsubsection{\texorpdfstring{aes\_encrypt\_file()}{aes\_encrypt\_file()}}
+{\footnotesize\ttfamily  bool key\+\_\+generate.\+AES\+\_\+key\+\_\+generator.\+aes\+\_\+encrypt\+\_\+file (\begin{DoxyParamCaption}\item[{str}]{file\+\_\+to\+\_\+encrypt,  }\item[{str}]{pin }\end{DoxyParamCaption})}
+
+
+
+Encrypts a file using a 4-\/digit PIN code and AES encryption. 
+
+The function reads a file from the given path, changes the given 4-\/digit PIN code to a 256-\/bit key, and then encrypt the file with this key using AES encryption.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+to\+\_\+encrypt} & Path to the input file to encrypt \\
+\hline
+{\em pin} & 4-\/digit PIN code\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if AES encryption was successful; False if the file was not found or encryption failed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacekey__generate_1_1AES__key__generator_aaec5e26fdaffaadbe99072443f8913ea}\label{namespacekey__generate_1_1AES__key__generator_aaec5e26fdaffaadbe99072443f8913ea}} 
+\index{key\_generate.AES\_key\_generator@{key\_generate.AES\_key\_generator}!hash\_pin@{hash\_pin}}
+\index{hash\_pin@{hash\_pin}!key\_generate.AES\_key\_generator@{key\_generate.AES\_key\_generator}}
+\doxysubsubsection{\texorpdfstring{hash\_pin()}{hash\_pin()}}
+{\footnotesize\ttfamily def key\+\_\+generate.\+AES\+\_\+key\+\_\+generator.\+hash\+\_\+pin (\begin{DoxyParamCaption}\item[{str}]{pin }\end{DoxyParamCaption})}
+
+
+
+Generates a 256-\/bit key from PIN code. 
+
+The function validates the given PIN code and generate a 256-\/bit code from given PIN code
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & A PIN code as string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The derived PIN code as a 256-\/bit key 
+\end{DoxyReturn}

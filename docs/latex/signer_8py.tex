@@ -1,0 +1,25 @@
+\hypertarget{signer_8py}{}\doxysection{signing/services/pdf\+\_\+signer/signer.py File Reference}
+\label{signer_8py}\index{signing/services/pdf\_signer/signer.py@{signing/services/pdf\_signer/signer.py}}
+
+
+Provides functions for signing PDF documents using RSA private keys.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacepdf__signer_1_1signer}{pdf\+\_\+signer.\+signer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepdf__signer_1_1signer_a41487c30da987090e1082e67f50e8ac2}{pdf\+\_\+signer.\+signer.\+sign}} (rsa.\+RSAPrivate\+Key private\+\_\+key, str pdf\+\_\+in\+\_\+path, str pdf\+\_\+out\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Signs a PDF document using a provided RSA private key. \end{DoxyCompactList}\item 
+Tuple\mbox{[}asn1\+\_\+x509.\+Certificate, asn1\+\_\+keys.\+Private\+Key\+Info\mbox{]} \mbox{\hyperlink{namespacepdf__signer_1_1signer_a31736380c3ed4628e0a45f59584640d9}{pdf\+\_\+signer.\+signer.\+\_\+generate\+\_\+self\+\_\+signed\+\_\+cert}} (rsa.\+RSAPrivate\+Key private\+\_\+key)
+\begin{DoxyCompactList}\small\item\em Generates a self-\/signed X.\+509 certificate and private key information in ASN.\+1 format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functions for signing PDF documents using RSA private keys. 
+
+This module leverages the {\ttfamily pyhanko} library to perform PAd\+ES digital signatures. It includes functionality to generate a self-\/signed certificate on-\/the-\/fly for the signing process. 

@@ -1,0 +1,45 @@
+\hypertarget{namespacekey__getter_1_1usb__finder__windows}{}\doxysection{key\+\_\+getter.\+usb\+\_\+finder\+\_\+windows Namespace Reference}
+\label{namespacekey__getter_1_1usb__finder__windows}\index{key\_getter.usb\_finder\_windows@{key\_getter.usb\_finder\_windows}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacekey__getter_1_1usb__finder__windows_a2821ca291f7ff69b0133056082d1b41c}{get\+\_\+usb\+\_\+mount\+\_\+paths\+\_\+windows}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the drive letters for all connected USB storage devices on a Windows system. \end{DoxyCompactList}\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacekey__getter_1_1usb__finder__windows_a7d9a00c9988fbe3ec185d5849887f9be}{\+\_\+get\+\_\+usb\+\_\+devices\+\_\+windows}} ()
+\begin{DoxyCompactList}\small\item\em Identifies removable logical disks on a Windows system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacekey__getter_1_1usb__finder__windows_a7d9a00c9988fbe3ec185d5849887f9be}\label{namespacekey__getter_1_1usb__finder__windows_a7d9a00c9988fbe3ec185d5849887f9be}} 
+\index{key\_getter.usb\_finder\_windows@{key\_getter.usb\_finder\_windows}!\_get\_usb\_devices\_windows@{\_get\_usb\_devices\_windows}}
+\index{\_get\_usb\_devices\_windows@{\_get\_usb\_devices\_windows}!key\_getter.usb\_finder\_windows@{key\_getter.usb\_finder\_windows}}
+\doxysubsubsection{\texorpdfstring{\_get\_usb\_devices\_windows()}{\_get\_usb\_devices\_windows()}}
+{\footnotesize\ttfamily  list\mbox{[}str\mbox{]} key\+\_\+getter.\+usb\+\_\+finder\+\_\+windows.\+\_\+get\+\_\+usb\+\_\+devices\+\_\+windows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Identifies removable logical disks on a Windows system. 
+
+This function queries WMI for {\ttfamily Win32\+\_\+\+Logical\+Disk} instances and filters them based on {\ttfamily Drive\+Type == 2}, which indicates a removable disk. It collects the {\ttfamily Device\+ID} (drive letter, e.\+g., \char`\"{}\+E\+:\char`\"{}) for each such disk. Source\+: \href{https://github.com/tjguk/wmi/blob/master/docs/cookbook.rst\#find-drive-types}{\texttt{ https\+://github.\+com/tjguk/wmi/blob/master/docs/cookbook.\+rst\#find-\/drive-\/types}} \begin{DoxyReturn}{Returns}
+A list of strings, where each string is the Device\+ID (drive letter) of a removable disk (e.\+g., \mbox{[}\textquotesingle{}E\+:\textquotesingle{}, \textquotesingle{}F\+:\textquotesingle{}\mbox{]}). @rtype list\mbox{[}str\mbox{]}
+\end{DoxyReturn}
+\begin{DoxyVerb}    https://github.com/tjguk/wmi/blob/master/docs/cookbook.rst#find-drive-types
+
+    Function to get device ID from remotable disk
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacekey__getter_1_1usb__finder__windows_a2821ca291f7ff69b0133056082d1b41c}\label{namespacekey__getter_1_1usb__finder__windows_a2821ca291f7ff69b0133056082d1b41c}} 
+\index{key\_getter.usb\_finder\_windows@{key\_getter.usb\_finder\_windows}!get\_usb\_mount\_paths\_windows@{get\_usb\_mount\_paths\_windows}}
+\index{get\_usb\_mount\_paths\_windows@{get\_usb\_mount\_paths\_windows}!key\_getter.usb\_finder\_windows@{key\_getter.usb\_finder\_windows}}
+\doxysubsubsection{\texorpdfstring{get\_usb\_mount\_paths\_windows()}{get\_usb\_mount\_paths\_windows()}}
+{\footnotesize\ttfamily  list\mbox{[}str\mbox{]} key\+\_\+getter.\+usb\+\_\+finder\+\_\+windows.\+get\+\_\+usb\+\_\+mount\+\_\+paths\+\_\+windows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the drive letters for all connected USB storage devices on a Windows system. 
+
+This function first calls {\ttfamily get\+\_\+usb\+\_\+devices\+\_\+windows()} to get a list of Device\+IDs (drive letters) for removable drives. It then formats these Device\+IDs into a list of strings representing paths (e.\+g., \char`\"{}\+C\+:\char`\"{}, \char`\"{}\+D\+:\char`\"{}). \begin{DoxyReturn}{Returns}
+A list of strings, where each string is a drive letter followed by a colon (e.\+g., \mbox{[}\textquotesingle{}E\+:\textquotesingle{}, \textquotesingle{}F\+:\textquotesingle{}\mbox{]}) representing detected USB drives. Returns an empty list if no removable drives are found. @rtype list\mbox{[}str\mbox{]}
+\end{DoxyReturn}
+\begin{DoxyVerb}    Convert device ID to the path
+\end{DoxyVerb}
+ 

@@ -1,0 +1,281 @@
+\hypertarget{namespaceframes_1_1signing}{}\doxysection{frames.\+signing Namespace Reference}
+\label{namespaceframes_1_1signing}\index{frames.signing@{frames.signing}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame}{Signing\+Frame}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame}{Signing\+Frame}} class provides the UI for the PDF signing process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{namespaceframes_1_1signing_ac1946cf26a4f8b37e86fe40814cf00c6}{LARGE\+\_\+\+FONT\+\_\+\+CONFIG}} = (\char`\"{}Tk\+Default\+Font\char`\"{}, 16)
+\begin{DoxyCompactList}\small\item\em Font configuration for large text elements (e.\+g., status labels, buttons). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1signing_ab31237b96474583c44a368a8d105bab1}{DEFAULT\+\_\+\+WRAP\+\_\+\+LENGTH}} = 750
+\begin{DoxyCompactList}\small\item\em Default wrap length in pixels for text in labels to ensure proper layout. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespaceframes_1_1signing_ab9f241e42a8806166c85dbf37ec83a70}{PDF\+\_\+\+FILE\+\_\+\+TYPES}} = \mbox{[}(\char`\"{}PDF files\char`\"{}, \char`\"{}$\ast$.pdf\char`\"{})\mbox{]}
+\begin{DoxyCompactList}\small\item\em File type filter used in file dialogs, restricting selection to PDF files. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ab2b0e8ee0beb39ff1e42b84a3722ab18}{SELECT\+\_\+\+SOURCE\+\_\+\+PDF\+\_\+\+TITLE}} = \char`\"{}Select the PDF file to sign\char`\"{}
+\begin{DoxyCompactList}\small\item\em Title for the file dialog when selecting the source PDF to be signed. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ae4e615b9421dea61d774fc8ef25a0b37}{SELECT\+\_\+\+TARGET\+\_\+\+PDF\+\_\+\+TITLE}} = \char`\"{}Set target location and filename for signed PDF\char`\"{}
+\begin{DoxyCompactList}\small\item\em Title for the file dialog when selecting the output path for the signed PDF. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a3cb475d41bdd4121b45ec19c674fdf5f}{INITIAL\+\_\+\+STATUS\+\_\+\+TEXT}} = \char`\"{}Please choose the PDF file to sign and where the signed PDF file should be placed.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Initial instructional text displayed in the status label. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a68b7e4bcc187c0332ceb657c9f65ec2e}{SOURCE\+\_\+\+PDF\+\_\+\+LABEL\+\_\+\+TEXT}} = \char`\"{}Selected PDF file to sign\+:\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the label indicating the selected source PDF file path. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_aaab6b6c400d6b3239ce351b77b4173b7}{TARGET\+\_\+\+PDF\+\_\+\+LABEL\+\_\+\+TEXT}} = \char`\"{}Location where the signed PDF file will be saved\+:\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the label indicating the selected target path for the signed PDF file. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a3c46f22fe0292b2d351ebcc6fa014583}{SELECT\+\_\+\+SOURCE\+\_\+\+BUTTON\+\_\+\+TEXT}} = \char`\"{}Select PDF file\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the button used to trigger source PDF file selection. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_aebb59e7c79f7b9212d057425a032d606}{SELECT\+\_\+\+TARGET\+\_\+\+BUTTON\+\_\+\+TEXT}} = \char`\"{}Set target location\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the button used to trigger target PDF path selection. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a95754ad0279a6f7b9055e14610ac2adc}{SIGN\+\_\+\+BUTTON\+\_\+\+INITIAL\+\_\+\+TEXT}} = \char`\"{}Sign the PDF file\char`\"{}
+\begin{DoxyCompactList}\small\item\em Initial text for the button that initiates the PDF signing process. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a071784bc46ecb49373364a857454eee6}{RETRY\+\_\+\+BUTTON\+\_\+\+TEXT}} = \char`\"{}Try Again\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the main action button when a retry is suggested after an error. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ae8a2e2b0376f4c692248d39d23e19653}{GO\+\_\+\+BACK\+\_\+\+BUTTON\+\_\+\+TEXT}} = \char`\"{}Go back to main menu\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the main action button to navigate back to the main menu after success. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a022546822ef4103558f09b92ef38d8c5}{PATHS\+\_\+\+REQUIRED\+\_\+\+ERROR\+\_\+\+TEXT}} = \char`\"{}Both original and target PDF locations are required. Please select them.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed when either source or target PDF paths are not selected. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_af200a0579246985b755de13aea92422f}{PATHS\+\_\+\+CANNOT\+\_\+\+BE\+\_\+\+THE\+\_\+\+SAME\+\_\+\+ERROR\+\_\+\+TEXT}} = \char`\"{}Original and target PDF locations cannot be the same. Please change one of them and try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed when source or target PDF paths are the same. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a8bddb68cb1ea034379b49065a383511e}{SIGNING\+\_\+\+SUCCESS\+\_\+\+TEXT}} = \char`\"{}Successfully signed PDF and saved to the designated location.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Message displayed in the status label upon successful PDF signing. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a5b94035e456bcf92e17f7d9ce7bebf8e}{PDF\+\_\+\+READ\+\_\+\+ERROR\+\_\+\+TEXT}} = \char`\"{}Selected source file is not a valid PDF file. Please verify and try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed if the selected source file is not a valid PDF. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a496ed713154a47b1263850d490057f02}{SIGNING\+\_\+\+ERROR\+\_\+\+TEXT}} = \char`\"{}This PDF file may have already been signed or is unsuitable for signing. Please choose a different file.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed if the PDF is already signed or unsuitable for signing. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a375a61749c5428b6b474a5f0f4cff8d5}{UNEXPECTED\+\_\+\+SIGNING\+\_\+\+ERROR\+\_\+\+TEXT}} = \char`\"{}An unexpected error occurred during signing\+: \{error\+\_\+type\}. Please try again\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message template for unexpected errors during the signing process. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ad4311202ed9aee95353b05e31daecc05}{FOREGROUND\+\_\+\+COLOR}} = \char`\"{}\#ffffff\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ac895fe95ebc1c2c44648b63eda8b6f0c}{BACKGROUND\+\_\+\+COLOR}} = \char`\"{}\#1e1e1e\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a9ca697a079279d52b822c344bf2efe31}{BACKGROUND2\+\_\+\+COLOR}} = \char`\"{}\#2d2d2d\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a5d3a5cdd4e9306d85198673eab794cee}{BLUE\+\_\+\+BUTTON\+\_\+\+COLOR}} = \char`\"{}\#007acc\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ab9a50f5a8ee833df68a1d6be8e55950f}{ACTIVATE\+\_\+\+BUTTON\+\_\+\+COLOR}} = \char`\"{}\#005f99\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceframes_1_1signing_ab9a50f5a8ee833df68a1d6be8e55950f}\label{namespaceframes_1_1signing_ab9a50f5a8ee833df68a1d6be8e55950f}} 
+\index{frames.signing@{frames.signing}!ACTIVATE\_BUTTON\_COLOR@{ACTIVATE\_BUTTON\_COLOR}}
+\index{ACTIVATE\_BUTTON\_COLOR@{ACTIVATE\_BUTTON\_COLOR}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{ACTIVATE\_BUTTON\_COLOR}{ACTIVATE\_BUTTON\_COLOR}}
+{\footnotesize\ttfamily string frames.\+signing.\+ACTIVATE\+\_\+\+BUTTON\+\_\+\+COLOR = \char`\"{}\#005f99\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a9ca697a079279d52b822c344bf2efe31}\label{namespaceframes_1_1signing_a9ca697a079279d52b822c344bf2efe31}} 
+\index{frames.signing@{frames.signing}!BACKGROUND2\_COLOR@{BACKGROUND2\_COLOR}}
+\index{BACKGROUND2\_COLOR@{BACKGROUND2\_COLOR}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{BACKGROUND2\_COLOR}{BACKGROUND2\_COLOR}}
+{\footnotesize\ttfamily string frames.\+signing.\+BACKGROUND2\+\_\+\+COLOR = \char`\"{}\#2d2d2d\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_ac895fe95ebc1c2c44648b63eda8b6f0c}\label{namespaceframes_1_1signing_ac895fe95ebc1c2c44648b63eda8b6f0c}} 
+\index{frames.signing@{frames.signing}!BACKGROUND\_COLOR@{BACKGROUND\_COLOR}}
+\index{BACKGROUND\_COLOR@{BACKGROUND\_COLOR}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{BACKGROUND\_COLOR}{BACKGROUND\_COLOR}}
+{\footnotesize\ttfamily string frames.\+signing.\+BACKGROUND\+\_\+\+COLOR = \char`\"{}\#1e1e1e\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a5d3a5cdd4e9306d85198673eab794cee}\label{namespaceframes_1_1signing_a5d3a5cdd4e9306d85198673eab794cee}} 
+\index{frames.signing@{frames.signing}!BLUE\_BUTTON\_COLOR@{BLUE\_BUTTON\_COLOR}}
+\index{BLUE\_BUTTON\_COLOR@{BLUE\_BUTTON\_COLOR}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{BLUE\_BUTTON\_COLOR}{BLUE\_BUTTON\_COLOR}}
+{\footnotesize\ttfamily string frames.\+signing.\+BLUE\+\_\+\+BUTTON\+\_\+\+COLOR = \char`\"{}\#007acc\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_ab31237b96474583c44a368a8d105bab1}\label{namespaceframes_1_1signing_ab31237b96474583c44a368a8d105bab1}} 
+\index{frames.signing@{frames.signing}!DEFAULT\_WRAP\_LENGTH@{DEFAULT\_WRAP\_LENGTH}}
+\index{DEFAULT\_WRAP\_LENGTH@{DEFAULT\_WRAP\_LENGTH}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_WRAP\_LENGTH}{DEFAULT\_WRAP\_LENGTH}}
+{\footnotesize\ttfamily frames.\+signing.\+DEFAULT\+\_\+\+WRAP\+\_\+\+LENGTH = 750}
+
+
+
+Default wrap length in pixels for text in labels to ensure proper layout. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_ad4311202ed9aee95353b05e31daecc05}\label{namespaceframes_1_1signing_ad4311202ed9aee95353b05e31daecc05}} 
+\index{frames.signing@{frames.signing}!FOREGROUND\_COLOR@{FOREGROUND\_COLOR}}
+\index{FOREGROUND\_COLOR@{FOREGROUND\_COLOR}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{FOREGROUND\_COLOR}{FOREGROUND\_COLOR}}
+{\footnotesize\ttfamily string frames.\+signing.\+FOREGROUND\+\_\+\+COLOR = \char`\"{}\#ffffff\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_ae8a2e2b0376f4c692248d39d23e19653}\label{namespaceframes_1_1signing_ae8a2e2b0376f4c692248d39d23e19653}} 
+\index{frames.signing@{frames.signing}!GO\_BACK\_BUTTON\_TEXT@{GO\_BACK\_BUTTON\_TEXT}}
+\index{GO\_BACK\_BUTTON\_TEXT@{GO\_BACK\_BUTTON\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{GO\_BACK\_BUTTON\_TEXT}{GO\_BACK\_BUTTON\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+GO\+\_\+\+BACK\+\_\+\+BUTTON\+\_\+\+TEXT = \char`\"{}Go back to main menu\char`\"{}}
+
+
+
+Text for the main action button to navigate back to the main menu after success. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a3cb475d41bdd4121b45ec19c674fdf5f}\label{namespaceframes_1_1signing_a3cb475d41bdd4121b45ec19c674fdf5f}} 
+\index{frames.signing@{frames.signing}!INITIAL\_STATUS\_TEXT@{INITIAL\_STATUS\_TEXT}}
+\index{INITIAL\_STATUS\_TEXT@{INITIAL\_STATUS\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_STATUS\_TEXT}{INITIAL\_STATUS\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+INITIAL\+\_\+\+STATUS\+\_\+\+TEXT = \char`\"{}Please choose the PDF file to sign and where the signed PDF file should be placed.\char`\"{}}
+
+
+
+Initial instructional text displayed in the status label. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_ac1946cf26a4f8b37e86fe40814cf00c6}\label{namespaceframes_1_1signing_ac1946cf26a4f8b37e86fe40814cf00c6}} 
+\index{frames.signing@{frames.signing}!LARGE\_FONT\_CONFIG@{LARGE\_FONT\_CONFIG}}
+\index{LARGE\_FONT\_CONFIG@{LARGE\_FONT\_CONFIG}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{LARGE\_FONT\_CONFIG}{LARGE\_FONT\_CONFIG}}
+{\footnotesize\ttfamily frames.\+signing.\+LARGE\+\_\+\+FONT\+\_\+\+CONFIG = (\char`\"{}Tk\+Default\+Font\char`\"{}, 16)}
+
+
+
+Font configuration for large text elements (e.\+g., status labels, buttons). 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_af200a0579246985b755de13aea92422f}\label{namespaceframes_1_1signing_af200a0579246985b755de13aea92422f}} 
+\index{frames.signing@{frames.signing}!PATHS\_CANNOT\_BE\_THE\_SAME\_ERROR\_TEXT@{PATHS\_CANNOT\_BE\_THE\_SAME\_ERROR\_TEXT}}
+\index{PATHS\_CANNOT\_BE\_THE\_SAME\_ERROR\_TEXT@{PATHS\_CANNOT\_BE\_THE\_SAME\_ERROR\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{PATHS\_CANNOT\_BE\_THE\_SAME\_ERROR\_TEXT}{PATHS\_CANNOT\_BE\_THE\_SAME\_ERROR\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+PATHS\+\_\+\+CANNOT\+\_\+\+BE\+\_\+\+THE\+\_\+\+SAME\+\_\+\+ERROR\+\_\+\+TEXT = \char`\"{}Original and target PDF locations cannot be the same. Please change one of them and try again.\char`\"{}}
+
+
+
+Error message displayed when source or target PDF paths are the same. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a022546822ef4103558f09b92ef38d8c5}\label{namespaceframes_1_1signing_a022546822ef4103558f09b92ef38d8c5}} 
+\index{frames.signing@{frames.signing}!PATHS\_REQUIRED\_ERROR\_TEXT@{PATHS\_REQUIRED\_ERROR\_TEXT}}
+\index{PATHS\_REQUIRED\_ERROR\_TEXT@{PATHS\_REQUIRED\_ERROR\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{PATHS\_REQUIRED\_ERROR\_TEXT}{PATHS\_REQUIRED\_ERROR\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+PATHS\+\_\+\+REQUIRED\+\_\+\+ERROR\+\_\+\+TEXT = \char`\"{}Both original and target PDF locations are required. Please select them.\char`\"{}}
+
+
+
+Error message displayed when either source or target PDF paths are not selected. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_ab9f241e42a8806166c85dbf37ec83a70}\label{namespaceframes_1_1signing_ab9f241e42a8806166c85dbf37ec83a70}} 
+\index{frames.signing@{frames.signing}!PDF\_FILE\_TYPES@{PDF\_FILE\_TYPES}}
+\index{PDF\_FILE\_TYPES@{PDF\_FILE\_TYPES}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{PDF\_FILE\_TYPES}{PDF\_FILE\_TYPES}}
+{\footnotesize\ttfamily frames.\+signing.\+PDF\+\_\+\+FILE\+\_\+\+TYPES = \mbox{[}(\char`\"{}PDF files\char`\"{}, \char`\"{}$\ast$.pdf\char`\"{})\mbox{]}}
+
+
+
+File type filter used in file dialogs, restricting selection to PDF files. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a5b94035e456bcf92e17f7d9ce7bebf8e}\label{namespaceframes_1_1signing_a5b94035e456bcf92e17f7d9ce7bebf8e}} 
+\index{frames.signing@{frames.signing}!PDF\_READ\_ERROR\_TEXT@{PDF\_READ\_ERROR\_TEXT}}
+\index{PDF\_READ\_ERROR\_TEXT@{PDF\_READ\_ERROR\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{PDF\_READ\_ERROR\_TEXT}{PDF\_READ\_ERROR\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+PDF\+\_\+\+READ\+\_\+\+ERROR\+\_\+\+TEXT = \char`\"{}Selected source file is not a valid PDF file. Please verify and try again.\char`\"{}}
+
+
+
+Error message displayed if the selected source file is not a valid PDF. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a071784bc46ecb49373364a857454eee6}\label{namespaceframes_1_1signing_a071784bc46ecb49373364a857454eee6}} 
+\index{frames.signing@{frames.signing}!RETRY\_BUTTON\_TEXT@{RETRY\_BUTTON\_TEXT}}
+\index{RETRY\_BUTTON\_TEXT@{RETRY\_BUTTON\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{RETRY\_BUTTON\_TEXT}{RETRY\_BUTTON\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+RETRY\+\_\+\+BUTTON\+\_\+\+TEXT = \char`\"{}Try Again\char`\"{}}
+
+
+
+Text for the main action button when a retry is suggested after an error. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a3c46f22fe0292b2d351ebcc6fa014583}\label{namespaceframes_1_1signing_a3c46f22fe0292b2d351ebcc6fa014583}} 
+\index{frames.signing@{frames.signing}!SELECT\_SOURCE\_BUTTON\_TEXT@{SELECT\_SOURCE\_BUTTON\_TEXT}}
+\index{SELECT\_SOURCE\_BUTTON\_TEXT@{SELECT\_SOURCE\_BUTTON\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{SELECT\_SOURCE\_BUTTON\_TEXT}{SELECT\_SOURCE\_BUTTON\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+SELECT\+\_\+\+SOURCE\+\_\+\+BUTTON\+\_\+\+TEXT = \char`\"{}Select PDF file\char`\"{}}
+
+
+
+Text for the button used to trigger source PDF file selection. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_ab2b0e8ee0beb39ff1e42b84a3722ab18}\label{namespaceframes_1_1signing_ab2b0e8ee0beb39ff1e42b84a3722ab18}} 
+\index{frames.signing@{frames.signing}!SELECT\_SOURCE\_PDF\_TITLE@{SELECT\_SOURCE\_PDF\_TITLE}}
+\index{SELECT\_SOURCE\_PDF\_TITLE@{SELECT\_SOURCE\_PDF\_TITLE}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{SELECT\_SOURCE\_PDF\_TITLE}{SELECT\_SOURCE\_PDF\_TITLE}}
+{\footnotesize\ttfamily frames.\+signing.\+SELECT\+\_\+\+SOURCE\+\_\+\+PDF\+\_\+\+TITLE = \char`\"{}Select the PDF file to sign\char`\"{}}
+
+
+
+Title for the file dialog when selecting the source PDF to be signed. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_aebb59e7c79f7b9212d057425a032d606}\label{namespaceframes_1_1signing_aebb59e7c79f7b9212d057425a032d606}} 
+\index{frames.signing@{frames.signing}!SELECT\_TARGET\_BUTTON\_TEXT@{SELECT\_TARGET\_BUTTON\_TEXT}}
+\index{SELECT\_TARGET\_BUTTON\_TEXT@{SELECT\_TARGET\_BUTTON\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{SELECT\_TARGET\_BUTTON\_TEXT}{SELECT\_TARGET\_BUTTON\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+SELECT\+\_\+\+TARGET\+\_\+\+BUTTON\+\_\+\+TEXT = \char`\"{}Set target location\char`\"{}}
+
+
+
+Text for the button used to trigger target PDF path selection. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_ae4e615b9421dea61d774fc8ef25a0b37}\label{namespaceframes_1_1signing_ae4e615b9421dea61d774fc8ef25a0b37}} 
+\index{frames.signing@{frames.signing}!SELECT\_TARGET\_PDF\_TITLE@{SELECT\_TARGET\_PDF\_TITLE}}
+\index{SELECT\_TARGET\_PDF\_TITLE@{SELECT\_TARGET\_PDF\_TITLE}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{SELECT\_TARGET\_PDF\_TITLE}{SELECT\_TARGET\_PDF\_TITLE}}
+{\footnotesize\ttfamily frames.\+signing.\+SELECT\+\_\+\+TARGET\+\_\+\+PDF\+\_\+\+TITLE = \char`\"{}Set target location and filename for signed PDF\char`\"{}}
+
+
+
+Title for the file dialog when selecting the output path for the signed PDF. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a95754ad0279a6f7b9055e14610ac2adc}\label{namespaceframes_1_1signing_a95754ad0279a6f7b9055e14610ac2adc}} 
+\index{frames.signing@{frames.signing}!SIGN\_BUTTON\_INITIAL\_TEXT@{SIGN\_BUTTON\_INITIAL\_TEXT}}
+\index{SIGN\_BUTTON\_INITIAL\_TEXT@{SIGN\_BUTTON\_INITIAL\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{SIGN\_BUTTON\_INITIAL\_TEXT}{SIGN\_BUTTON\_INITIAL\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+SIGN\+\_\+\+BUTTON\+\_\+\+INITIAL\+\_\+\+TEXT = \char`\"{}Sign the PDF file\char`\"{}}
+
+
+
+Initial text for the button that initiates the PDF signing process. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a496ed713154a47b1263850d490057f02}\label{namespaceframes_1_1signing_a496ed713154a47b1263850d490057f02}} 
+\index{frames.signing@{frames.signing}!SIGNING\_ERROR\_TEXT@{SIGNING\_ERROR\_TEXT}}
+\index{SIGNING\_ERROR\_TEXT@{SIGNING\_ERROR\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{SIGNING\_ERROR\_TEXT}{SIGNING\_ERROR\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+SIGNING\+\_\+\+ERROR\+\_\+\+TEXT = \char`\"{}This PDF file may have already been signed or is unsuitable for signing. Please choose a different file.\char`\"{}}
+
+
+
+Error message displayed if the PDF is already signed or unsuitable for signing. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a8bddb68cb1ea034379b49065a383511e}\label{namespaceframes_1_1signing_a8bddb68cb1ea034379b49065a383511e}} 
+\index{frames.signing@{frames.signing}!SIGNING\_SUCCESS\_TEXT@{SIGNING\_SUCCESS\_TEXT}}
+\index{SIGNING\_SUCCESS\_TEXT@{SIGNING\_SUCCESS\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{SIGNING\_SUCCESS\_TEXT}{SIGNING\_SUCCESS\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+SIGNING\+\_\+\+SUCCESS\+\_\+\+TEXT = \char`\"{}Successfully signed PDF and saved to the designated location.\char`\"{}}
+
+
+
+Message displayed in the status label upon successful PDF signing. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a68b7e4bcc187c0332ceb657c9f65ec2e}\label{namespaceframes_1_1signing_a68b7e4bcc187c0332ceb657c9f65ec2e}} 
+\index{frames.signing@{frames.signing}!SOURCE\_PDF\_LABEL\_TEXT@{SOURCE\_PDF\_LABEL\_TEXT}}
+\index{SOURCE\_PDF\_LABEL\_TEXT@{SOURCE\_PDF\_LABEL\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{SOURCE\_PDF\_LABEL\_TEXT}{SOURCE\_PDF\_LABEL\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+SOURCE\+\_\+\+PDF\+\_\+\+LABEL\+\_\+\+TEXT = \char`\"{}Selected PDF file to sign\+:\char`\"{}}
+
+
+
+Text for the label indicating the selected source PDF file path. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_aaab6b6c400d6b3239ce351b77b4173b7}\label{namespaceframes_1_1signing_aaab6b6c400d6b3239ce351b77b4173b7}} 
+\index{frames.signing@{frames.signing}!TARGET\_PDF\_LABEL\_TEXT@{TARGET\_PDF\_LABEL\_TEXT}}
+\index{TARGET\_PDF\_LABEL\_TEXT@{TARGET\_PDF\_LABEL\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{TARGET\_PDF\_LABEL\_TEXT}{TARGET\_PDF\_LABEL\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+TARGET\+\_\+\+PDF\+\_\+\+LABEL\+\_\+\+TEXT = \char`\"{}Location where the signed PDF file will be saved\+:\char`\"{}}
+
+
+
+Text for the label indicating the selected target path for the signed PDF file. 
+
+\mbox{\Hypertarget{namespaceframes_1_1signing_a375a61749c5428b6b474a5f0f4cff8d5}\label{namespaceframes_1_1signing_a375a61749c5428b6b474a5f0f4cff8d5}} 
+\index{frames.signing@{frames.signing}!UNEXPECTED\_SIGNING\_ERROR\_TEXT@{UNEXPECTED\_SIGNING\_ERROR\_TEXT}}
+\index{UNEXPECTED\_SIGNING\_ERROR\_TEXT@{UNEXPECTED\_SIGNING\_ERROR\_TEXT}!frames.signing@{frames.signing}}
+\doxysubsubsection{\texorpdfstring{UNEXPECTED\_SIGNING\_ERROR\_TEXT}{UNEXPECTED\_SIGNING\_ERROR\_TEXT}}
+{\footnotesize\ttfamily frames.\+signing.\+UNEXPECTED\+\_\+\+SIGNING\+\_\+\+ERROR\+\_\+\+TEXT = \char`\"{}An unexpected error occurred during signing\+: \{error\+\_\+type\}. Please try again\char`\"{}}
+
+
+
+Error message template for unexpected errors during the signing process. 
+

@@ -1,0 +1,317 @@
+\hypertarget{namespaceframes_1_1verifying}{}\doxysection{frames.\+verifying Namespace Reference}
+\label{namespaceframes_1_1verifying}\index{frames.verifying@{frames.verifying}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame}{Verifying\+Frame}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classframes_1_1verifying_1_1VerifyingFrame}{Verifying\+Frame}} class provides the UI for PDF signature verification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{namespaceframes_1_1verifying_ab6a0617b96fe0ec8e7796fa6b8f3c37c}{LARGE\+\_\+\+FONT\+\_\+\+CONFIG}} = (\char`\"{}Tk\+Default\+Font\char`\"{}, 16)
+\begin{DoxyCompactList}\small\item\em Font configuration for large text elements like status labels and buttons. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1verifying_a5fa3b3fdc66552db5cfc5d496e297041}{DEFAULT\+\_\+\+WRAP\+\_\+\+LENGTH}} = 750
+\begin{DoxyCompactList}\small\item\em Default wrap length in pixels for text in labels to ensure proper UI layout. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespaceframes_1_1verifying_aa1347b461c3032ac85cfadbc9e379df8}{PDF\+\_\+\+FILE\+\_\+\+TYPES}} = \mbox{[}(\char`\"{}PDF files\char`\"{}, \char`\"{}$\ast$.pdf\char`\"{})\mbox{]}
+\begin{DoxyCompactList}\small\item\em File type filter for PDF file selection dialogs, showing only \char`\"{}$\ast$.\+pdf\char`\"{} files. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespaceframes_1_1verifying_a768dc41662a51383a3163c046505c17d}{PUBLIC\+\_\+\+KEY\+\_\+\+FILE\+\_\+\+TYPES}} = \mbox{[}(\char`\"{}Public Key files\char`\"{}, \char`\"{}$\ast$.pem $\ast$.key\char`\"{})\mbox{]}
+\begin{DoxyCompactList}\small\item\em File type filter for public key file selection dialogs, showing \char`\"{}$\ast$.\+pem\char`\"{} and \char`\"{}$\ast$.\+key\char`\"{} files. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a8a34fe127e04e16ce86c6d5f250dfd29}{SELECT\+\_\+\+PDF\+\_\+\+TO\+\_\+\+VERIFY\+\_\+\+TITLE}} = \char`\"{}Select the PDF file to verify\char`\"{}
+\begin{DoxyCompactList}\small\item\em Title for the file dialog when selecting the PDF file to be verified. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a0c1c3eed0fc327c00e22f48453933c84}{SELECT\+\_\+\+PUBLIC\+\_\+\+KEY\+\_\+\+TITLE}} = \char`\"{}Select the public key file\char`\"{}
+\begin{DoxyCompactList}\small\item\em Title for the file dialog when selecting the public key file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1verifying_a76dd2e42d9daf247ca146db6c24b3a34}{DEFAULT\+\_\+\+PADDING\+\_\+X}} = 10
+\begin{DoxyCompactList}\small\item\em Default horizontal padding in pixels for UI elements. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1verifying_a25e2514f76b2853dcae3c2858d913ad8}{DEFAULT\+\_\+\+PADDING\+\_\+Y}} = 10
+\begin{DoxyCompactList}\small\item\em Default vertical padding in pixels for general UI elements. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1verifying_ab581d0a0a85ca0ad45961d9129d748b9}{SECTION\+\_\+\+SPACING\+\_\+Y}} = 20
+\begin{DoxyCompactList}\small\item\em Vertical spacing in pixels used between UI sections (e.\+g., between PDF selection and public key selection). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1verifying_a0e6dd5385b957e9bae269604f622c5eb}{BUTTON\+\_\+\+PADDING\+\_\+Y}} = 20
+\begin{DoxyCompactList}\small\item\em Specific vertical padding in pixels for buttons. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_af825f5293f10f3a52d93c586cd9c770a}{INITIAL\+\_\+\+INSTRUCTION\+\_\+\+TEXT}} = \char`\"{}Please choose the PDF file to verify and the public key corresponding to the signature.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Initial instructional text displayed to the user in the status label. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_ab9e7dccc57b94ecf7f54f665b256de6f}{VERIFY\+\_\+\+BUTTON\+\_\+\+INITIAL\+\_\+\+TEXT}} = \char`\"{}Verify PDF Signature\char`\"{}
+\begin{DoxyCompactList}\small\item\em Initial text for the button that initiates the PDF signature verification process. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_aed855c08bbf80aebe84f191a103e29c8}{VERIFY\+\_\+\+BUTTON\+\_\+\+RETRY\+\_\+\+TEXT}} = \char`\"{}Try Again\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the main action button when a retry is suggested after an error. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a9091bc5b0e0309a124a902556e8651a2}{VERIFY\+\_\+\+BUTTON\+\_\+\+GO\+\_\+\+BACK\+\_\+\+TEXT}} = \char`\"{}Go back to main menu\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the main action button to navigate back to the main menu after verification (success or failure). \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_af898f4e60990689a2477b834736f348d}{PATHS\+\_\+\+REQUIRED\+\_\+\+MSG}} = \char`\"{}Both PDF file and public key file locations are required. Please select them.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed if either the PDF file or public key file path is not selected. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_af9d1b737dc3054743c4d19d472d362b0}{PUBLIC\+\_\+\+KEY\+\_\+\+NOT\+\_\+\+FOUND\+\_\+\+MSG}} = \char`\"{}Public key file not found at the specified location. Please check the path and try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed if the specified public key file cannot be found. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_ad4c11b45217ad83d400ae47eab84bb64}{PUBLIC\+\_\+\+KEY\+\_\+\+INVALID\+\_\+\+MSG}} = \char`\"{}The selected file is not a valid public key or is corrupted. Please verify the key file.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed if the selected public key file is invalid or corrupted. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a2bbda3761c82d1de6185659f7dff89db}{PDF\+\_\+\+INVALID\+\_\+\+MSG}} = \char`\"{}The selected file is not a valid PDF file. Please verify the PDF and try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed if the selected PDF file is invalid or cannot be read. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a3435dd6aaa88d7682126d4ae300415bf}{NO\+\_\+\+SIGNATURE\+\_\+\+MSG}} = \char`\"{}This PDF file does not appear to be signed. Please select a signed PDF.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Message displayed if the selected PDF file does not contain a digital signature. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a1ffcef6df9f73b72daab22fad6ec3240}{VERIFICATION\+\_\+\+ERROR\+\_\+\+MSG}} = \char`\"{}An error occurred during verification. Please try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em General error message displayed if an unexpected error occurs during verification. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a632df2de1d602b1b5764e4de1ecd9a64}{SIGNATURE\+\_\+\+VALID\+\_\+\+MSG}} = \char`\"{}The signature is VALID.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Message displayed in the status label when the PDF signature is successfully validated. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a218bd7bc415d3b6b06c90ec3dd2ad44d}{SIGNATURE\+\_\+\+INVALID\+\_\+\+MSG}} = \char`\"{}The signature is INVALID.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Message displayed in the status label when the PDF signature is found to be invalid. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_ac8eb52c82bd1f1b879ee21961bb89511}{FOREGROUND\+\_\+\+COLOR}} = \char`\"{}\#ffffff\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a54d3c98d5e7a1258a1df39a777c05c75}{BACKGROUND\+\_\+\+COLOR}} = \char`\"{}\#1e1e1e\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a01512db3190be4a480b8bcbc60638b9a}{BACKGROUND2\+\_\+\+COLOR}} = \char`\"{}\#2d2d2d\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a8b55f3774e7640b89d5337b281ee6c45}{BLUE\+\_\+\+BUTTON\+\_\+\+COLOR}} = \char`\"{}\#007acc\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1verifying_a793b86e5a36ed54d2e36197dac0ccd46}{ACTIVATE\+\_\+\+BUTTON\+\_\+\+COLOR}} = \char`\"{}\#005f99\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a793b86e5a36ed54d2e36197dac0ccd46}\label{namespaceframes_1_1verifying_a793b86e5a36ed54d2e36197dac0ccd46}} 
+\index{frames.verifying@{frames.verifying}!ACTIVATE\_BUTTON\_COLOR@{ACTIVATE\_BUTTON\_COLOR}}
+\index{ACTIVATE\_BUTTON\_COLOR@{ACTIVATE\_BUTTON\_COLOR}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{ACTIVATE\_BUTTON\_COLOR}{ACTIVATE\_BUTTON\_COLOR}}
+{\footnotesize\ttfamily string frames.\+verifying.\+ACTIVATE\+\_\+\+BUTTON\+\_\+\+COLOR = \char`\"{}\#005f99\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a01512db3190be4a480b8bcbc60638b9a}\label{namespaceframes_1_1verifying_a01512db3190be4a480b8bcbc60638b9a}} 
+\index{frames.verifying@{frames.verifying}!BACKGROUND2\_COLOR@{BACKGROUND2\_COLOR}}
+\index{BACKGROUND2\_COLOR@{BACKGROUND2\_COLOR}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{BACKGROUND2\_COLOR}{BACKGROUND2\_COLOR}}
+{\footnotesize\ttfamily string frames.\+verifying.\+BACKGROUND2\+\_\+\+COLOR = \char`\"{}\#2d2d2d\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a54d3c98d5e7a1258a1df39a777c05c75}\label{namespaceframes_1_1verifying_a54d3c98d5e7a1258a1df39a777c05c75}} 
+\index{frames.verifying@{frames.verifying}!BACKGROUND\_COLOR@{BACKGROUND\_COLOR}}
+\index{BACKGROUND\_COLOR@{BACKGROUND\_COLOR}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{BACKGROUND\_COLOR}{BACKGROUND\_COLOR}}
+{\footnotesize\ttfamily string frames.\+verifying.\+BACKGROUND\+\_\+\+COLOR = \char`\"{}\#1e1e1e\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a8b55f3774e7640b89d5337b281ee6c45}\label{namespaceframes_1_1verifying_a8b55f3774e7640b89d5337b281ee6c45}} 
+\index{frames.verifying@{frames.verifying}!BLUE\_BUTTON\_COLOR@{BLUE\_BUTTON\_COLOR}}
+\index{BLUE\_BUTTON\_COLOR@{BLUE\_BUTTON\_COLOR}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{BLUE\_BUTTON\_COLOR}{BLUE\_BUTTON\_COLOR}}
+{\footnotesize\ttfamily string frames.\+verifying.\+BLUE\+\_\+\+BUTTON\+\_\+\+COLOR = \char`\"{}\#007acc\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a0e6dd5385b957e9bae269604f622c5eb}\label{namespaceframes_1_1verifying_a0e6dd5385b957e9bae269604f622c5eb}} 
+\index{frames.verifying@{frames.verifying}!BUTTON\_PADDING\_Y@{BUTTON\_PADDING\_Y}}
+\index{BUTTON\_PADDING\_Y@{BUTTON\_PADDING\_Y}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{BUTTON\_PADDING\_Y}{BUTTON\_PADDING\_Y}}
+{\footnotesize\ttfamily frames.\+verifying.\+BUTTON\+\_\+\+PADDING\+\_\+Y = 20}
+
+
+
+Specific vertical padding in pixels for buttons. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a76dd2e42d9daf247ca146db6c24b3a34}\label{namespaceframes_1_1verifying_a76dd2e42d9daf247ca146db6c24b3a34}} 
+\index{frames.verifying@{frames.verifying}!DEFAULT\_PADDING\_X@{DEFAULT\_PADDING\_X}}
+\index{DEFAULT\_PADDING\_X@{DEFAULT\_PADDING\_X}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_PADDING\_X}{DEFAULT\_PADDING\_X}}
+{\footnotesize\ttfamily frames.\+verifying.\+DEFAULT\+\_\+\+PADDING\+\_\+X = 10}
+
+
+
+Default horizontal padding in pixels for UI elements. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a25e2514f76b2853dcae3c2858d913ad8}\label{namespaceframes_1_1verifying_a25e2514f76b2853dcae3c2858d913ad8}} 
+\index{frames.verifying@{frames.verifying}!DEFAULT\_PADDING\_Y@{DEFAULT\_PADDING\_Y}}
+\index{DEFAULT\_PADDING\_Y@{DEFAULT\_PADDING\_Y}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_PADDING\_Y}{DEFAULT\_PADDING\_Y}}
+{\footnotesize\ttfamily frames.\+verifying.\+DEFAULT\+\_\+\+PADDING\+\_\+Y = 10}
+
+
+
+Default vertical padding in pixels for general UI elements. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a5fa3b3fdc66552db5cfc5d496e297041}\label{namespaceframes_1_1verifying_a5fa3b3fdc66552db5cfc5d496e297041}} 
+\index{frames.verifying@{frames.verifying}!DEFAULT\_WRAP\_LENGTH@{DEFAULT\_WRAP\_LENGTH}}
+\index{DEFAULT\_WRAP\_LENGTH@{DEFAULT\_WRAP\_LENGTH}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_WRAP\_LENGTH}{DEFAULT\_WRAP\_LENGTH}}
+{\footnotesize\ttfamily frames.\+verifying.\+DEFAULT\+\_\+\+WRAP\+\_\+\+LENGTH = 750}
+
+
+
+Default wrap length in pixels for text in labels to ensure proper UI layout. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_ac8eb52c82bd1f1b879ee21961bb89511}\label{namespaceframes_1_1verifying_ac8eb52c82bd1f1b879ee21961bb89511}} 
+\index{frames.verifying@{frames.verifying}!FOREGROUND\_COLOR@{FOREGROUND\_COLOR}}
+\index{FOREGROUND\_COLOR@{FOREGROUND\_COLOR}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{FOREGROUND\_COLOR}{FOREGROUND\_COLOR}}
+{\footnotesize\ttfamily string frames.\+verifying.\+FOREGROUND\+\_\+\+COLOR = \char`\"{}\#ffffff\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_af825f5293f10f3a52d93c586cd9c770a}\label{namespaceframes_1_1verifying_af825f5293f10f3a52d93c586cd9c770a}} 
+\index{frames.verifying@{frames.verifying}!INITIAL\_INSTRUCTION\_TEXT@{INITIAL\_INSTRUCTION\_TEXT}}
+\index{INITIAL\_INSTRUCTION\_TEXT@{INITIAL\_INSTRUCTION\_TEXT}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_INSTRUCTION\_TEXT}{INITIAL\_INSTRUCTION\_TEXT}}
+{\footnotesize\ttfamily frames.\+verifying.\+INITIAL\+\_\+\+INSTRUCTION\+\_\+\+TEXT = \char`\"{}Please choose the PDF file to verify and the public key corresponding to the signature.\char`\"{}}
+
+
+
+Initial instructional text displayed to the user in the status label. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_ab6a0617b96fe0ec8e7796fa6b8f3c37c}\label{namespaceframes_1_1verifying_ab6a0617b96fe0ec8e7796fa6b8f3c37c}} 
+\index{frames.verifying@{frames.verifying}!LARGE\_FONT\_CONFIG@{LARGE\_FONT\_CONFIG}}
+\index{LARGE\_FONT\_CONFIG@{LARGE\_FONT\_CONFIG}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{LARGE\_FONT\_CONFIG}{LARGE\_FONT\_CONFIG}}
+{\footnotesize\ttfamily frames.\+verifying.\+LARGE\+\_\+\+FONT\+\_\+\+CONFIG = (\char`\"{}Tk\+Default\+Font\char`\"{}, 16)}
+
+
+
+Font configuration for large text elements like status labels and buttons. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a3435dd6aaa88d7682126d4ae300415bf}\label{namespaceframes_1_1verifying_a3435dd6aaa88d7682126d4ae300415bf}} 
+\index{frames.verifying@{frames.verifying}!NO\_SIGNATURE\_MSG@{NO\_SIGNATURE\_MSG}}
+\index{NO\_SIGNATURE\_MSG@{NO\_SIGNATURE\_MSG}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{NO\_SIGNATURE\_MSG}{NO\_SIGNATURE\_MSG}}
+{\footnotesize\ttfamily frames.\+verifying.\+NO\+\_\+\+SIGNATURE\+\_\+\+MSG = \char`\"{}This PDF file does not appear to be signed. Please select a signed PDF.\char`\"{}}
+
+
+
+Message displayed if the selected PDF file does not contain a digital signature. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_af898f4e60990689a2477b834736f348d}\label{namespaceframes_1_1verifying_af898f4e60990689a2477b834736f348d}} 
+\index{frames.verifying@{frames.verifying}!PATHS\_REQUIRED\_MSG@{PATHS\_REQUIRED\_MSG}}
+\index{PATHS\_REQUIRED\_MSG@{PATHS\_REQUIRED\_MSG}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{PATHS\_REQUIRED\_MSG}{PATHS\_REQUIRED\_MSG}}
+{\footnotesize\ttfamily frames.\+verifying.\+PATHS\+\_\+\+REQUIRED\+\_\+\+MSG = \char`\"{}Both PDF file and public key file locations are required. Please select them.\char`\"{}}
+
+
+
+Error message displayed if either the PDF file or public key file path is not selected. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_aa1347b461c3032ac85cfadbc9e379df8}\label{namespaceframes_1_1verifying_aa1347b461c3032ac85cfadbc9e379df8}} 
+\index{frames.verifying@{frames.verifying}!PDF\_FILE\_TYPES@{PDF\_FILE\_TYPES}}
+\index{PDF\_FILE\_TYPES@{PDF\_FILE\_TYPES}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{PDF\_FILE\_TYPES}{PDF\_FILE\_TYPES}}
+{\footnotesize\ttfamily frames.\+verifying.\+PDF\+\_\+\+FILE\+\_\+\+TYPES = \mbox{[}(\char`\"{}PDF files\char`\"{}, \char`\"{}$\ast$.pdf\char`\"{})\mbox{]}}
+
+
+
+File type filter for PDF file selection dialogs, showing only \char`\"{}$\ast$.\+pdf\char`\"{} files. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a2bbda3761c82d1de6185659f7dff89db}\label{namespaceframes_1_1verifying_a2bbda3761c82d1de6185659f7dff89db}} 
+\index{frames.verifying@{frames.verifying}!PDF\_INVALID\_MSG@{PDF\_INVALID\_MSG}}
+\index{PDF\_INVALID\_MSG@{PDF\_INVALID\_MSG}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{PDF\_INVALID\_MSG}{PDF\_INVALID\_MSG}}
+{\footnotesize\ttfamily frames.\+verifying.\+PDF\+\_\+\+INVALID\+\_\+\+MSG = \char`\"{}The selected file is not a valid PDF file. Please verify the PDF and try again.\char`\"{}}
+
+
+
+Error message displayed if the selected PDF file is invalid or cannot be read. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a768dc41662a51383a3163c046505c17d}\label{namespaceframes_1_1verifying_a768dc41662a51383a3163c046505c17d}} 
+\index{frames.verifying@{frames.verifying}!PUBLIC\_KEY\_FILE\_TYPES@{PUBLIC\_KEY\_FILE\_TYPES}}
+\index{PUBLIC\_KEY\_FILE\_TYPES@{PUBLIC\_KEY\_FILE\_TYPES}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{PUBLIC\_KEY\_FILE\_TYPES}{PUBLIC\_KEY\_FILE\_TYPES}}
+{\footnotesize\ttfamily frames.\+verifying.\+PUBLIC\+\_\+\+KEY\+\_\+\+FILE\+\_\+\+TYPES = \mbox{[}(\char`\"{}Public Key files\char`\"{}, \char`\"{}$\ast$.pem $\ast$.key\char`\"{})\mbox{]}}
+
+
+
+File type filter for public key file selection dialogs, showing \char`\"{}$\ast$.\+pem\char`\"{} and \char`\"{}$\ast$.\+key\char`\"{} files. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_ad4c11b45217ad83d400ae47eab84bb64}\label{namespaceframes_1_1verifying_ad4c11b45217ad83d400ae47eab84bb64}} 
+\index{frames.verifying@{frames.verifying}!PUBLIC\_KEY\_INVALID\_MSG@{PUBLIC\_KEY\_INVALID\_MSG}}
+\index{PUBLIC\_KEY\_INVALID\_MSG@{PUBLIC\_KEY\_INVALID\_MSG}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{PUBLIC\_KEY\_INVALID\_MSG}{PUBLIC\_KEY\_INVALID\_MSG}}
+{\footnotesize\ttfamily frames.\+verifying.\+PUBLIC\+\_\+\+KEY\+\_\+\+INVALID\+\_\+\+MSG = \char`\"{}The selected file is not a valid public key or is corrupted. Please verify the key file.\char`\"{}}
+
+
+
+Error message displayed if the selected public key file is invalid or corrupted. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_af9d1b737dc3054743c4d19d472d362b0}\label{namespaceframes_1_1verifying_af9d1b737dc3054743c4d19d472d362b0}} 
+\index{frames.verifying@{frames.verifying}!PUBLIC\_KEY\_NOT\_FOUND\_MSG@{PUBLIC\_KEY\_NOT\_FOUND\_MSG}}
+\index{PUBLIC\_KEY\_NOT\_FOUND\_MSG@{PUBLIC\_KEY\_NOT\_FOUND\_MSG}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{PUBLIC\_KEY\_NOT\_FOUND\_MSG}{PUBLIC\_KEY\_NOT\_FOUND\_MSG}}
+{\footnotesize\ttfamily frames.\+verifying.\+PUBLIC\+\_\+\+KEY\+\_\+\+NOT\+\_\+\+FOUND\+\_\+\+MSG = \char`\"{}Public key file not found at the specified location. Please check the path and try again.\char`\"{}}
+
+
+
+Error message displayed if the specified public key file cannot be found. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_ab581d0a0a85ca0ad45961d9129d748b9}\label{namespaceframes_1_1verifying_ab581d0a0a85ca0ad45961d9129d748b9}} 
+\index{frames.verifying@{frames.verifying}!SECTION\_SPACING\_Y@{SECTION\_SPACING\_Y}}
+\index{SECTION\_SPACING\_Y@{SECTION\_SPACING\_Y}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{SECTION\_SPACING\_Y}{SECTION\_SPACING\_Y}}
+{\footnotesize\ttfamily frames.\+verifying.\+SECTION\+\_\+\+SPACING\+\_\+Y = 20}
+
+
+
+Vertical spacing in pixels used between UI sections (e.\+g., between PDF selection and public key selection). 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a8a34fe127e04e16ce86c6d5f250dfd29}\label{namespaceframes_1_1verifying_a8a34fe127e04e16ce86c6d5f250dfd29}} 
+\index{frames.verifying@{frames.verifying}!SELECT\_PDF\_TO\_VERIFY\_TITLE@{SELECT\_PDF\_TO\_VERIFY\_TITLE}}
+\index{SELECT\_PDF\_TO\_VERIFY\_TITLE@{SELECT\_PDF\_TO\_VERIFY\_TITLE}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{SELECT\_PDF\_TO\_VERIFY\_TITLE}{SELECT\_PDF\_TO\_VERIFY\_TITLE}}
+{\footnotesize\ttfamily frames.\+verifying.\+SELECT\+\_\+\+PDF\+\_\+\+TO\+\_\+\+VERIFY\+\_\+\+TITLE = \char`\"{}Select the PDF file to verify\char`\"{}}
+
+
+
+Title for the file dialog when selecting the PDF file to be verified. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a0c1c3eed0fc327c00e22f48453933c84}\label{namespaceframes_1_1verifying_a0c1c3eed0fc327c00e22f48453933c84}} 
+\index{frames.verifying@{frames.verifying}!SELECT\_PUBLIC\_KEY\_TITLE@{SELECT\_PUBLIC\_KEY\_TITLE}}
+\index{SELECT\_PUBLIC\_KEY\_TITLE@{SELECT\_PUBLIC\_KEY\_TITLE}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{SELECT\_PUBLIC\_KEY\_TITLE}{SELECT\_PUBLIC\_KEY\_TITLE}}
+{\footnotesize\ttfamily frames.\+verifying.\+SELECT\+\_\+\+PUBLIC\+\_\+\+KEY\+\_\+\+TITLE = \char`\"{}Select the public key file\char`\"{}}
+
+
+
+Title for the file dialog when selecting the public key file. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a218bd7bc415d3b6b06c90ec3dd2ad44d}\label{namespaceframes_1_1verifying_a218bd7bc415d3b6b06c90ec3dd2ad44d}} 
+\index{frames.verifying@{frames.verifying}!SIGNATURE\_INVALID\_MSG@{SIGNATURE\_INVALID\_MSG}}
+\index{SIGNATURE\_INVALID\_MSG@{SIGNATURE\_INVALID\_MSG}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{SIGNATURE\_INVALID\_MSG}{SIGNATURE\_INVALID\_MSG}}
+{\footnotesize\ttfamily frames.\+verifying.\+SIGNATURE\+\_\+\+INVALID\+\_\+\+MSG = \char`\"{}The signature is INVALID.\char`\"{}}
+
+
+
+Message displayed in the status label when the PDF signature is found to be invalid. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a632df2de1d602b1b5764e4de1ecd9a64}\label{namespaceframes_1_1verifying_a632df2de1d602b1b5764e4de1ecd9a64}} 
+\index{frames.verifying@{frames.verifying}!SIGNATURE\_VALID\_MSG@{SIGNATURE\_VALID\_MSG}}
+\index{SIGNATURE\_VALID\_MSG@{SIGNATURE\_VALID\_MSG}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{SIGNATURE\_VALID\_MSG}{SIGNATURE\_VALID\_MSG}}
+{\footnotesize\ttfamily frames.\+verifying.\+SIGNATURE\+\_\+\+VALID\+\_\+\+MSG = \char`\"{}The signature is VALID.\char`\"{}}
+
+
+
+Message displayed in the status label when the PDF signature is successfully validated. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a1ffcef6df9f73b72daab22fad6ec3240}\label{namespaceframes_1_1verifying_a1ffcef6df9f73b72daab22fad6ec3240}} 
+\index{frames.verifying@{frames.verifying}!VERIFICATION\_ERROR\_MSG@{VERIFICATION\_ERROR\_MSG}}
+\index{VERIFICATION\_ERROR\_MSG@{VERIFICATION\_ERROR\_MSG}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{VERIFICATION\_ERROR\_MSG}{VERIFICATION\_ERROR\_MSG}}
+{\footnotesize\ttfamily frames.\+verifying.\+VERIFICATION\+\_\+\+ERROR\+\_\+\+MSG = \char`\"{}An error occurred during verification. Please try again.\char`\"{}}
+
+
+
+General error message displayed if an unexpected error occurs during verification. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_a9091bc5b0e0309a124a902556e8651a2}\label{namespaceframes_1_1verifying_a9091bc5b0e0309a124a902556e8651a2}} 
+\index{frames.verifying@{frames.verifying}!VERIFY\_BUTTON\_GO\_BACK\_TEXT@{VERIFY\_BUTTON\_GO\_BACK\_TEXT}}
+\index{VERIFY\_BUTTON\_GO\_BACK\_TEXT@{VERIFY\_BUTTON\_GO\_BACK\_TEXT}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{VERIFY\_BUTTON\_GO\_BACK\_TEXT}{VERIFY\_BUTTON\_GO\_BACK\_TEXT}}
+{\footnotesize\ttfamily frames.\+verifying.\+VERIFY\+\_\+\+BUTTON\+\_\+\+GO\+\_\+\+BACK\+\_\+\+TEXT = \char`\"{}Go back to main menu\char`\"{}}
+
+
+
+Text for the main action button to navigate back to the main menu after verification (success or failure). 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_ab9e7dccc57b94ecf7f54f665b256de6f}\label{namespaceframes_1_1verifying_ab9e7dccc57b94ecf7f54f665b256de6f}} 
+\index{frames.verifying@{frames.verifying}!VERIFY\_BUTTON\_INITIAL\_TEXT@{VERIFY\_BUTTON\_INITIAL\_TEXT}}
+\index{VERIFY\_BUTTON\_INITIAL\_TEXT@{VERIFY\_BUTTON\_INITIAL\_TEXT}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{VERIFY\_BUTTON\_INITIAL\_TEXT}{VERIFY\_BUTTON\_INITIAL\_TEXT}}
+{\footnotesize\ttfamily frames.\+verifying.\+VERIFY\+\_\+\+BUTTON\+\_\+\+INITIAL\+\_\+\+TEXT = \char`\"{}Verify PDF Signature\char`\"{}}
+
+
+
+Initial text for the button that initiates the PDF signature verification process. 
+
+\mbox{\Hypertarget{namespaceframes_1_1verifying_aed855c08bbf80aebe84f191a103e29c8}\label{namespaceframes_1_1verifying_aed855c08bbf80aebe84f191a103e29c8}} 
+\index{frames.verifying@{frames.verifying}!VERIFY\_BUTTON\_RETRY\_TEXT@{VERIFY\_BUTTON\_RETRY\_TEXT}}
+\index{VERIFY\_BUTTON\_RETRY\_TEXT@{VERIFY\_BUTTON\_RETRY\_TEXT}!frames.verifying@{frames.verifying}}
+\doxysubsubsection{\texorpdfstring{VERIFY\_BUTTON\_RETRY\_TEXT}{VERIFY\_BUTTON\_RETRY\_TEXT}}
+{\footnotesize\ttfamily frames.\+verifying.\+VERIFY\+\_\+\+BUTTON\+\_\+\+RETRY\+\_\+\+TEXT = \char`\"{}Try Again\char`\"{}}
+
+
+
+Text for the main action button when a retry is suggested after an error. 
+

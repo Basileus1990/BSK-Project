@@ -1,0 +1,60 @@
+\hypertarget{namespacepdf__signer_1_1signer}{}\doxysection{pdf\+\_\+signer.\+signer Namespace Reference}
+\label{namespacepdf__signer_1_1signer}\index{pdf\_signer.signer@{pdf\_signer.signer}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepdf__signer_1_1signer_a41487c30da987090e1082e67f50e8ac2}{sign}} (rsa.\+RSAPrivate\+Key private\+\_\+key, str pdf\+\_\+in\+\_\+path, str pdf\+\_\+out\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Signs a PDF document using a provided RSA private key. \end{DoxyCompactList}\item 
+Tuple\mbox{[}asn1\+\_\+x509.\+Certificate, asn1\+\_\+keys.\+Private\+Key\+Info\mbox{]} \mbox{\hyperlink{namespacepdf__signer_1_1signer_a31736380c3ed4628e0a45f59584640d9}{\+\_\+generate\+\_\+self\+\_\+signed\+\_\+cert}} (rsa.\+RSAPrivate\+Key private\+\_\+key)
+\begin{DoxyCompactList}\small\item\em Generates a self-\/signed X.\+509 certificate and private key information in ASN.\+1 format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacepdf__signer_1_1signer_a31736380c3ed4628e0a45f59584640d9}\label{namespacepdf__signer_1_1signer_a31736380c3ed4628e0a45f59584640d9}} 
+\index{pdf\_signer.signer@{pdf\_signer.signer}!\_generate\_self\_signed\_cert@{\_generate\_self\_signed\_cert}}
+\index{\_generate\_self\_signed\_cert@{\_generate\_self\_signed\_cert}!pdf\_signer.signer@{pdf\_signer.signer}}
+\doxysubsubsection{\texorpdfstring{\_generate\_self\_signed\_cert()}{\_generate\_self\_signed\_cert()}}
+{\footnotesize\ttfamily  Tuple\mbox{[}asn1\+\_\+x509.\+Certificate, asn1\+\_\+keys.\+Private\+Key\+Info\mbox{]} pdf\+\_\+signer.\+signer.\+\_\+generate\+\_\+self\+\_\+signed\+\_\+cert (\begin{DoxyParamCaption}\item[{rsa.\+RSAPrivate\+Key}]{private\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Generates a self-\/signed X.\+509 certificate and private key information in ASN.\+1 format. 
+
+This internal helper function takes an RSA private key and creates a self-\/signed certificate suitable for use with {\ttfamily pyhanko}. The certificate has a common name \char`\"{}my\+PAd\+ESCertificate\char`\"{} and is valid for 10 years. 
+\begin{DoxyParams}{Parameters}
+{\em private\+\_\+key} & The RSA private key object from which to generate the public key for the certificate and to sign the certificate. @type private\+\_\+key rsa.\+RSAPrivate\+Key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tuple containing\+:
+\begin{DoxyItemize}
+\item {\ttfamily asn1\+\_\+cert}\+: The generated self-\/signed certificate in {\ttfamily asn1crypto.\+x509.\+Certificate} format.
+\item {\ttfamily asn1\+\_\+private\+\_\+key}\+: The private key information in {\ttfamily asn1crypto.\+keys.\+Private\+Key\+Info} format. @rtype Tuple\mbox{[}asn1\+\_\+x509.\+Certificate, asn1\+\_\+keys.\+Private\+Key\+Info\mbox{]} 
+\end{DoxyItemize}
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacepdf__signer_1_1signer_a41487c30da987090e1082e67f50e8ac2}\label{namespacepdf__signer_1_1signer_a41487c30da987090e1082e67f50e8ac2}} 
+\index{pdf\_signer.signer@{pdf\_signer.signer}!sign@{sign}}
+\index{sign@{sign}!pdf\_signer.signer@{pdf\_signer.signer}}
+\doxysubsubsection{\texorpdfstring{sign()}{sign()}}
+{\footnotesize\ttfamily def pdf\+\_\+signer.\+signer.\+sign (\begin{DoxyParamCaption}\item[{rsa.\+RSAPrivate\+Key}]{private\+\_\+key,  }\item[{str}]{pdf\+\_\+in\+\_\+path,  }\item[{str}]{pdf\+\_\+out\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Signs a PDF document using a provided RSA private key. 
+
+This function creates a self-\/signed certificate from the given private key and uses it to apply a digital signature to the input PDF. The signed PDF is saved to the specified output path. A signature field is added to the first page of the PDF. If an error occurs during signing, any partially created output file is removed. 
+\begin{DoxyParams}{Parameters}
+{\em private\+\_\+key} & The RSA private key object to use for signing. @type private\+\_\+key rsa.\+RSAPrivate\+Key \\
+\hline
+{\em pdf\+\_\+in\+\_\+path} & The file system path to the input PDF document that needs to be signed. @type pdf\+\_\+in\+\_\+path str \\
+\hline
+{\em pdf\+\_\+out\+\_\+path} & The file system path where the signed PDF document will be saved. @type pdf\+\_\+out\+\_\+path str \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em File\+Not\+Found\+Error} & When the input file doesn\textquotesingle{}t exist \\
+\hline
+{\em Pdf\+Read\+Error} & When an error occurs during signature or while reading the input PDF file \\
+\hline
+\end{DoxyExceptions}

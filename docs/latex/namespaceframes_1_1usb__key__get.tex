@@ -1,0 +1,281 @@
+\hypertarget{namespaceframes_1_1usb__key__get}{}\doxysection{frames.\+usb\+\_\+key\+\_\+get Namespace Reference}
+\label{namespaceframes_1_1usb__key__get}\index{frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame}{Key\+From\+USBFrame}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classframes_1_1usb__key__get_1_1KeyFromUSBFrame}{Key\+From\+USBFrame}} class handles the UI for retrieving a private key from a USB drive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a5c7ff713a2f85feb842ccfdf6be902f3}{LARGE\+\_\+\+FONT\+\_\+\+CONFIG}} = (\char`\"{}Tk\+Default\+Font\char`\"{}, 16)
+\begin{DoxyCompactList}\small\item\em Font configuration for large text elements. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a60f7661fc3e6f50e357e53be89aa2f97}{DEFAULT\+\_\+\+WRAP\+\_\+\+LENGTH}} = 750
+\begin{DoxyCompactList}\small\item\em Default wrap length in pixels for text in labels. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a39846f185ee18afd390c9a6572da07d1}{DEFAULT\+\_\+\+PADDING\+\_\+X}} = 10
+\begin{DoxyCompactList}\small\item\em Default horizontal padding in pixels for UI elements. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1usb__key__get_ab8c1a59223f9d329cc44e154a7e56965}{DEFAULT\+\_\+\+PADDING\+\_\+Y}} = 10
+\begin{DoxyCompactList}\small\item\em Default vertical padding in pixels for general UI elements. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1usb__key__get_aa64f225b7a28ce845f011126124f9a5f}{INPUT\+\_\+\+AREA\+\_\+\+PADDING\+\_\+Y}} = 5
+\begin{DoxyCompactList}\small\item\em Vertical padding in pixels for the PIN input area. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a7dbc086d00eb7fbe6977858639dea8ce}{BUTTON\+\_\+\+PADDING\+\_\+Y}} = 20
+\begin{DoxyCompactList}\small\item\em Specific vertical padding in pixels for buttons. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_aeb1326881b2d254266a8cfa7ec38a5fb}{INITIAL\+\_\+\+INSTRUCTION\+\_\+\+TEXT}} = \char`\"{}To sign the PDF file, first the key has to be read from the USB drive and deciphered with your PIN.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Initial instruction text displayed to the user. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a8b168c69f9ec8574b6cbbad8c0bbc5e2}{PIN\+\_\+\+LABEL\+\_\+\+TEXT}} = \char`\"{}Enter PIN\+:\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the PIN entry label. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a49f9e48ada9bd7369c242311708dfb28}{ACTION\+\_\+\+BUTTON\+\_\+\+INITIAL\+\_\+\+TEXT}} = \char`\"{}Find and Read Key\char`\"{}
+\begin{DoxyCompactList}\small\item\em Initial text for the main action button. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a729f19f88712aae87cc9b9b5c2ed4167}{ACTION\+\_\+\+BUTTON\+\_\+\+RETRY\+\_\+\+TEXT}} = \char`\"{}Try Again\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the action button when a retry is suggested. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a04a09c13b9cfcf491d520b136d0d36d5}{ACTION\+\_\+\+BUTTON\+\_\+\+EXIT\+\_\+\+TEXT}} = \char`\"{}Exit Program\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the action button when exiting is the only option. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a815d2d53c9c3807c9342b37fa916f6bb}{PIN\+\_\+\+REQUIRED\+\_\+\+MSG}} = \char`\"{}PIN is required. Please enter your 4-\/digit PIN.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message when the PIN is not entered. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a04afa476c2d179285032ba53fa322d7c}{PIN\+\_\+\+INVALID\+\_\+\+FORMAT\+\_\+\+MSG}} = \char`\"{}The PIN must be 4 digits. Please try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message when the PIN format is incorrect. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_ae57b9a6540c0f2ba8f88e93563756f2f}{UNSUPPORTED\+\_\+\+PLATFORM\+\_\+\+MSG}} = \char`\"{}Error\+: Current operating system is not supported for USB key retrieval.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message for unsupported operating systems. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a660341a7602a8751ddb2fa4f1851fde0}{NO\+\_\+\+USB\+\_\+\+DRIVES\+\_\+\+MSG}} = \char`\"{}No USB drives found. Please insert the USB drive with the key and try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message when no USB drives are detected. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a7b8ba612681e83b41fc27778f2c32d64}{NO\+\_\+\+KEY\+\_\+\+FILE\+\_\+\+MSG}} = \char`\"{}No key file found on any USB drive. Please ensure the key file is present and try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message when the key file is not found on USB drives. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a8bb3e0f0d74fa3e568e3dd9fd95426db}{MULTIPLE\+\_\+\+KEYS\+\_\+\+MSG}} = \char`\"{}Multiple key files found across different USB drives. Please ensure only one USB drive with the key file is connected and try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message when multiple key files are found. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_ac05d0c772d76c67b4b22a196d4749f65}{KEY\+\_\+\+OR\+\_\+\+PIN\+\_\+\+INVALID\+\_\+\+MSG}} = \char`\"{}Invalid PIN or key file. Please verify your PIN and the key file, then try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message for an invalid PIN or key file. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_aebd85d83ebb05277d5ea80196f33b5a4}{KEY\+\_\+\+INVALID\+\_\+\+MSG}} = \char`\"{}The key file is invalid or corrupted. Please ensure you have the correct key file.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message when the key file itself is invalid or corrupted. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a3317f3dd65b409af15a23a58944a6345}{FOREGROUND\+\_\+\+COLOR}} = \char`\"{}\#ffffff\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a5a1991d9a51466b0743871d09d09d439}{BACKGROUND\+\_\+\+COLOR}} = \char`\"{}\#1e1e1e\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a31644d37f6ede7adf2ccbe2ddc8efa44}{BACKGROUND2\+\_\+\+COLOR}} = \char`\"{}\#2d2d2d\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_a72df98e9f1bb39e9860fd339bea6e522}{BLUE\+\_\+\+BUTTON\+\_\+\+COLOR}} = \char`\"{}\#007acc\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1usb__key__get_ae155dba59b24a43baa28231986dd0e4f}{ACTIVATE\+\_\+\+BUTTON\+\_\+\+COLOR}} = \char`\"{}\#005f99\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a04a09c13b9cfcf491d520b136d0d36d5}\label{namespaceframes_1_1usb__key__get_a04a09c13b9cfcf491d520b136d0d36d5}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!ACTION\_BUTTON\_EXIT\_TEXT@{ACTION\_BUTTON\_EXIT\_TEXT}}
+\index{ACTION\_BUTTON\_EXIT\_TEXT@{ACTION\_BUTTON\_EXIT\_TEXT}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{ACTION\_BUTTON\_EXIT\_TEXT}{ACTION\_BUTTON\_EXIT\_TEXT}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+ACTION\+\_\+\+BUTTON\+\_\+\+EXIT\+\_\+\+TEXT = \char`\"{}Exit Program\char`\"{}}
+
+
+
+Text for the action button when exiting is the only option. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a49f9e48ada9bd7369c242311708dfb28}\label{namespaceframes_1_1usb__key__get_a49f9e48ada9bd7369c242311708dfb28}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!ACTION\_BUTTON\_INITIAL\_TEXT@{ACTION\_BUTTON\_INITIAL\_TEXT}}
+\index{ACTION\_BUTTON\_INITIAL\_TEXT@{ACTION\_BUTTON\_INITIAL\_TEXT}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{ACTION\_BUTTON\_INITIAL\_TEXT}{ACTION\_BUTTON\_INITIAL\_TEXT}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+ACTION\+\_\+\+BUTTON\+\_\+\+INITIAL\+\_\+\+TEXT = \char`\"{}Find and Read Key\char`\"{}}
+
+
+
+Initial text for the main action button. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a729f19f88712aae87cc9b9b5c2ed4167}\label{namespaceframes_1_1usb__key__get_a729f19f88712aae87cc9b9b5c2ed4167}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!ACTION\_BUTTON\_RETRY\_TEXT@{ACTION\_BUTTON\_RETRY\_TEXT}}
+\index{ACTION\_BUTTON\_RETRY\_TEXT@{ACTION\_BUTTON\_RETRY\_TEXT}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{ACTION\_BUTTON\_RETRY\_TEXT}{ACTION\_BUTTON\_RETRY\_TEXT}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+ACTION\+\_\+\+BUTTON\+\_\+\+RETRY\+\_\+\+TEXT = \char`\"{}Try Again\char`\"{}}
+
+
+
+Text for the action button when a retry is suggested. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_ae155dba59b24a43baa28231986dd0e4f}\label{namespaceframes_1_1usb__key__get_ae155dba59b24a43baa28231986dd0e4f}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!ACTIVATE\_BUTTON\_COLOR@{ACTIVATE\_BUTTON\_COLOR}}
+\index{ACTIVATE\_BUTTON\_COLOR@{ACTIVATE\_BUTTON\_COLOR}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{ACTIVATE\_BUTTON\_COLOR}{ACTIVATE\_BUTTON\_COLOR}}
+{\footnotesize\ttfamily string frames.\+usb\+\_\+key\+\_\+get.\+ACTIVATE\+\_\+\+BUTTON\+\_\+\+COLOR = \char`\"{}\#005f99\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a31644d37f6ede7adf2ccbe2ddc8efa44}\label{namespaceframes_1_1usb__key__get_a31644d37f6ede7adf2ccbe2ddc8efa44}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!BACKGROUND2\_COLOR@{BACKGROUND2\_COLOR}}
+\index{BACKGROUND2\_COLOR@{BACKGROUND2\_COLOR}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{BACKGROUND2\_COLOR}{BACKGROUND2\_COLOR}}
+{\footnotesize\ttfamily string frames.\+usb\+\_\+key\+\_\+get.\+BACKGROUND2\+\_\+\+COLOR = \char`\"{}\#2d2d2d\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a5a1991d9a51466b0743871d09d09d439}\label{namespaceframes_1_1usb__key__get_a5a1991d9a51466b0743871d09d09d439}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!BACKGROUND\_COLOR@{BACKGROUND\_COLOR}}
+\index{BACKGROUND\_COLOR@{BACKGROUND\_COLOR}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{BACKGROUND\_COLOR}{BACKGROUND\_COLOR}}
+{\footnotesize\ttfamily string frames.\+usb\+\_\+key\+\_\+get.\+BACKGROUND\+\_\+\+COLOR = \char`\"{}\#1e1e1e\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a72df98e9f1bb39e9860fd339bea6e522}\label{namespaceframes_1_1usb__key__get_a72df98e9f1bb39e9860fd339bea6e522}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!BLUE\_BUTTON\_COLOR@{BLUE\_BUTTON\_COLOR}}
+\index{BLUE\_BUTTON\_COLOR@{BLUE\_BUTTON\_COLOR}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{BLUE\_BUTTON\_COLOR}{BLUE\_BUTTON\_COLOR}}
+{\footnotesize\ttfamily string frames.\+usb\+\_\+key\+\_\+get.\+BLUE\+\_\+\+BUTTON\+\_\+\+COLOR = \char`\"{}\#007acc\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a7dbc086d00eb7fbe6977858639dea8ce}\label{namespaceframes_1_1usb__key__get_a7dbc086d00eb7fbe6977858639dea8ce}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!BUTTON\_PADDING\_Y@{BUTTON\_PADDING\_Y}}
+\index{BUTTON\_PADDING\_Y@{BUTTON\_PADDING\_Y}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{BUTTON\_PADDING\_Y}{BUTTON\_PADDING\_Y}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+BUTTON\+\_\+\+PADDING\+\_\+Y = 20}
+
+
+
+Specific vertical padding in pixels for buttons. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a39846f185ee18afd390c9a6572da07d1}\label{namespaceframes_1_1usb__key__get_a39846f185ee18afd390c9a6572da07d1}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!DEFAULT\_PADDING\_X@{DEFAULT\_PADDING\_X}}
+\index{DEFAULT\_PADDING\_X@{DEFAULT\_PADDING\_X}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_PADDING\_X}{DEFAULT\_PADDING\_X}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+DEFAULT\+\_\+\+PADDING\+\_\+X = 10}
+
+
+
+Default horizontal padding in pixels for UI elements. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_ab8c1a59223f9d329cc44e154a7e56965}\label{namespaceframes_1_1usb__key__get_ab8c1a59223f9d329cc44e154a7e56965}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!DEFAULT\_PADDING\_Y@{DEFAULT\_PADDING\_Y}}
+\index{DEFAULT\_PADDING\_Y@{DEFAULT\_PADDING\_Y}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_PADDING\_Y}{DEFAULT\_PADDING\_Y}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+DEFAULT\+\_\+\+PADDING\+\_\+Y = 10}
+
+
+
+Default vertical padding in pixels for general UI elements. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a60f7661fc3e6f50e357e53be89aa2f97}\label{namespaceframes_1_1usb__key__get_a60f7661fc3e6f50e357e53be89aa2f97}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!DEFAULT\_WRAP\_LENGTH@{DEFAULT\_WRAP\_LENGTH}}
+\index{DEFAULT\_WRAP\_LENGTH@{DEFAULT\_WRAP\_LENGTH}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_WRAP\_LENGTH}{DEFAULT\_WRAP\_LENGTH}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+DEFAULT\+\_\+\+WRAP\+\_\+\+LENGTH = 750}
+
+
+
+Default wrap length in pixels for text in labels. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a3317f3dd65b409af15a23a58944a6345}\label{namespaceframes_1_1usb__key__get_a3317f3dd65b409af15a23a58944a6345}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!FOREGROUND\_COLOR@{FOREGROUND\_COLOR}}
+\index{FOREGROUND\_COLOR@{FOREGROUND\_COLOR}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{FOREGROUND\_COLOR}{FOREGROUND\_COLOR}}
+{\footnotesize\ttfamily string frames.\+usb\+\_\+key\+\_\+get.\+FOREGROUND\+\_\+\+COLOR = \char`\"{}\#ffffff\char`\"{}}
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_aeb1326881b2d254266a8cfa7ec38a5fb}\label{namespaceframes_1_1usb__key__get_aeb1326881b2d254266a8cfa7ec38a5fb}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!INITIAL\_INSTRUCTION\_TEXT@{INITIAL\_INSTRUCTION\_TEXT}}
+\index{INITIAL\_INSTRUCTION\_TEXT@{INITIAL\_INSTRUCTION\_TEXT}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{INITIAL\_INSTRUCTION\_TEXT}{INITIAL\_INSTRUCTION\_TEXT}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+INITIAL\+\_\+\+INSTRUCTION\+\_\+\+TEXT = \char`\"{}To sign the PDF file, first the key has to be read from the USB drive and deciphered with your PIN.\char`\"{}}
+
+
+
+Initial instruction text displayed to the user. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_aa64f225b7a28ce845f011126124f9a5f}\label{namespaceframes_1_1usb__key__get_aa64f225b7a28ce845f011126124f9a5f}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!INPUT\_AREA\_PADDING\_Y@{INPUT\_AREA\_PADDING\_Y}}
+\index{INPUT\_AREA\_PADDING\_Y@{INPUT\_AREA\_PADDING\_Y}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{INPUT\_AREA\_PADDING\_Y}{INPUT\_AREA\_PADDING\_Y}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+INPUT\+\_\+\+AREA\+\_\+\+PADDING\+\_\+Y = 5}
+
+
+
+Vertical padding in pixels for the PIN input area. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_aebd85d83ebb05277d5ea80196f33b5a4}\label{namespaceframes_1_1usb__key__get_aebd85d83ebb05277d5ea80196f33b5a4}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!KEY\_INVALID\_MSG@{KEY\_INVALID\_MSG}}
+\index{KEY\_INVALID\_MSG@{KEY\_INVALID\_MSG}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{KEY\_INVALID\_MSG}{KEY\_INVALID\_MSG}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+KEY\+\_\+\+INVALID\+\_\+\+MSG = \char`\"{}The key file is invalid or corrupted. Please ensure you have the correct key file.\char`\"{}}
+
+
+
+Error message when the key file itself is invalid or corrupted. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_ac05d0c772d76c67b4b22a196d4749f65}\label{namespaceframes_1_1usb__key__get_ac05d0c772d76c67b4b22a196d4749f65}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!KEY\_OR\_PIN\_INVALID\_MSG@{KEY\_OR\_PIN\_INVALID\_MSG}}
+\index{KEY\_OR\_PIN\_INVALID\_MSG@{KEY\_OR\_PIN\_INVALID\_MSG}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{KEY\_OR\_PIN\_INVALID\_MSG}{KEY\_OR\_PIN\_INVALID\_MSG}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+KEY\+\_\+\+OR\+\_\+\+PIN\+\_\+\+INVALID\+\_\+\+MSG = \char`\"{}Invalid PIN or key file. Please verify your PIN and the key file, then try again.\char`\"{}}
+
+
+
+Error message for an invalid PIN or key file. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a5c7ff713a2f85feb842ccfdf6be902f3}\label{namespaceframes_1_1usb__key__get_a5c7ff713a2f85feb842ccfdf6be902f3}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!LARGE\_FONT\_CONFIG@{LARGE\_FONT\_CONFIG}}
+\index{LARGE\_FONT\_CONFIG@{LARGE\_FONT\_CONFIG}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{LARGE\_FONT\_CONFIG}{LARGE\_FONT\_CONFIG}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+LARGE\+\_\+\+FONT\+\_\+\+CONFIG = (\char`\"{}Tk\+Default\+Font\char`\"{}, 16)}
+
+
+
+Font configuration for large text elements. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a8bb3e0f0d74fa3e568e3dd9fd95426db}\label{namespaceframes_1_1usb__key__get_a8bb3e0f0d74fa3e568e3dd9fd95426db}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!MULTIPLE\_KEYS\_MSG@{MULTIPLE\_KEYS\_MSG}}
+\index{MULTIPLE\_KEYS\_MSG@{MULTIPLE\_KEYS\_MSG}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{MULTIPLE\_KEYS\_MSG}{MULTIPLE\_KEYS\_MSG}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+MULTIPLE\+\_\+\+KEYS\+\_\+\+MSG = \char`\"{}Multiple key files found across different USB drives. Please ensure only one USB drive with the key file is connected and try again.\char`\"{}}
+
+
+
+Error message when multiple key files are found. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a7b8ba612681e83b41fc27778f2c32d64}\label{namespaceframes_1_1usb__key__get_a7b8ba612681e83b41fc27778f2c32d64}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!NO\_KEY\_FILE\_MSG@{NO\_KEY\_FILE\_MSG}}
+\index{NO\_KEY\_FILE\_MSG@{NO\_KEY\_FILE\_MSG}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{NO\_KEY\_FILE\_MSG}{NO\_KEY\_FILE\_MSG}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+NO\+\_\+\+KEY\+\_\+\+FILE\+\_\+\+MSG = \char`\"{}No key file found on any USB drive. Please ensure the key file is present and try again.\char`\"{}}
+
+
+
+Error message when the key file is not found on USB drives. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a660341a7602a8751ddb2fa4f1851fde0}\label{namespaceframes_1_1usb__key__get_a660341a7602a8751ddb2fa4f1851fde0}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!NO\_USB\_DRIVES\_MSG@{NO\_USB\_DRIVES\_MSG}}
+\index{NO\_USB\_DRIVES\_MSG@{NO\_USB\_DRIVES\_MSG}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{NO\_USB\_DRIVES\_MSG}{NO\_USB\_DRIVES\_MSG}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+NO\+\_\+\+USB\+\_\+\+DRIVES\+\_\+\+MSG = \char`\"{}No USB drives found. Please insert the USB drive with the key and try again.\char`\"{}}
+
+
+
+Error message when no USB drives are detected. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a04afa476c2d179285032ba53fa322d7c}\label{namespaceframes_1_1usb__key__get_a04afa476c2d179285032ba53fa322d7c}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!PIN\_INVALID\_FORMAT\_MSG@{PIN\_INVALID\_FORMAT\_MSG}}
+\index{PIN\_INVALID\_FORMAT\_MSG@{PIN\_INVALID\_FORMAT\_MSG}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{PIN\_INVALID\_FORMAT\_MSG}{PIN\_INVALID\_FORMAT\_MSG}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+PIN\+\_\+\+INVALID\+\_\+\+FORMAT\+\_\+\+MSG = \char`\"{}The PIN must be 4 digits. Please try again.\char`\"{}}
+
+
+
+Error message when the PIN format is incorrect. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a8b168c69f9ec8574b6cbbad8c0bbc5e2}\label{namespaceframes_1_1usb__key__get_a8b168c69f9ec8574b6cbbad8c0bbc5e2}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!PIN\_LABEL\_TEXT@{PIN\_LABEL\_TEXT}}
+\index{PIN\_LABEL\_TEXT@{PIN\_LABEL\_TEXT}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{PIN\_LABEL\_TEXT}{PIN\_LABEL\_TEXT}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+PIN\+\_\+\+LABEL\+\_\+\+TEXT = \char`\"{}Enter PIN\+:\char`\"{}}
+
+
+
+Text for the PIN entry label. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_a815d2d53c9c3807c9342b37fa916f6bb}\label{namespaceframes_1_1usb__key__get_a815d2d53c9c3807c9342b37fa916f6bb}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!PIN\_REQUIRED\_MSG@{PIN\_REQUIRED\_MSG}}
+\index{PIN\_REQUIRED\_MSG@{PIN\_REQUIRED\_MSG}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{PIN\_REQUIRED\_MSG}{PIN\_REQUIRED\_MSG}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+PIN\+\_\+\+REQUIRED\+\_\+\+MSG = \char`\"{}PIN is required. Please enter your 4-\/digit PIN.\char`\"{}}
+
+
+
+Error message when the PIN is not entered. 
+
+\mbox{\Hypertarget{namespaceframes_1_1usb__key__get_ae57b9a6540c0f2ba8f88e93563756f2f}\label{namespaceframes_1_1usb__key__get_ae57b9a6540c0f2ba8f88e93563756f2f}} 
+\index{frames.usb\_key\_get@{frames.usb\_key\_get}!UNSUPPORTED\_PLATFORM\_MSG@{UNSUPPORTED\_PLATFORM\_MSG}}
+\index{UNSUPPORTED\_PLATFORM\_MSG@{UNSUPPORTED\_PLATFORM\_MSG}!frames.usb\_key\_get@{frames.usb\_key\_get}}
+\doxysubsubsection{\texorpdfstring{UNSUPPORTED\_PLATFORM\_MSG}{UNSUPPORTED\_PLATFORM\_MSG}}
+{\footnotesize\ttfamily frames.\+usb\+\_\+key\+\_\+get.\+UNSUPPORTED\+\_\+\+PLATFORM\+\_\+\+MSG = \char`\"{}Error\+: Current operating system is not supported for USB key retrieval.\char`\"{}}
+
+
+
+Error message for unsupported operating systems. 
+

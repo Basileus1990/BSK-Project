@@ -1,0 +1,145 @@
+\hypertarget{classmain_1_1App}{}\doxysection{main.\+App Class Reference}
+\label{classmain_1_1App}\index{main.App@{main.App}}
+
+
+Main application class that inherits from tkinter.\+Tk.  
+
+
+
+
+Inheritance diagram for main.\+App\+:
+% FIG 0
+
+
+Collaboration diagram for main.\+App\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classmain_1_1App_a922b6f5e95a8247a36d18fa78196aa03}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{classmain_1_1App}{App}} class. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmain_1_1App_a9751f481ffb6613e30389a2816629471}{start\+\_\+signing}} (self)
+\begin{DoxyCompactList}\small\item\em Switches the current frame to the Key\+From\+USBFrame. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmain_1_1App_a494d153fb596cad1caf32558efeffafb}{start\+\_\+verifying}} (self)
+\begin{DoxyCompactList}\small\item\em Switches the current frame to the Verifying\+Frame. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmain_1_1App_a382d5c8dcc881a1a80ef0c9040bfe096}{get\+\_\+key\+\_\+from\+\_\+usb\+\_\+result}} (self, rsa.\+RSAPrivate\+Key key)
+\begin{DoxyCompactList}\small\item\em Handles the result of the USB key retrieval and switches to the Signing\+Frame. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmain_1_1App_ab7f9338e3b4ba3b792420626de1309b5}{main\+\_\+menu}} (self)
+\begin{DoxyCompactList}\small\item\em Switches the current frame back to the Start\+Frame (main menu). \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classmain_1_1App_a922b6f5e95a8247a36d18fa78196aa03}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmain_1_1App_a0a600ceddf797d50a6e2cdf54c961fed}{current\+\_\+frame}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classmain_1_1App_a3e1b38b5ef11e57ba861d90ab84162dd}{\+\_\+change\+\_\+frame}} (self, tk.\+Frame frame)
+\begin{DoxyCompactList}\small\item\em Internal method to change the currently displayed frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main application class that inherits from tkinter.\+Tk. 
+
+Main application class for key generation GUI.
+
+This class is responsible for initializing the main window and managing frame transitions.
+
+This class inherits from {\ttfamily tk.\+Tk} and loads the main GUI frame responsible for generating RSA keys and encrypting them using a 4-\/digit PIN. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmain_1_1App_a922b6f5e95a8247a36d18fa78196aa03}\label{classmain_1_1App_a922b6f5e95a8247a36d18fa78196aa03}} 
+\index{main.App@{main.App}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!main.App@{main.App}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily def main.\+App.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Initializes the \mbox{\hyperlink{classmain_1_1App}{App}} class. 
+
+Sets up the window title, geometry, and resizability. It also initializes and displays the starting frame. \mbox{\Hypertarget{classmain_1_1App_a922b6f5e95a8247a36d18fa78196aa03}\label{classmain_1_1App_a922b6f5e95a8247a36d18fa78196aa03}} 
+\index{main.App@{main.App}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!main.App@{main.App}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily def main.\+App.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmain_1_1App_a3e1b38b5ef11e57ba861d90ab84162dd}\label{classmain_1_1App_a3e1b38b5ef11e57ba861d90ab84162dd}} 
+\index{main.App@{main.App}!\_change\_frame@{\_change\_frame}}
+\index{\_change\_frame@{\_change\_frame}!main.App@{main.App}}
+\doxysubsubsection{\texorpdfstring{\_change\_frame()}{\_change\_frame()}}
+{\footnotesize\ttfamily def main.\+App.\+\_\+change\+\_\+frame (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{tk.\+Frame}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal method to change the currently displayed frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & The new tkinter.\+Frame to display. @type frame tk.\+Frame\\
+\hline
+\end{DoxyParams}
+Destroys the current frame and packs the new frame into the window. \mbox{\Hypertarget{classmain_1_1App_a382d5c8dcc881a1a80ef0c9040bfe096}\label{classmain_1_1App_a382d5c8dcc881a1a80ef0c9040bfe096}} 
+\index{main.App@{main.App}!get\_key\_from\_usb\_result@{get\_key\_from\_usb\_result}}
+\index{get\_key\_from\_usb\_result@{get\_key\_from\_usb\_result}!main.App@{main.App}}
+\doxysubsubsection{\texorpdfstring{get\_key\_from\_usb\_result()}{get\_key\_from\_usb\_result()}}
+{\footnotesize\ttfamily def main.\+App.\+get\+\_\+key\+\_\+from\+\_\+usb\+\_\+result (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{rsa.\+RSAPrivate\+Key}]{key }\end{DoxyParamCaption})}
+
+
+
+Handles the result of the USB key retrieval and switches to the Signing\+Frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The RSA private key retrieved from the USB device. @type key rsa.\+RSAPrivate\+Key \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmain_1_1App_ab7f9338e3b4ba3b792420626de1309b5}\label{classmain_1_1App_ab7f9338e3b4ba3b792420626de1309b5}} 
+\index{main.App@{main.App}!main\_menu@{main\_menu}}
+\index{main\_menu@{main\_menu}!main.App@{main.App}}
+\doxysubsubsection{\texorpdfstring{main\_menu()}{main\_menu()}}
+{\footnotesize\ttfamily def main.\+App.\+main\+\_\+menu (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Switches the current frame back to the Start\+Frame (main menu). 
+
+\mbox{\Hypertarget{classmain_1_1App_a9751f481ffb6613e30389a2816629471}\label{classmain_1_1App_a9751f481ffb6613e30389a2816629471}} 
+\index{main.App@{main.App}!start\_signing@{start\_signing}}
+\index{start\_signing@{start\_signing}!main.App@{main.App}}
+\doxysubsubsection{\texorpdfstring{start\_signing()}{start\_signing()}}
+{\footnotesize\ttfamily def main.\+App.\+start\+\_\+signing (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Switches the current frame to the Key\+From\+USBFrame. 
+
+\mbox{\Hypertarget{classmain_1_1App_a494d153fb596cad1caf32558efeffafb}\label{classmain_1_1App_a494d153fb596cad1caf32558efeffafb}} 
+\index{main.App@{main.App}!start\_verifying@{start\_verifying}}
+\index{start\_verifying@{start\_verifying}!main.App@{main.App}}
+\doxysubsubsection{\texorpdfstring{start\_verifying()}{start\_verifying()}}
+{\footnotesize\ttfamily def main.\+App.\+start\+\_\+verifying (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Switches the current frame to the Verifying\+Frame. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmain_1_1App_a0a600ceddf797d50a6e2cdf54c961fed}\label{classmain_1_1App_a0a600ceddf797d50a6e2cdf54c961fed}} 
+\index{main.App@{main.App}!current\_frame@{current\_frame}}
+\index{current\_frame@{current\_frame}!main.App@{main.App}}
+\doxysubsubsection{\texorpdfstring{current\_frame}{current\_frame}}
+{\footnotesize\ttfamily main.\+App.\+current\+\_\+frame}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+signing/\mbox{\hyperlink{signing_2main_8py}{main.\+py}}\end{DoxyCompactItemize}

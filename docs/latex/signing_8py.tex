@@ -1,0 +1,74 @@
+\hypertarget{signing_8py}{}\doxysection{signing/frames/signing.py File Reference}
+\label{signing_8py}\index{signing/frames/signing.py@{signing/frames/signing.py}}
+
+
+A Tkinter Frame for selecting a PDF, choosing an output location, and signing the PDF.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame}{frames.\+signing.\+Signing\+Frame}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classframes_1_1signing_1_1SigningFrame}{Signing\+Frame}} class provides the UI for the PDF signing process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceframes_1_1signing}{frames.\+signing}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+tuple \mbox{\hyperlink{namespaceframes_1_1signing_ac1946cf26a4f8b37e86fe40814cf00c6}{frames.\+signing.\+LARGE\+\_\+\+FONT\+\_\+\+CONFIG}} = (\char`\"{}Tk\+Default\+Font\char`\"{}, 16)
+\begin{DoxyCompactList}\small\item\em Font configuration for large text elements (e.\+g., status labels, buttons). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespaceframes_1_1signing_ab31237b96474583c44a368a8d105bab1}{frames.\+signing.\+DEFAULT\+\_\+\+WRAP\+\_\+\+LENGTH}} = 750
+\begin{DoxyCompactList}\small\item\em Default wrap length in pixels for text in labels to ensure proper layout. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespaceframes_1_1signing_ab9f241e42a8806166c85dbf37ec83a70}{frames.\+signing.\+PDF\+\_\+\+FILE\+\_\+\+TYPES}} = \mbox{[}(\char`\"{}PDF files\char`\"{}, \char`\"{}$\ast$.pdf\char`\"{})\mbox{]}
+\begin{DoxyCompactList}\small\item\em File type filter used in file dialogs, restricting selection to PDF files. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ab2b0e8ee0beb39ff1e42b84a3722ab18}{frames.\+signing.\+SELECT\+\_\+\+SOURCE\+\_\+\+PDF\+\_\+\+TITLE}} = \char`\"{}Select the PDF file to sign\char`\"{}
+\begin{DoxyCompactList}\small\item\em Title for the file dialog when selecting the source PDF to be signed. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ae4e615b9421dea61d774fc8ef25a0b37}{frames.\+signing.\+SELECT\+\_\+\+TARGET\+\_\+\+PDF\+\_\+\+TITLE}} = \char`\"{}Set target location and filename for signed PDF\char`\"{}
+\begin{DoxyCompactList}\small\item\em Title for the file dialog when selecting the output path for the signed PDF. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a3cb475d41bdd4121b45ec19c674fdf5f}{frames.\+signing.\+INITIAL\+\_\+\+STATUS\+\_\+\+TEXT}} = \char`\"{}Please choose the PDF file to sign and where the signed PDF file should be placed.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Initial instructional text displayed in the status label. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a68b7e4bcc187c0332ceb657c9f65ec2e}{frames.\+signing.\+SOURCE\+\_\+\+PDF\+\_\+\+LABEL\+\_\+\+TEXT}} = \char`\"{}Selected PDF file to sign\+:\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the label indicating the selected source PDF file path. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_aaab6b6c400d6b3239ce351b77b4173b7}{frames.\+signing.\+TARGET\+\_\+\+PDF\+\_\+\+LABEL\+\_\+\+TEXT}} = \char`\"{}Location where the signed PDF file will be saved\+:\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the label indicating the selected target path for the signed PDF file. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a3c46f22fe0292b2d351ebcc6fa014583}{frames.\+signing.\+SELECT\+\_\+\+SOURCE\+\_\+\+BUTTON\+\_\+\+TEXT}} = \char`\"{}Select PDF file\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the button used to trigger source PDF file selection. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_aebb59e7c79f7b9212d057425a032d606}{frames.\+signing.\+SELECT\+\_\+\+TARGET\+\_\+\+BUTTON\+\_\+\+TEXT}} = \char`\"{}Set target location\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the button used to trigger target PDF path selection. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a95754ad0279a6f7b9055e14610ac2adc}{frames.\+signing.\+SIGN\+\_\+\+BUTTON\+\_\+\+INITIAL\+\_\+\+TEXT}} = \char`\"{}Sign the PDF file\char`\"{}
+\begin{DoxyCompactList}\small\item\em Initial text for the button that initiates the PDF signing process. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a071784bc46ecb49373364a857454eee6}{frames.\+signing.\+RETRY\+\_\+\+BUTTON\+\_\+\+TEXT}} = \char`\"{}Try Again\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the main action button when a retry is suggested after an error. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ae8a2e2b0376f4c692248d39d23e19653}{frames.\+signing.\+GO\+\_\+\+BACK\+\_\+\+BUTTON\+\_\+\+TEXT}} = \char`\"{}Go back to main menu\char`\"{}
+\begin{DoxyCompactList}\small\item\em Text for the main action button to navigate back to the main menu after success. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a022546822ef4103558f09b92ef38d8c5}{frames.\+signing.\+PATHS\+\_\+\+REQUIRED\+\_\+\+ERROR\+\_\+\+TEXT}} = \char`\"{}Both original and target PDF locations are required. Please select them.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed when either source or target PDF paths are not selected. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_af200a0579246985b755de13aea92422f}{frames.\+signing.\+PATHS\+\_\+\+CANNOT\+\_\+\+BE\+\_\+\+THE\+\_\+\+SAME\+\_\+\+ERROR\+\_\+\+TEXT}} = \char`\"{}Original and target PDF locations cannot be the same. Please change one of them and try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed when source or target PDF paths are the same. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a8bddb68cb1ea034379b49065a383511e}{frames.\+signing.\+SIGNING\+\_\+\+SUCCESS\+\_\+\+TEXT}} = \char`\"{}Successfully signed PDF and saved to the designated location.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Message displayed in the status label upon successful PDF signing. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a5b94035e456bcf92e17f7d9ce7bebf8e}{frames.\+signing.\+PDF\+\_\+\+READ\+\_\+\+ERROR\+\_\+\+TEXT}} = \char`\"{}Selected source file is not a valid PDF file. Please verify and try again.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed if the selected source file is not a valid PDF. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a496ed713154a47b1263850d490057f02}{frames.\+signing.\+SIGNING\+\_\+\+ERROR\+\_\+\+TEXT}} = \char`\"{}This PDF file may have already been signed or is unsuitable for signing. Please choose a different file.\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message displayed if the PDF is already signed or unsuitable for signing. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a375a61749c5428b6b474a5f0f4cff8d5}{frames.\+signing.\+UNEXPECTED\+\_\+\+SIGNING\+\_\+\+ERROR\+\_\+\+TEXT}} = \char`\"{}An unexpected error occurred during signing\+: \{error\+\_\+type\}. Please try again\char`\"{}
+\begin{DoxyCompactList}\small\item\em Error message template for unexpected errors during the signing process. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ad4311202ed9aee95353b05e31daecc05}{frames.\+signing.\+FOREGROUND\+\_\+\+COLOR}} = \char`\"{}\#ffffff\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ac895fe95ebc1c2c44648b63eda8b6f0c}{frames.\+signing.\+BACKGROUND\+\_\+\+COLOR}} = \char`\"{}\#1e1e1e\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a9ca697a079279d52b822c344bf2efe31}{frames.\+signing.\+BACKGROUND2\+\_\+\+COLOR}} = \char`\"{}\#2d2d2d\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_a5d3a5cdd4e9306d85198673eab794cee}{frames.\+signing.\+BLUE\+\_\+\+BUTTON\+\_\+\+COLOR}} = \char`\"{}\#007acc\char`\"{}
+\item 
+string \mbox{\hyperlink{namespaceframes_1_1signing_ab9a50f5a8ee833df68a1d6be8e55950f}{frames.\+signing.\+ACTIVATE\+\_\+\+BUTTON\+\_\+\+COLOR}} = \char`\"{}\#005f99\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Tkinter Frame for selecting a PDF, choosing an output location, and signing the PDF. 
+
+This frame guides the user through selecting an input PDF, specifying an output path for the signed PDF, and then performs the signing operation using a provided private key. It handles UI updates for status messages and error reporting. 

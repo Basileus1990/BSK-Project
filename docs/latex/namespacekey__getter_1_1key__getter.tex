@@ -1,0 +1,177 @@
+\hypertarget{namespacekey__getter_1_1key__getter}{}\doxysection{key\+\_\+getter.\+key\+\_\+getter Namespace Reference}
+\label{namespacekey__getter_1_1key__getter}\index{key\_getter.key\_getter@{key\_getter.key\_getter}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1UnsupportedPlatformException}{Unsupported\+Platform\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when the current operating system is not supported for USB key retrieval. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoUSBDrivesFoundException}{No\+USBDrives\+Found\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when no USB drives are found connected to the system. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoKeyFoundException}{No\+Key\+Found\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when the key file is not found on any detected USB drives. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1MultipleKeysFoundException}{Multiple\+Keys\+Found\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when the key file is found on multiple USB drives, creating ambiguity. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1KeyOrPinInvalidException}{Key\+Or\+Pin\+Invalid\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when the provided PIN is incorrect or the key file is corrupted/cannot be decrypted with the PIN. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1KeyInvalidException}{Key\+Invalid\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception raised when the decrypted key data cannot be parsed as a valid RSA private key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+rsa.\+RSAPrivate\+Key \mbox{\hyperlink{namespacekey__getter_1_1key__getter_aa40b8cce6a67693cb8f47f205c8c28fc}{get\+\_\+key}} (str pin)
+\begin{DoxyCompactList}\small\item\em Retrieves and decrypts the RSA private key from a USB drive using a PIN. \end{DoxyCompactList}\item 
+bytes \mbox{\hyperlink{namespacekey__getter_1_1key__getter_a09f2e383bec74d85d21a9a8da467b10f}{\+\_\+get\+\_\+key\+\_\+windows}} ()
+\begin{DoxyCompactList}\small\item\em Internal function to retrieve the encrypted key data from USB drives on Windows. \end{DoxyCompactList}\item 
+bytes \mbox{\hyperlink{namespacekey__getter_1_1key__getter_a257bf6528a628ff2a34bd75106257d4f}{\+\_\+get\+\_\+key\+\_\+linux}} ()
+\begin{DoxyCompactList}\small\item\em Internal function to retrieve the encrypted key data from USB drives on Linux. \end{DoxyCompactList}\item 
+bytes \mbox{\hyperlink{namespacekey__getter_1_1key__getter_a3524154f84dffe07615ea3b77225614b}{\+\_\+get\+\_\+key\+\_\+paths}} (list\mbox{[}str\mbox{]} usb\+\_\+paths)
+\begin{DoxyCompactList}\small\item\em Internal function to search for and read the key file from a list of USB paths. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacekey__getter_1_1key__getter_ad0f635a517c68f9277ecfaf30de76460}{WINDOWS\+\_\+\+PLATFORM\+\_\+\+NAME}} = \char`\"{}Windows\char`\"{}
+\begin{DoxyCompactList}\small\item\em String constant representing the Windows platform identifier. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespacekey__getter_1_1key__getter_a7b5751c900d5f7f880a264717c63ead5}{LINUX\+\_\+\+PLATFORM\+\_\+\+NAME}} = \char`\"{}Linux\char`\"{}
+\begin{DoxyCompactList}\small\item\em String constant representing the Linux platform identifier. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespacekey__getter_1_1key__getter_a4a203769b0ad4860c12ed8a2e54800a3}{KEY\+\_\+\+FILE\+\_\+\+NAME}} = \char`\"{}private\+\_\+key.\+key\char`\"{}
+\begin{DoxyCompactList}\small\item\em The expected filename of the encrypted private key on the USB drive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacekey__getter_1_1key__getter_a257bf6528a628ff2a34bd75106257d4f}\label{namespacekey__getter_1_1key__getter_a257bf6528a628ff2a34bd75106257d4f}} 
+\index{key\_getter.key\_getter@{key\_getter.key\_getter}!\_get\_key\_linux@{\_get\_key\_linux}}
+\index{\_get\_key\_linux@{\_get\_key\_linux}!key\_getter.key\_getter@{key\_getter.key\_getter}}
+\doxysubsubsection{\texorpdfstring{\_get\_key\_linux()}{\_get\_key\_linux()}}
+{\footnotesize\ttfamily  bytes key\+\_\+getter.\+key\+\_\+getter.\+\_\+get\+\_\+key\+\_\+linux (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal function to retrieve the encrypted key data from USB drives on Linux. 
+
+Calls {\ttfamily get\+\_\+usb\+\_\+mount\+\_\+paths\+\_\+linux} to find USB drives and then {\ttfamily \+\_\+get\+\_\+key\+\_\+paths} to locate and read the key file. \begin{DoxyReturn}{Returns}
+The encrypted key data as bytes. @rtype bytes 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoUSBDrivesFoundException}{No\+USBDrives\+Found\+Exception}}} & If no USB drives are detected by {\ttfamily \+\_\+get\+\_\+key\+\_\+paths}. \\
+\hline
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoKeyFoundException}{No\+Key\+Found\+Exception}}} & If the key file is not found on any detected USB drives by {\ttfamily \+\_\+get\+\_\+key\+\_\+paths}. \\
+\hline
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1MultipleKeysFoundException}{Multiple\+Keys\+Found\+Exception}}} & If the key file is found on multiple USB drives by {\ttfamily \+\_\+get\+\_\+key\+\_\+paths}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{namespacekey__getter_1_1key__getter_a3524154f84dffe07615ea3b77225614b}\label{namespacekey__getter_1_1key__getter_a3524154f84dffe07615ea3b77225614b}} 
+\index{key\_getter.key\_getter@{key\_getter.key\_getter}!\_get\_key\_paths@{\_get\_key\_paths}}
+\index{\_get\_key\_paths@{\_get\_key\_paths}!key\_getter.key\_getter@{key\_getter.key\_getter}}
+\doxysubsubsection{\texorpdfstring{\_get\_key\_paths()}{\_get\_key\_paths()}}
+{\footnotesize\ttfamily  bytes key\+\_\+getter.\+key\+\_\+getter.\+\_\+get\+\_\+key\+\_\+paths (\begin{DoxyParamCaption}\item[{list\mbox{[}str\mbox{]}}]{usb\+\_\+paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal function to search for and read the key file from a list of USB paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em usb\+\_\+paths} & A list of file system paths where USB drives are mounted. @type usb\+\_\+paths list\mbox{[}str\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The content of the key file as bytes. @rtype bytes 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoUSBDrivesFoundException}{No\+USBDrives\+Found\+Exception}}} & If the {\ttfamily usb\+\_\+paths} list is empty. \\
+\hline
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoKeyFoundException}{No\+Key\+Found\+Exception}}} & If {\ttfamily KEY\+\_\+\+FILE\+\_\+\+NAME} is not found in any of the provided {\ttfamily usb\+\_\+paths}. \\
+\hline
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1MultipleKeysFoundException}{Multiple\+Keys\+Found\+Exception}}} & If {\ttfamily KEY\+\_\+\+FILE\+\_\+\+NAME} is found in more than one path in {\ttfamily usb\+\_\+paths}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{namespacekey__getter_1_1key__getter_a09f2e383bec74d85d21a9a8da467b10f}\label{namespacekey__getter_1_1key__getter_a09f2e383bec74d85d21a9a8da467b10f}} 
+\index{key\_getter.key\_getter@{key\_getter.key\_getter}!\_get\_key\_windows@{\_get\_key\_windows}}
+\index{\_get\_key\_windows@{\_get\_key\_windows}!key\_getter.key\_getter@{key\_getter.key\_getter}}
+\doxysubsubsection{\texorpdfstring{\_get\_key\_windows()}{\_get\_key\_windows()}}
+{\footnotesize\ttfamily  bytes key\+\_\+getter.\+key\+\_\+getter.\+\_\+get\+\_\+key\+\_\+windows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Internal function to retrieve the encrypted key data from USB drives on Windows. 
+
+Calls {\ttfamily get\+\_\+usb\+\_\+mount\+\_\+paths\+\_\+windows} to find USB drives and then {\ttfamily \+\_\+get\+\_\+key\+\_\+paths} to locate and read the key file. \begin{DoxyReturn}{Returns}
+The encrypted key data as bytes. @rtype bytes 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoUSBDrivesFoundException}{No\+USBDrives\+Found\+Exception}}} & If no USB drives are detected by {\ttfamily \+\_\+get\+\_\+key\+\_\+paths}. \\
+\hline
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoKeyFoundException}{No\+Key\+Found\+Exception}}} & If the key file is not found on any detected USB drives by {\ttfamily \+\_\+get\+\_\+key\+\_\+paths}. \\
+\hline
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1MultipleKeysFoundException}{Multiple\+Keys\+Found\+Exception}}} & If the key file is found on multiple USB drives by {\ttfamily \+\_\+get\+\_\+key\+\_\+paths}. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{namespacekey__getter_1_1key__getter_aa40b8cce6a67693cb8f47f205c8c28fc}\label{namespacekey__getter_1_1key__getter_aa40b8cce6a67693cb8f47f205c8c28fc}} 
+\index{key\_getter.key\_getter@{key\_getter.key\_getter}!get\_key@{get\_key}}
+\index{get\_key@{get\_key}!key\_getter.key\_getter@{key\_getter.key\_getter}}
+\doxysubsubsection{\texorpdfstring{get\_key()}{get\_key()}}
+{\footnotesize\ttfamily  rsa.\+RSAPrivate\+Key key\+\_\+getter.\+key\+\_\+getter.\+get\+\_\+key (\begin{DoxyParamCaption}\item[{str}]{pin }\end{DoxyParamCaption})}
+
+
+
+Retrieves and decrypts the RSA private key from a USB drive using a PIN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The PIN code to decrypt the private key. @type pin str \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The decrypted RSA private key. @rtype rsa.\+RSAPrivate\+Key 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1UnsupportedPlatformException}{Unsupported\+Platform\+Exception}}} & If the current operating system is not supported. \\
+\hline
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoUSBDrivesFoundException}{No\+USBDrives\+Found\+Exception}}} & If no USB drives are detected. \\
+\hline
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1NoKeyFoundException}{No\+Key\+Found\+Exception}}} & If the key file is not found on any USB drive. \\
+\hline
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1MultipleKeysFoundException}{Multiple\+Keys\+Found\+Exception}}} & If the key file is found on more than one USB drive. \\
+\hline
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1KeyOrPinInvalidException}{Key\+Or\+Pin\+Invalid\+Exception}}} & If the PIN is incorrect or the key data is malformed leading to decryption failure. \\
+\hline
+{\em \mbox{\hyperlink{classkey__getter_1_1key__getter_1_1KeyInvalidException}{Key\+Invalid\+Exception}}} & If the decrypted data cannot be loaded as a valid PEM-\/encoded private key. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacekey__getter_1_1key__getter_a4a203769b0ad4860c12ed8a2e54800a3}\label{namespacekey__getter_1_1key__getter_a4a203769b0ad4860c12ed8a2e54800a3}} 
+\index{key\_getter.key\_getter@{key\_getter.key\_getter}!KEY\_FILE\_NAME@{KEY\_FILE\_NAME}}
+\index{KEY\_FILE\_NAME@{KEY\_FILE\_NAME}!key\_getter.key\_getter@{key\_getter.key\_getter}}
+\doxysubsubsection{\texorpdfstring{KEY\_FILE\_NAME}{KEY\_FILE\_NAME}}
+{\footnotesize\ttfamily key\+\_\+getter.\+key\+\_\+getter.\+KEY\+\_\+\+FILE\+\_\+\+NAME = \char`\"{}private\+\_\+key.\+key\char`\"{}}
+
+
+
+The expected filename of the encrypted private key on the USB drive. 
+
+\mbox{\Hypertarget{namespacekey__getter_1_1key__getter_a7b5751c900d5f7f880a264717c63ead5}\label{namespacekey__getter_1_1key__getter_a7b5751c900d5f7f880a264717c63ead5}} 
+\index{key\_getter.key\_getter@{key\_getter.key\_getter}!LINUX\_PLATFORM\_NAME@{LINUX\_PLATFORM\_NAME}}
+\index{LINUX\_PLATFORM\_NAME@{LINUX\_PLATFORM\_NAME}!key\_getter.key\_getter@{key\_getter.key\_getter}}
+\doxysubsubsection{\texorpdfstring{LINUX\_PLATFORM\_NAME}{LINUX\_PLATFORM\_NAME}}
+{\footnotesize\ttfamily key\+\_\+getter.\+key\+\_\+getter.\+LINUX\+\_\+\+PLATFORM\+\_\+\+NAME = \char`\"{}Linux\char`\"{}}
+
+
+
+String constant representing the Linux platform identifier. 
+
+\mbox{\Hypertarget{namespacekey__getter_1_1key__getter_ad0f635a517c68f9277ecfaf30de76460}\label{namespacekey__getter_1_1key__getter_ad0f635a517c68f9277ecfaf30de76460}} 
+\index{key\_getter.key\_getter@{key\_getter.key\_getter}!WINDOWS\_PLATFORM\_NAME@{WINDOWS\_PLATFORM\_NAME}}
+\index{WINDOWS\_PLATFORM\_NAME@{WINDOWS\_PLATFORM\_NAME}!key\_getter.key\_getter@{key\_getter.key\_getter}}
+\doxysubsubsection{\texorpdfstring{WINDOWS\_PLATFORM\_NAME}{WINDOWS\_PLATFORM\_NAME}}
+{\footnotesize\ttfamily key\+\_\+getter.\+key\+\_\+getter.\+WINDOWS\+\_\+\+PLATFORM\+\_\+\+NAME = \char`\"{}Windows\char`\"{}}
+
+
+
+String constant representing the Windows platform identifier. 
+

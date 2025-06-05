@@ -1,0 +1,38 @@
+\hypertarget{namespacekey__getter_1_1usb__finder__linux}{}\doxysection{key\+\_\+getter.\+usb\+\_\+finder\+\_\+linux Namespace Reference}
+\label{namespacekey__getter_1_1usb__finder__linux}\index{key\_getter.usb\_finder\_linux@{key\_getter.usb\_finder\_linux}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacekey__getter_1_1usb__finder__linux_a8bdc964cc48b4492853912e9fedd4be8}{\+\_\+get\+\_\+usb\+\_\+devices\+\_\+linux}} ()
+\begin{DoxyCompactList}\small\item\em Identifies USB block devices connected to a Linux system. \end{DoxyCompactList}\item 
+list\mbox{[}str\mbox{]} \mbox{\hyperlink{namespacekey__getter_1_1usb__finder__linux_a8ef182c700482f76c6c7a0c10fed2a6d}{get\+\_\+usb\+\_\+mount\+\_\+paths\+\_\+linux}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the mount paths for all connected USB storage devices on a Linux system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacekey__getter_1_1usb__finder__linux_a8bdc964cc48b4492853912e9fedd4be8}\label{namespacekey__getter_1_1usb__finder__linux_a8bdc964cc48b4492853912e9fedd4be8}} 
+\index{key\_getter.usb\_finder\_linux@{key\_getter.usb\_finder\_linux}!\_get\_usb\_devices\_linux@{\_get\_usb\_devices\_linux}}
+\index{\_get\_usb\_devices\_linux@{\_get\_usb\_devices\_linux}!key\_getter.usb\_finder\_linux@{key\_getter.usb\_finder\_linux}}
+\doxysubsubsection{\texorpdfstring{\_get\_usb\_devices\_linux()}{\_get\_usb\_devices\_linux()}}
+{\footnotesize\ttfamily  list\mbox{[}str\mbox{]} key\+\_\+getter.\+usb\+\_\+finder\+\_\+linux.\+\_\+get\+\_\+usb\+\_\+devices\+\_\+linux (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Identifies USB block devices connected to a Linux system. 
+
+This function filters {\ttfamily /sys/block} for entries corresponding to USB storage devices (typically {\ttfamily sd$\ast$}). It checks the device path for the presence of \char`\"{}usb\char`\"{} to confirm it\textquotesingle{}s a USB device. Source\+: \href{https://stackoverflow.com/a/64000192}{\texttt{ https\+://stackoverflow.\+com/a/64000192}} \begin{DoxyReturn}{Returns}
+A list of base names for USB block devices (e.\+g., \mbox{[}\textquotesingle{}sdb\textquotesingle{}, \textquotesingle{}sdc\textquotesingle{}\mbox{]}). @rtype list\mbox{[}str\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacekey__getter_1_1usb__finder__linux_a8ef182c700482f76c6c7a0c10fed2a6d}\label{namespacekey__getter_1_1usb__finder__linux_a8ef182c700482f76c6c7a0c10fed2a6d}} 
+\index{key\_getter.usb\_finder\_linux@{key\_getter.usb\_finder\_linux}!get\_usb\_mount\_paths\_linux@{get\_usb\_mount\_paths\_linux}}
+\index{get\_usb\_mount\_paths\_linux@{get\_usb\_mount\_paths\_linux}!key\_getter.usb\_finder\_linux@{key\_getter.usb\_finder\_linux}}
+\doxysubsubsection{\texorpdfstring{get\_usb\_mount\_paths\_linux()}{get\_usb\_mount\_paths\_linux()}}
+{\footnotesize\ttfamily  list\mbox{[}str\mbox{]} key\+\_\+getter.\+usb\+\_\+finder\+\_\+linux.\+get\+\_\+usb\+\_\+mount\+\_\+paths\+\_\+linux (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the mount paths for all connected USB storage devices on a Linux system. 
+
+This function first gets the list of USB block devices using {\ttfamily \+\_\+get\+\_\+usb\+\_\+devices\+\_\+linux}. Then, for each device, it uses the {\ttfamily lsblk} command to find its mount point(s). It parses the output of {\ttfamily lsblk} to extract and return a list of valid mount paths. Source\+: \href{https://stackoverflow.com/a/64000192}{\texttt{ https\+://stackoverflow.\+com/a/64000192}} \begin{DoxyReturn}{Returns}
+A list of strings, where each string is an absolute mount path of a USB device. Returns an empty list if no USB devices are mounted or found. @rtype list\mbox{[}str\mbox{]} 
+\end{DoxyReturn}
